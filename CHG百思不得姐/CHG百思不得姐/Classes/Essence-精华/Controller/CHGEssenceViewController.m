@@ -31,7 +31,7 @@
 - (void)tagClick
 {
     CHGTagViewController *vc = [[CHGTagViewController alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
+//    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
     
 }

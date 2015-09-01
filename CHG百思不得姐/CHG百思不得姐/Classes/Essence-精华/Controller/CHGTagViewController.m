@@ -20,21 +20,10 @@
     
     self.navigationItem.title = @"推荐标签";
     
-    UIButton *Button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [Button setTitle:@"返回" forState:UIControlStateNormal];
-    [Button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [Button setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    [Button setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
-    [Button setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
-    [Button sizeToFit];
-    [Button addTarget:self action:@selector(tagClick) forControlEvents:UIControlEventTouchUpInside];
-    Button.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:Button];
+    // 设置背景颜色
+    self.view.backgroundColor = CHGGlobalBg;
+    
 }
 
-- (void)tagClick
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 @end

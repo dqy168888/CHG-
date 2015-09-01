@@ -7,6 +7,7 @@
 //
 
 #import "CHGFriendTrendsViewController.h"
+#import "CHGRecommendController.h"
 
 @interface CHGFriendTrendsViewController ()
 
@@ -29,7 +30,8 @@
 
 - (void)tagClick
 {
-    CHGLogFunc;
+    CHGRecommendController *vc = [[CHGRecommendController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

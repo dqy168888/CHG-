@@ -20,6 +20,9 @@
 		FA8237F91B95EC3600A4E7C8 /* UIView+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8237ED1B95EC3600A4E7C8 /* UIView+CHGExtension.m */; };
 		FA8237FF1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8237FD1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.m */; };
 		FA8238001B95F12D00A4E7C8 /* CHGFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8237FE1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.xib */; };
+		FA8238031B95F59000A4E7C8 /* CHGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8238021B95F59000A4E7C8 /* CHGNavigationController.m */; };
+		FA8238071B95F9AE00A4E7C8 /* CHGRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8238051B95F9AE00A4E7C8 /* CHGRecommendController.m */; };
+		FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8238061B95F9AE00A4E7C8 /* CHGRecommendController.xib */; };
 		FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */; };
 		FACD16E31B95678B00339438 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD16E21B95678B00339438 /* Images.xcassets */; };
 		FACD16F21B95678B00339438 /* CHG_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16F11B95678B00339438 /* CHG_____Tests.m */; };
@@ -61,6 +64,11 @@
 		FA8237FC1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGFriendTrendsViewController.h; sourceTree = "<group>"; };
 		FA8237FD1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGFriendTrendsViewController.m; sourceTree = "<group>"; };
 		FA8237FE1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		FA8238011B95F59000A4E7C8 /* CHGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGNavigationController.h; sourceTree = "<group>"; };
+		FA8238021B95F59000A4E7C8 /* CHGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGNavigationController.m; sourceTree = "<group>"; };
+		FA8238041B95F9AE00A4E7C8 /* CHGRecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGRecommendController.h; sourceTree = "<group>"; };
+		FA8238051B95F9AE00A4E7C8 /* CHGRecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGRecommendController.m; sourceTree = "<group>"; };
+		FA8238061B95F9AE00A4E7C8 /* CHGRecommendController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGRecommendController.xib; sourceTree = "<group>"; };
 		FACD16CF1B95678B00339438 /* CHG百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHG百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16D31B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16DA1B95678B00339438 /* CHG_____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CHG_____.xcdatamodel"; sourceTree = "<group>"; };
@@ -151,6 +159,9 @@
 				FA8237FC1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.h */,
 				FA8237FD1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.m */,
 				FA8237FE1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.xib */,
+				FA8238041B95F9AE00A4E7C8 /* CHGRecommendController.h */,
+				FA8238051B95F9AE00A4E7C8 /* CHGRecommendController.m */,
+				FA8238061B95F9AE00A4E7C8 /* CHGRecommendController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -264,6 +275,8 @@
 			children = (
 				FA8237E41B95EC3600A4E7C8 /* CHGTabBarController.h */,
 				FA8237E51B95EC3600A4E7C8 /* CHGTabBarController.m */,
+				FA8238011B95F59000A4E7C8 /* CHGNavigationController.h */,
+				FA8238021B95F59000A4E7C8 /* CHGNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -423,6 +436,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */,
 				FACD16E31B95678B00339438 /* Images.xcassets in Resources */,
 				FA8238001B95F12D00A4E7C8 /* CHGFriendTrendsViewController.xib in Resources */,
 			);
@@ -444,6 +458,7 @@
 			files = (
 				FA8237F31B95EC3600A4E7C8 /* CHGNewViewController.m in Sources */,
 				FA8237EF1B95EC3600A4E7C8 /* CHGTagViewController.m in Sources */,
+				FA8238071B95F9AE00A4E7C8 /* CHGRecommendController.m in Sources */,
 				FA8237F71B95EC3600A4E7C8 /* CHGTabBar.m in Sources */,
 				FA8237FF1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.m in Sources */,
 				FA8237F61B95EC3600A4E7C8 /* CHGTabBarController.m in Sources */,
@@ -452,6 +467,7 @@
 				FA8237F21B95EC3600A4E7C8 /* CHGSetingTableViewController.m in Sources */,
 				FA8237F11B95EC3600A4E7C8 /* CHGMeViewController.m in Sources */,
 				FA8237F81B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m in Sources */,
+				FA8238031B95F59000A4E7C8 /* CHGNavigationController.m in Sources */,
 				FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */,
 				FA8237F51B95EC3600A4E7C8 /* main.m in Sources */,
 				FA8237F91B95EC3600A4E7C8 /* UIView+CHGExtension.m in Sources */,

@@ -12,6 +12,7 @@
 #import "CHGFriendTrendsViewController.h"
 #import "CHGMeViewController.h"
 #import "CHGTabBar.h"
+#import "CHGNavigationController.h"
 
 @interface CHGTabBarController ()
 
@@ -50,10 +51,9 @@
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
-//    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
     
-    // 将vc包装成UINavigationController
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    // 将vc包装成CHGNavigationController
+    CHGNavigationController *nav = [[CHGNavigationController alloc] initWithRootViewController:vc];
     // 给CHGTabBarController添加子控制器nav
     [self addChildViewController:nav];
 }
