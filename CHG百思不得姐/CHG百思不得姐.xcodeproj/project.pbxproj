@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FA0D0F221B95B845001784A7 /* CHGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0D0F211B95B845001784A7 /* CHGTabBarController.m */; };
+		FA0D0F251B95B967001784A7 /* CHGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0D0F241B95B967001784A7 /* CHGEssenceViewController.m */; };
+		FA0D0F281B95B986001784A7 /* CHGNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0D0F271B95B986001784A7 /* CHGNewViewController.m */; };
+		FA0D0F2B1B95B99B001784A7 /* CHGFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0D0F2A1B95B99B001784A7 /* CHGFriendTrendsViewController.m */; };
+		FA0D0F2E1B95B9AE001784A7 /* CHGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0D0F2D1B95B9AE001784A7 /* CHGMeViewController.m */; };
 		FACD16D51B95678B00339438 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D41B95678B00339438 /* main.m */; };
 		FACD16D81B95678B00339438 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D71B95678B00339438 /* AppDelegate.m */; };
 		FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */; };
@@ -28,6 +32,14 @@
 /* Begin PBXFileReference section */
 		FA0D0F201B95B845001784A7 /* CHGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTabBarController.h; sourceTree = "<group>"; };
 		FA0D0F211B95B845001784A7 /* CHGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTabBarController.m; sourceTree = "<group>"; };
+		FA0D0F231B95B967001784A7 /* CHGEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGEssenceViewController.h; sourceTree = "<group>"; };
+		FA0D0F241B95B967001784A7 /* CHGEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGEssenceViewController.m; sourceTree = "<group>"; };
+		FA0D0F261B95B986001784A7 /* CHGNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGNewViewController.h; sourceTree = "<group>"; };
+		FA0D0F271B95B986001784A7 /* CHGNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGNewViewController.m; sourceTree = "<group>"; };
+		FA0D0F291B95B99B001784A7 /* CHGFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGFriendTrendsViewController.h; sourceTree = "<group>"; };
+		FA0D0F2A1B95B99B001784A7 /* CHGFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGFriendTrendsViewController.m; sourceTree = "<group>"; };
+		FA0D0F2C1B95B9AE001784A7 /* CHGMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGMeViewController.h; sourceTree = "<group>"; };
+		FA0D0F2D1B95B9AE001784A7 /* CHGMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGMeViewController.m; sourceTree = "<group>"; };
 		FACD16CF1B95678B00339438 /* CHG百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHG百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16D31B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16D41B95678B00339438 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +95,14 @@
 				FACD16D71B95678B00339438 /* AppDelegate.m */,
 				FA0D0F201B95B845001784A7 /* CHGTabBarController.h */,
 				FA0D0F211B95B845001784A7 /* CHGTabBarController.m */,
+				FA0D0F231B95B967001784A7 /* CHGEssenceViewController.h */,
+				FA0D0F241B95B967001784A7 /* CHGEssenceViewController.m */,
+				FA0D0F261B95B986001784A7 /* CHGNewViewController.h */,
+				FA0D0F271B95B986001784A7 /* CHGNewViewController.m */,
+				FA0D0F291B95B99B001784A7 /* CHGFriendTrendsViewController.h */,
+				FA0D0F2A1B95B99B001784A7 /* CHGFriendTrendsViewController.m */,
+				FA0D0F2C1B95B9AE001784A7 /* CHGMeViewController.h */,
+				FA0D0F2D1B95B9AE001784A7 /* CHGMeViewController.m */,
 				FACD16D21B95678B00339438 /* Supporting Files */,
 			);
 			path = "CHG百思不得姐";
@@ -218,6 +238,10 @@
 				FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */,
 				FACD16D81B95678B00339438 /* AppDelegate.m in Sources */,
 				FA0D0F221B95B845001784A7 /* CHGTabBarController.m in Sources */,
+				FA0D0F2E1B95B9AE001784A7 /* CHGMeViewController.m in Sources */,
+				FA0D0F2B1B95B99B001784A7 /* CHGFriendTrendsViewController.m in Sources */,
+				FA0D0F251B95B967001784A7 /* CHGEssenceViewController.m in Sources */,
+				FA0D0F281B95B986001784A7 /* CHGNewViewController.m in Sources */,
 				FACD16D51B95678B00339438 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
