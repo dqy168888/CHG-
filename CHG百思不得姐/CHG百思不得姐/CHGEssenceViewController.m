@@ -7,6 +7,7 @@
 //
 
 #import "CHGEssenceViewController.h"
+#import "CHGTagViewController.h"
 
 @interface CHGEssenceViewController ()
 
@@ -26,7 +27,10 @@
 
 - (void)tagClick
 {
-    CHGLogFunc;
+    CHGTagViewController *vc = [[CHGTagViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 @end
