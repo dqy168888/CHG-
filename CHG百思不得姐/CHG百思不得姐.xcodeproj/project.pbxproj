@@ -10,9 +10,9 @@
 		FACD16D51B95678B00339438 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D41B95678B00339438 /* main.m */; };
 		FACD16D81B95678B00339438 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D71B95678B00339438 /* AppDelegate.m */; };
 		FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */; };
-		FACD16DE1B95678B00339438 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16DD1B95678B00339438 /* ViewController.m */; };
 		FACD16E31B95678B00339438 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD16E21B95678B00339438 /* Images.xcassets */; };
 		FACD16F21B95678B00339438 /* CHG_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16F11B95678B00339438 /* CHG_____Tests.m */; };
+		FACD16FD1B956D9C00339438 /* CHGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16FC1B956D9C00339438 /* CHGTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,12 +32,12 @@
 		FACD16D61B95678B00339438 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FACD16D71B95678B00339438 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FACD16DA1B95678B00339438 /* CHG_____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CHG_____.xcdatamodel"; sourceTree = "<group>"; };
-		FACD16DC1B95678B00339438 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FACD16DD1B95678B00339438 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FACD16E21B95678B00339438 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FACD16EB1B95678B00339438 /* CHG百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CHG百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16F01B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16F11B95678B00339438 /* CHG_____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CHG_____Tests.m"; sourceTree = "<group>"; };
+		FACD16FB1B956D9C00339438 /* CHGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHGTabBarController.h; path = ../../../../../../Documents/CHGTabBarController.h; sourceTree = "<group>"; };
+		FACD16FC1B956D9C00339438 /* CHGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHGTabBarController.m; path = ../../../../../../Documents/CHGTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +81,8 @@
 			children = (
 				FACD16D61B95678B00339438 /* AppDelegate.h */,
 				FACD16D71B95678B00339438 /* AppDelegate.m */,
-				FACD16DC1B95678B00339438 /* ViewController.h */,
-				FACD16DD1B95678B00339438 /* ViewController.m */,
-				FACD16E21B95678B00339438 /* Images.xcassets */,
-				FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */,
+				FACD16FB1B956D9C00339438 /* CHGTabBarController.h */,
+				FACD16FC1B956D9C00339438 /* CHGTabBarController.m */,
 				FACD16D21B95678B00339438 /* Supporting Files */,
 			);
 			path = "CHG百思不得姐";
@@ -93,6 +91,8 @@
 		FACD16D21B95678B00339438 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FACD16E21B95678B00339438 /* Images.xcassets */,
+				FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */,
 				FACD16D31B95678B00339438 /* Info.plist */,
 				FACD16D41B95678B00339438 /* main.m */,
 			);
@@ -160,6 +160,7 @@
 		FACD16C71B95678B00339438 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CHG;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "陈弘根";
 				TargetAttributes = {
@@ -216,7 +217,7 @@
 			files = (
 				FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */,
 				FACD16D81B95678B00339438 /* AppDelegate.m in Sources */,
-				FACD16DE1B95678B00339438 /* ViewController.m in Sources */,
+				FACD16FD1B956D9C00339438 /* CHGTabBarController.m in Sources */,
 				FACD16D51B95678B00339438 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +396,7 @@
 				FACD16F71B95678B00339438 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FACD16F81B95678B00339438 /* Build configuration list for PBXNativeTarget "CHG百思不得姐Tests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +405,7 @@
 				FACD16FA1B95678B00339438 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

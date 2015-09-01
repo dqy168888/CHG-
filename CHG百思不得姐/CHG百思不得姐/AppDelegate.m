@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CHGTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,7 @@
     self.window.backgroundColor = [UIColor redColor];
     
     // 2、设置根控制器
-    self.window.rootViewController = [[UITableViewController alloc] init];
+    self.window.rootViewController = [[CHGTabBarController alloc] init];
     
     // 3、显示窗口
     [self.window makeKeyAndVisible];
