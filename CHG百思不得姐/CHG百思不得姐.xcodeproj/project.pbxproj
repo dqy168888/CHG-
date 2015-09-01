@@ -13,6 +13,7 @@
 		FA0D0F2B1B95B99B001784A7 /* CHGFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0D0F2A1B95B99B001784A7 /* CHGFriendTrendsViewController.m */; };
 		FA0D0F2E1B95B9AE001784A7 /* CHGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0D0F2D1B95B9AE001784A7 /* CHGMeViewController.m */; };
 		FA0D0F311B95BD76001784A7 /* CHGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0D0F301B95BD76001784A7 /* CHGTabBar.m */; };
+		FA0D0F341B95C684001784A7 /* UIView+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0D0F331B95C684001784A7 /* UIView+CHGExtension.m */; };
 		FACD16D51B95678B00339438 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D41B95678B00339438 /* main.m */; };
 		FACD16D81B95678B00339438 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D71B95678B00339438 /* AppDelegate.m */; };
 		FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */; };
@@ -43,6 +44,9 @@
 		FA0D0F2D1B95B9AE001784A7 /* CHGMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGMeViewController.m; sourceTree = "<group>"; };
 		FA0D0F2F1B95BD76001784A7 /* CHGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTabBar.h; sourceTree = "<group>"; };
 		FA0D0F301B95BD76001784A7 /* CHGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTabBar.m; sourceTree = "<group>"; };
+		FA0D0F321B95C684001784A7 /* UIView+CHGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CHGExtension.h"; sourceTree = "<group>"; };
+		FA0D0F331B95C684001784A7 /* UIView+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CHGExtension.m"; sourceTree = "<group>"; };
+		FA0D0F351B95C8D2001784A7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FACD16CF1B95678B00339438 /* CHG百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHG百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16D31B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16D41B95678B00339438 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -108,6 +112,9 @@
 				FA0D0F2D1B95B9AE001784A7 /* CHGMeViewController.m */,
 				FA0D0F2F1B95BD76001784A7 /* CHGTabBar.h */,
 				FA0D0F301B95BD76001784A7 /* CHGTabBar.m */,
+				FA0D0F321B95C684001784A7 /* UIView+CHGExtension.h */,
+				FA0D0F331B95C684001784A7 /* UIView+CHGExtension.m */,
+				FA0D0F351B95C8D2001784A7 /* PrefixHeader.pch */,
 				FACD16D21B95678B00339438 /* Supporting Files */,
 			);
 			path = "CHG百思不得姐";
@@ -241,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0D0F311B95BD76001784A7 /* CHGTabBar.m in Sources */,
+				FA0D0F341B95C684001784A7 /* UIView+CHGExtension.m in Sources */,
 				FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */,
 				FACD16D81B95678B00339438 /* AppDelegate.m in Sources */,
 				FA0D0F221B95B845001784A7 /* CHGTabBarController.m in Sources */,
@@ -356,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "CHG百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "CHG百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -367,6 +376,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "CHG百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "CHG百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
