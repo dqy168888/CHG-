@@ -11,4 +11,13 @@
 
 #import "UIView+CHGExtension.h"
 
+#ifdef DEBUG
+#define CHGLog(...) NSLog(__VA_ARGS__)
+#else
+#define CHGLog(...)
+#endif
+
+#define CHGLogFunc CHGLog(@"%s", __func__)
+
+
 #endif

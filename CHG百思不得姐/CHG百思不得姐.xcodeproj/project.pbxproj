@@ -100,8 +100,6 @@
 			children = (
 				FACD16D61B95678B00339438 /* AppDelegate.h */,
 				FACD16D71B95678B00339438 /* AppDelegate.m */,
-				FA0D0F201B95B845001784A7 /* CHGTabBarController.h */,
-				FA0D0F211B95B845001784A7 /* CHGTabBarController.m */,
 				FA0D0F231B95B967001784A7 /* CHGEssenceViewController.h */,
 				FA0D0F241B95B967001784A7 /* CHGEssenceViewController.m */,
 				FA0D0F261B95B986001784A7 /* CHGNewViewController.h */,
@@ -110,6 +108,8 @@
 				FA0D0F2A1B95B99B001784A7 /* CHGFriendTrendsViewController.m */,
 				FA0D0F2C1B95B9AE001784A7 /* CHGMeViewController.h */,
 				FA0D0F2D1B95B9AE001784A7 /* CHGMeViewController.m */,
+				FA0D0F201B95B845001784A7 /* CHGTabBarController.h */,
+				FA0D0F211B95B845001784A7 /* CHGTabBarController.m */,
 				FA0D0F2F1B95BD76001784A7 /* CHGTabBar.h */,
 				FA0D0F301B95BD76001784A7 /* CHGTabBar.m */,
 				FA0D0F321B95C684001784A7 /* UIView+CHGExtension.h */,
