@@ -14,13 +14,17 @@
 
 @implementation CHGFriendTrendsViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"关注";
+    self.navigationItem.title = @"我的关注";
     
     UIBarButtonItem *tagItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" target:self action:@selector(tagClick)];
     
     self.navigationItem.leftBarButtonItem = tagItem;
+    
+    // 设置背景颜色
+    self.view.backgroundColor = CHGGlobalBg;
 }
 
 - (void)tagClick

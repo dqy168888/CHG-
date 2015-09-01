@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // 1、设置窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor redColor];
+//    self.window.backgroundColor = [UIColor redColor];
     
     // 2、设置根控制器
     self.window.rootViewController = [[CHGTabBarController alloc] init];

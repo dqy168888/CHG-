@@ -1,36 +1,35 @@
 //
-//  CHGEssenceViewController.m
+//  CHGNewViewController.m
 //  CHG百思不得姐
 //
 //  Created by chenhongen on 15/9/1.
 //  Copyright (c) 2015年 陈弘根. All rights reserved.
 //
 
-#import "CHGEssenceViewController.h"
-#import "CHGTagViewController.h"
+#import "CHGNewViewController.h"
 
-@interface CHGEssenceViewController ()
+@interface CHGNewViewController ()
 
 @end
 
-@implementation CHGEssenceViewController
+@implementation CHGNewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     
     UIBarButtonItem *tagItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
     
     self.navigationItem.leftBarButtonItem = tagItem;
+    
+    // 设置背景颜色
+    self.view.backgroundColor = CHGGlobalBg;
 }
 
 - (void)tagClick
 {
-    CHGTagViewController *vc = [[CHGTagViewController alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
-    
+    CHGLogFunc;
 }
+
 
 @end
