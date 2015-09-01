@@ -11,6 +11,7 @@
 #import "CHGNewViewController.h"
 #import "CHGFriendTrendsViewController.h"
 #import "CHGMeViewController.h"
+#import "CHGTabBar.h"
 
 @interface CHGTabBarController ()
 
@@ -42,6 +43,8 @@
     [self setupChildVc:[[CHGEssenceViewController alloc] init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
     [self setupChildVc:[[CHGEssenceViewController alloc] init] title:@"我的" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    
+    [self setValue:[[CHGTabBar alloc] init] forKeyPath:@"tabBar"];
 
 }
 
@@ -51,6 +54,7 @@
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
+    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
     // 给CHGTabBarController添加子控制器
     [self addChildViewController:vc];
 }
