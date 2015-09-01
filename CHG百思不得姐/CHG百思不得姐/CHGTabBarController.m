@@ -23,29 +23,25 @@
     [super viewDidLoad];
     
     // 统一设置所有UITabBarItem的文字属性
-    NSMutableDictionary *normalAttr = [NSMutableDictionary dictionary];
-    normalAttr[NSFontAttributeName] = [UIFont systemFontOfSize:13];
-    normalAttr[NSForegroundColorAttributeName]  = [UIColor grayColor];
-    
-    NSMutableDictionary *selectedAttr = [NSMutableDictionary dictionary];
-    selectedAttr[NSFontAttributeName] = normalAttr[NSFontAttributeName];
-    normalAttr[NSForegroundColorAttributeName]  = [UIColor darkGrayColor];
-    
-    UITabBarItem *item = [UITabBarItem appearance];
-    [item setTitleTextAttributes:normalAttr forState:UIControlStateNormal];
-    [item setTitleTextAttributes:selectedAttr forState:UIControlStateSelected];
+    [self setupAttribute];
 
     // 设置子控制器
+    [self setupChildVc];
+    
+    // 设置tabbar
+    [self setupTabBar];
+}
+
+- (void)setupChildVc
+{
     [self setupChildVc:[[CHGEssenceViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
     
     [self setupChildVc:[[CHGNewViewController alloc] init] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
-
+    
     [self setupChildVc:[[CHGFriendTrendsViewController alloc] init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
     [self setupChildVc:[[CHGMeViewController alloc] init] title:@"我的" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
-    [self setValue:[[CHGTabBar alloc] init] forKeyPath:@"tabBar"];
-
 }
 
 // 设置子控制器
@@ -61,5 +57,29 @@
     // 给CHGTabBarController添加子控制器nav
     [self addChildViewController:nav];
 }
+
+
+- (void)setupTabBar
+{
+    [self setValue:[[CHGTabBar alloc] init] forKeyPath:@"tabBar"];
+}
+
+
+- (void)setupAttribute
+{
+    NSMutableDictionary *normalAttr = [NSMutableDictionary dictionary];
+    normalAttr[NSFontAttributeName] = [UIFont systemFontOfSize:13];
+    normalAttr[NSForegroundColorAttributeName]  = [UIColor grayColor];
+    
+    NSMutableDictionary *selectedAttr = [NSMutableDictionary dictionary];
+    selectedAttr[NSFontAttributeName] = normalAttr[NSFontAttributeName];
+    normalAttr[NSForegroundColorAttributeName]  = [UIColor darkGrayColor];
+    
+    UITabBarItem *item = [UITabBarItem appearance];
+    [item setTitleTextAttributes:normalAttr forState:UIControlStateNormal];
+    [item setTitleTextAttributes:selectedAttr forState:UIControlStateSelected];
+}
+
+
 
 @end

@@ -10,6 +10,8 @@
 #define _1_______PrefixHeader_pch
 
 #import "UIView+CHGExtension.h"
+#import <UIKit/UIKit.h>
+#import "UIBarButtonItem+CHGExtension.h"
 
 #ifdef DEBUG
 #define CHGLog(...) NSLog(__VA_ARGS__)

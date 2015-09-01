@@ -18,12 +18,9 @@
     [super viewDidLoad];
     self.navigationItem.title = @"关注";
     
-    UIButton *tagButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [tagButton setBackgroundImage:[UIImage imageNamed:@"friendsRecommentIcon"] forState:UIControlStateNormal];
-    [tagButton setBackgroundImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] forState:UIControlStateHighlighted];
-    tagButton.size = tagButton.currentBackgroundImage.size;
-    [tagButton addTarget:self action:@selector(tagClick) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:tagButton];
+    UIBarButtonItem *tagItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" target:self action:@selector(tagClick)];
+    
+    self.navigationItem.leftBarButtonItem = tagItem;
 }
 
 - (void)tagClick

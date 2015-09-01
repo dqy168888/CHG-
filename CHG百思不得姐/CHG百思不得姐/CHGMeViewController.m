@@ -8,6 +8,7 @@
 
 #import "CHGMeViewController.h"
 
+
 @interface CHGMeViewController ()
 
 @end
@@ -18,23 +19,11 @@
     [super viewDidLoad];
     self.navigationItem.title = @"我的";
     
+    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon" highImage:@"mine-setting-icon-click" target:self action:@selector(settingClick)];
     
-    UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [settingButton setBackgroundImage:[UIImage imageNamed:@"mine-setting-icon"] forState:UIControlStateNormal];
-    [settingButton setBackgroundImage:[UIImage imageNamed:@"mine-setting-icon-click"] forState:UIControlStateHighlighted];
-    settingButton.size = settingButton.currentBackgroundImage.size;
-    [settingButton addTarget:self action:@selector(settingClick) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *nightModeItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon"highImage:@"mine-moon-icon-click" target:self action:@selector(nightModeClick)];
     
-    UIButton *nightModeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [nightModeButton setBackgroundImage:[UIImage imageNamed:@"mine-moon-icon"] forState:UIControlStateNormal];
-    [nightModeButton setBackgroundImage:[UIImage imageNamed:@"mine-moon-icon-click"] forState:UIControlStateHighlighted];
-    nightModeButton.size = nightModeButton.currentBackgroundImage.size;
-    [nightModeButton addTarget:self action:@selector(nightModeClick) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.navigationItem.rightBarButtonItems = @[
-                                                [[UIBarButtonItem alloc] initWithCustomView:settingButton],
-                                                [[UIBarButtonItem alloc] initWithCustomView:nightModeButton]
-                                                ];
+    self.navigationItem.rightBarButtonItems = @[settingItem,nightModeItem];
 }
 
 - (void)settingClick
