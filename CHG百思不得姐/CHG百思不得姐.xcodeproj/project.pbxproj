@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0D0F221B95B845001784A7 /* CHGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0D0F211B95B845001784A7 /* CHGTabBarController.m */; };
 		FACD16D51B95678B00339438 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D41B95678B00339438 /* main.m */; };
 		FACD16D81B95678B00339438 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D71B95678B00339438 /* AppDelegate.m */; };
 		FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */; };
 		FACD16E31B95678B00339438 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD16E21B95678B00339438 /* Images.xcassets */; };
 		FACD16F21B95678B00339438 /* CHG_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16F11B95678B00339438 /* CHG_____Tests.m */; };
-		FACD16FD1B956D9C00339438 /* CHGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16FC1B956D9C00339438 /* CHGTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA0D0F201B95B845001784A7 /* CHGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTabBarController.h; sourceTree = "<group>"; };
+		FA0D0F211B95B845001784A7 /* CHGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTabBarController.m; sourceTree = "<group>"; };
 		FACD16CF1B95678B00339438 /* CHG百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHG百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16D31B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16D41B95678B00339438 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,8 +38,6 @@
 		FACD16EB1B95678B00339438 /* CHG百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CHG百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16F01B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16F11B95678B00339438 /* CHG_____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CHG_____Tests.m"; sourceTree = "<group>"; };
-		FACD16FB1B956D9C00339438 /* CHGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHGTabBarController.h; path = ../../../../../../Documents/CHGTabBarController.h; sourceTree = "<group>"; };
-		FACD16FC1B956D9C00339438 /* CHGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHGTabBarController.m; path = ../../../../../../Documents/CHGTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +81,8 @@
 			children = (
 				FACD16D61B95678B00339438 /* AppDelegate.h */,
 				FACD16D71B95678B00339438 /* AppDelegate.m */,
-				FACD16FB1B956D9C00339438 /* CHGTabBarController.h */,
-				FACD16FC1B956D9C00339438 /* CHGTabBarController.m */,
+				FA0D0F201B95B845001784A7 /* CHGTabBarController.h */,
+				FA0D0F211B95B845001784A7 /* CHGTabBarController.m */,
 				FACD16D21B95678B00339438 /* Supporting Files */,
 			);
 			path = "CHG百思不得姐";
@@ -217,7 +217,7 @@
 			files = (
 				FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */,
 				FACD16D81B95678B00339438 /* AppDelegate.m in Sources */,
-				FACD16FD1B956D9C00339438 /* CHGTabBarController.m in Sources */,
+				FA0D0F221B95B845001784A7 /* CHGTabBarController.m in Sources */,
 				FACD16D51B95678B00339438 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
