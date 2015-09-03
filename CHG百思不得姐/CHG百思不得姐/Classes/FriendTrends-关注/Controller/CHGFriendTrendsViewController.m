@@ -8,6 +8,7 @@
 
 #import "CHGFriendTrendsViewController.h"
 #import "CHGRecommendController.h"
+#import "CHGLoginRegisterViewController.h"
 
 @interface CHGFriendTrendsViewController ()
 
@@ -15,6 +16,13 @@
 
 @implementation CHGFriendTrendsViewController
 
+- (IBAction)loginClick:(UIButton *)sender {
+    CHGLoginRegisterViewController *loginVc = [[CHGLoginRegisterViewController alloc] init];
+    [self.navigationController presentViewController:loginVc animated:YES completion:^{
+        
+    }];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

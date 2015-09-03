@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */; };
 		FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8237C41B95EC3600A4E7C8 /* CHGEssenceViewController.m */; };
 		FA8237EF1B95EC3600A4E7C8 /* CHGTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8237C61B95EC3600A4E7C8 /* CHGTagViewController.m */; };
 		FA8237F11B95EC3600A4E7C8 /* CHGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8237D21B95EC3600A4E7C8 /* CHGMeViewController.m */; };
@@ -23,6 +24,8 @@
 		FA8238031B95F59000A4E7C8 /* CHGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8238021B95F59000A4E7C8 /* CHGNavigationController.m */; };
 		FA8238071B95F9AE00A4E7C8 /* CHGRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8238051B95F9AE00A4E7C8 /* CHGRecommendController.m */; };
 		FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8238061B95F9AE00A4E7C8 /* CHGRecommendController.xib */; };
+		FA9A97361B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A97341B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m */; };
+		FA9A97371B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9A97351B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib */; };
 		FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */; };
 		FACD16E31B95678B00339438 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD16E21B95678B00339438 /* Images.xcassets */; };
 		FACD16F21B95678B00339438 /* CHG_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16F11B95678B00339438 /* CHG_____Tests.m */; };
@@ -39,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA5B04771B98AD9800FE4D92 /* CHGQuickLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGQuickLoginButton.h; sourceTree = "<group>"; };
+		FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGQuickLoginButton.m; sourceTree = "<group>"; };
 		FA8237C31B95EC3600A4E7C8 /* CHGEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGEssenceViewController.h; sourceTree = "<group>"; };
 		FA8237C41B95EC3600A4E7C8 /* CHGEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGEssenceViewController.m; sourceTree = "<group>"; };
 		FA8237C51B95EC3600A4E7C8 /* CHGTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTagViewController.h; sourceTree = "<group>"; };
@@ -49,18 +54,18 @@
 		FA8237D41B95EC3600A4E7C8 /* CHGSetingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGSetingTableViewController.m; sourceTree = "<group>"; };
 		FA8237D91B95EC3600A4E7C8 /* CHGNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGNewViewController.h; sourceTree = "<group>"; };
 		FA8237DA1B95EC3600A4E7C8 /* CHGNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGNewViewController.m; sourceTree = "<group>"; };
-		FA8237DF1B95EC3600A4E7C8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FA8237E01B95EC3600A4E7C8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FA8237E11B95EC3600A4E7C8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FA8237E21B95EC3600A4E7C8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FA8237DF1B95EC3600A4E7C8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Category/AppDelegate.h; sourceTree = "<group>"; };
+		FA8237E01B95EC3600A4E7C8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Category/AppDelegate.m; sourceTree = "<group>"; };
+		FA8237E11B95EC3600A4E7C8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Category/main.m; sourceTree = "<group>"; };
+		FA8237E21B95EC3600A4E7C8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Category/PrefixHeader.pch; sourceTree = "<group>"; };
 		FA8237E41B95EC3600A4E7C8 /* CHGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTabBarController.h; sourceTree = "<group>"; };
 		FA8237E51B95EC3600A4E7C8 /* CHGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTabBarController.m; sourceTree = "<group>"; };
 		FA8237E81B95EC3600A4E7C8 /* CHGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTabBar.h; sourceTree = "<group>"; };
 		FA8237E91B95EC3600A4E7C8 /* CHGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTabBar.m; sourceTree = "<group>"; };
-		FA8237EA1B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+CHGExtension.h"; sourceTree = "<group>"; };
-		FA8237EB1B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CHGExtension.m"; sourceTree = "<group>"; };
-		FA8237EC1B95EC3600A4E7C8 /* UIView+CHGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CHGExtension.h"; sourceTree = "<group>"; };
-		FA8237ED1B95EC3600A4E7C8 /* UIView+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CHGExtension.m"; sourceTree = "<group>"; };
+		FA8237EA1B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+CHGExtension.h"; path = "../View/UIBarButtonItem+CHGExtension.h"; sourceTree = "<group>"; };
+		FA8237EB1B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+CHGExtension.m"; path = "../View/UIBarButtonItem+CHGExtension.m"; sourceTree = "<group>"; };
+		FA8237EC1B95EC3600A4E7C8 /* UIView+CHGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+CHGExtension.h"; path = "../View/UIView+CHGExtension.h"; sourceTree = "<group>"; };
+		FA8237ED1B95EC3600A4E7C8 /* UIView+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+CHGExtension.m"; path = "../View/UIView+CHGExtension.m"; sourceTree = "<group>"; };
 		FA8237FC1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGFriendTrendsViewController.h; sourceTree = "<group>"; };
 		FA8237FD1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGFriendTrendsViewController.m; sourceTree = "<group>"; };
 		FA8237FE1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGFriendTrendsViewController.xib; sourceTree = "<group>"; };
@@ -69,6 +74,9 @@
 		FA8238041B95F9AE00A4E7C8 /* CHGRecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGRecommendController.h; sourceTree = "<group>"; };
 		FA8238051B95F9AE00A4E7C8 /* CHGRecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGRecommendController.m; sourceTree = "<group>"; };
 		FA8238061B95F9AE00A4E7C8 /* CHGRecommendController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGRecommendController.xib; sourceTree = "<group>"; };
+		FA9A97331B96A45E00EF0EB6 /* CHGLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGLoginRegisterViewController.h; sourceTree = "<group>"; };
+		FA9A97341B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGLoginRegisterViewController.m; sourceTree = "<group>"; };
+		FA9A97351B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		FACD16CF1B95678B00339438 /* CHG百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHG百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16D31B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16DA1B95678B00339438 /* CHG_____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CHG_____.xcdatamodel"; sourceTree = "<group>"; };
@@ -159,6 +167,9 @@
 				FA8237FC1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.h */,
 				FA8237FD1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.m */,
 				FA8237FE1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.xib */,
+				FA9A97331B96A45E00EF0EB6 /* CHGLoginRegisterViewController.h */,
+				FA9A97341B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m */,
+				FA9A97351B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib */,
 				FA8238041B95F9AE00A4E7C8 /* CHGRecommendController.h */,
 				FA8238051B95F9AE00A4E7C8 /* CHGRecommendController.m */,
 				FA8238061B95F9AE00A4E7C8 /* CHGRecommendController.xib */,
@@ -176,6 +187,8 @@
 		FA8237CE1B95EC3600A4E7C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA5B04771B98AD9800FE4D92 /* CHGQuickLoginButton.h */,
+				FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,7 +264,11 @@
 		FA8237DD1B95EC3600A4E7C8 /* Other-其他 */ = {
 			isa = PBXGroup;
 			children = (
-				FA8237DE1B95EC3600A4E7C8 /* Category */,
+				FA8237DF1B95EC3600A4E7C8 /* AppDelegate.h */,
+				FA8237E01B95EC3600A4E7C8 /* AppDelegate.m */,
+				FA8237E11B95EC3600A4E7C8 /* main.m */,
+				FA8237E21B95EC3600A4E7C8 /* PrefixHeader.pch */,
+				FA8237DE1B95EC3600A4E7C8 /* Category-分类 */,
 				FA8237E31B95EC3600A4E7C8 /* Controller */,
 				FA8237E61B95EC3600A4E7C8 /* Model */,
 				FA8237E71B95EC3600A4E7C8 /* View */,
@@ -259,14 +276,15 @@
 			path = "Other-其他";
 			sourceTree = "<group>";
 		};
-		FA8237DE1B95EC3600A4E7C8 /* Category */ = {
+		FA8237DE1B95EC3600A4E7C8 /* Category-分类 */ = {
 			isa = PBXGroup;
 			children = (
-				FA8237DF1B95EC3600A4E7C8 /* AppDelegate.h */,
-				FA8237E01B95EC3600A4E7C8 /* AppDelegate.m */,
-				FA8237E11B95EC3600A4E7C8 /* main.m */,
-				FA8237E21B95EC3600A4E7C8 /* PrefixHeader.pch */,
+				FA8237EA1B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.h */,
+				FA8237EB1B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m */,
+				FA8237EC1B95EC3600A4E7C8 /* UIView+CHGExtension.h */,
+				FA8237ED1B95EC3600A4E7C8 /* UIView+CHGExtension.m */,
 			);
+			name = "Category-分类";
 			path = Category;
 			sourceTree = "<group>";
 		};
@@ -293,10 +311,6 @@
 			children = (
 				FA8237E81B95EC3600A4E7C8 /* CHGTabBar.h */,
 				FA8237E91B95EC3600A4E7C8 /* CHGTabBar.m */,
-				FA8237EA1B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.h */,
-				FA8237EB1B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m */,
-				FA8237EC1B95EC3600A4E7C8 /* UIView+CHGExtension.h */,
-				FA8237ED1B95EC3600A4E7C8 /* UIView+CHGExtension.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,6 +452,7 @@
 			files = (
 				FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */,
 				FACD16E31B95678B00339438 /* Images.xcassets in Resources */,
+				FA9A97371B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib in Resources */,
 				FA8238001B95F12D00A4E7C8 /* CHGFriendTrendsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +475,7 @@
 				FA8237EF1B95EC3600A4E7C8 /* CHGTagViewController.m in Sources */,
 				FA8238071B95F9AE00A4E7C8 /* CHGRecommendController.m in Sources */,
 				FA8237F71B95EC3600A4E7C8 /* CHGTabBar.m in Sources */,
+				FA9A97361B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m in Sources */,
 				FA8237FF1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.m in Sources */,
 				FA8237F61B95EC3600A4E7C8 /* CHGTabBarController.m in Sources */,
 				FA8237F41B95EC3600A4E7C8 /* AppDelegate.m in Sources */,
@@ -468,6 +484,7 @@
 				FA8237F11B95EC3600A4E7C8 /* CHGMeViewController.m in Sources */,
 				FA8237F81B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m in Sources */,
 				FA8238031B95F59000A4E7C8 /* CHGNavigationController.m in Sources */,
+				FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */,
 				FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */,
 				FA8237F51B95EC3600A4E7C8 /* main.m in Sources */,
 				FA8237F91B95EC3600A4E7C8 /* UIView+CHGExtension.m in Sources */,
