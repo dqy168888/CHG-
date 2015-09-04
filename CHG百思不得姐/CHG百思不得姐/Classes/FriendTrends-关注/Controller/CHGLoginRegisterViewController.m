@@ -9,6 +9,7 @@
 #import "CHGLoginRegisterViewController.h"
 
 @interface CHGLoginRegisterViewController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftSpace;
 
 @end
 
@@ -18,6 +19,23 @@
     [self dismissViewControllerAnimated:YES completion:^{
         
     }];
+}
+
+
+- (IBAction)loginRegisterBtn:(UIButton *)btn {
+    if (self.leftSpace.constant == 0) {
+        self.leftSpace.constant = - self.view.width;
+        btn.selected = YES;
+    }else
+    {
+        self.leftSpace.constant = 0;
+        btn.selected = NO;
+    }
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+    
 }
 
 
