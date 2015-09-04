@@ -21,7 +21,7 @@
     }];
 }
 
-
+ 
 - (IBAction)loginRegisterBtn:(UIButton *)btn {
     if (self.leftSpace.constant == 0) {
         self.leftSpace.constant = - self.view.width;
