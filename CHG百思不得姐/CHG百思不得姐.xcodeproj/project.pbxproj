@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA575B961B99528800B5652F /* CHGLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */; };
 		FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */; };
 		FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8237C41B95EC3600A4E7C8 /* CHGEssenceViewController.m */; };
 		FA8237EF1B95EC3600A4E7C8 /* CHGTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8237C61B95EC3600A4E7C8 /* CHGTagViewController.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA575B941B99528800B5652F /* CHGLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGLoginRegisterTextField.h; sourceTree = "<group>"; };
+		FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGLoginRegisterTextField.m; sourceTree = "<group>"; };
 		FA5B04771B98AD9800FE4D92 /* CHGQuickLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGQuickLoginButton.h; sourceTree = "<group>"; };
 		FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGQuickLoginButton.m; sourceTree = "<group>"; };
 		FA8237C31B95EC3600A4E7C8 /* CHGEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGEssenceViewController.h; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 			children = (
 				FA5B04771B98AD9800FE4D92 /* CHGQuickLoginButton.h */,
 				FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */,
+				FA575B941B99528800B5652F /* CHGLoginRegisterTextField.h */,
+				FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,6 +485,7 @@
 				FA8237F61B95EC3600A4E7C8 /* CHGTabBarController.m in Sources */,
 				FA8237F41B95EC3600A4E7C8 /* AppDelegate.m in Sources */,
 				FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */,
+				FA575B961B99528800B5652F /* CHGLoginRegisterTextField.m in Sources */,
 				FA8237F21B95EC3600A4E7C8 /* CHGSetingTableViewController.m in Sources */,
 				FA8237F11B95EC3600A4E7C8 /* CHGMeViewController.m in Sources */,
 				FA8237F81B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m in Sources */,
