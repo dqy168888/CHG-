@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CHGTagViewController : UIViewController
+@interface CHGTagViewController : UITableViewController
 
 @end
