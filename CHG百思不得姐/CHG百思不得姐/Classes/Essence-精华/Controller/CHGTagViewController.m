@@ -78,7 +78,7 @@
     
     // 发送请求
     CHGWeakSelf
-    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self.manager GET:CHGRequestURL parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         
         // 服务器没有数据（一般不会出现这种情况）
         if (responseObject == nil) {
