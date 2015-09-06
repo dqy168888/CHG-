@@ -41,14 +41,7 @@
     }
     
     // 设置图片
-    CHGWeakSelf
-    UIImage *placeholderimage =[[UIImage imageNamed:@"defaultUserIcon"] circleImage];
-    [self.imageListView sd_setImageWithURL:[NSURL URLWithString:Tag.image_list] placeholderImage:placeholderimage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        // 如果图片下载失败，就不做任何处理，按照默认的做法：会显示占位图片
-        if (image == nil) return;
-        
-        weakSelf.imageListView.image = [image circleImage];
-    }];
+    [self.imageListView setHeader:Tag.image_list];
 }
 
 @end

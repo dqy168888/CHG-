@@ -30,6 +30,7 @@
 		FA9994161B9C4F1800CF4E83 /* CHGTagViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9994141B9C4F1800CF4E83 /* CHGTagViewCell.m */; };
 		FA9994171B9C4F1800CF4E83 /* CHGTagViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9994151B9C4F1800CF4E83 /* CHGTagViewCell.xib */; };
 		FA99941D1B9C623C00CF4E83 /* UIImage+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA99941C1B9C623C00CF4E83 /* UIImage+CHGExtension.m */; };
+		FA9994201B9C662A00CF4E83 /* UIImageView+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA99941F1B9C662A00CF4E83 /* UIImageView+CHGExtension.m */; };
 		FA9A97361B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A97341B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m */; };
 		FA9A97371B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9A97351B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib */; };
 		FAA42F3A1B9BBF67006145C6 /* CHGRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA42F391B9BBF67006145C6 /* CHGRecommendCategory.m */; };
@@ -95,6 +96,8 @@
 		FA9994151B9C4F1800CF4E83 /* CHGTagViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTagViewCell.xib; sourceTree = "<group>"; };
 		FA99941B1B9C623C00CF4E83 /* UIImage+CHGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CHGExtension.h"; sourceTree = "<group>"; };
 		FA99941C1B9C623C00CF4E83 /* UIImage+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CHGExtension.m"; sourceTree = "<group>"; };
+		FA99941E1B9C662A00CF4E83 /* UIImageView+CHGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CHGExtension.h"; sourceTree = "<group>"; };
+		FA99941F1B9C662A00CF4E83 /* UIImageView+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CHGExtension.m"; sourceTree = "<group>"; };
 		FA9A97331B96A45E00EF0EB6 /* CHGLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGLoginRegisterViewController.h; sourceTree = "<group>"; };
 		FA9A97341B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGLoginRegisterViewController.m; sourceTree = "<group>"; };
 		FA9A97351B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGLoginRegisterViewController.xib; sourceTree = "<group>"; };
@@ -341,6 +344,8 @@
 				FA8237ED1B95EC3600A4E7C8 /* UIView+CHGExtension.m */,
 				FA99941B1B9C623C00CF4E83 /* UIImage+CHGExtension.h */,
 				FA99941C1B9C623C00CF4E83 /* UIImage+CHGExtension.m */,
+				FA99941E1B9C662A00CF4E83 /* UIImageView+CHGExtension.h */,
+				FA99941F1B9C662A00CF4E83 /* UIImageView+CHGExtension.m */,
 			);
 			name = "Category-分类";
 			path = Category;
@@ -587,6 +592,7 @@
 				FAA42F3E1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m in Sources */,
 				FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */,
 				FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */,
+				FA9994201B9C662A00CF4E83 /* UIImageView+CHGExtension.m in Sources */,
 				FA9994161B9C4F1800CF4E83 /* CHGTagViewCell.m in Sources */,
 				FA8237F51B95EC3600A4E7C8 /* main.m in Sources */,
 				FA8237F91B95EC3600A4E7C8 /* UIView+CHGExtension.m in Sources */,
