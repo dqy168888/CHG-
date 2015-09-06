@@ -28,6 +28,9 @@
 		FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8238061B95F9AE00A4E7C8 /* CHGRecommendController.xib */; };
 		FA9A97361B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A97341B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m */; };
 		FA9A97371B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9A97351B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib */; };
+		FAA42F3A1B9BBF67006145C6 /* CHGRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA42F391B9BBF67006145C6 /* CHGRecommendCategory.m */; };
+		FAA42F3E1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA42F3C1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m */; };
+		FAA42F3F1B9BBFBD006145C6 /* CHGRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA42F3D1B9BBFBD006145C6 /* CHGRecommendCategoryCell.xib */; };
 		FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */; };
 		FACD16E31B95678B00339438 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD16E21B95678B00339438 /* Images.xcassets */; };
 		FACD16F21B95678B00339438 /* CHG_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16F11B95678B00339438 /* CHG_____Tests.m */; };
@@ -84,6 +87,11 @@
 		FA9A97331B96A45E00EF0EB6 /* CHGLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGLoginRegisterViewController.h; sourceTree = "<group>"; };
 		FA9A97341B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGLoginRegisterViewController.m; sourceTree = "<group>"; };
 		FA9A97351B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		FAA42F381B9BBF67006145C6 /* CHGRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGRecommendCategory.h; sourceTree = "<group>"; };
+		FAA42F391B9BBF67006145C6 /* CHGRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGRecommendCategory.m; sourceTree = "<group>"; };
+		FAA42F3B1B9BBFBD006145C6 /* CHGRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGRecommendCategoryCell.h; sourceTree = "<group>"; };
+		FAA42F3C1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGRecommendCategoryCell.m; sourceTree = "<group>"; };
+		FAA42F3D1B9BBFBD006145C6 /* CHGRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGRecommendCategoryCell.xib; sourceTree = "<group>"; };
 		FACD16CF1B95678B00339438 /* CHG百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHG百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16D31B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16DA1B95678B00339438 /* CHG_____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CHG_____.xcdatamodel"; sourceTree = "<group>"; };
@@ -205,6 +213,8 @@
 		FA8237CD1B95EC3600A4E7C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FAA42F381B9BBF67006145C6 /* CHGRecommendCategory.h */,
+				FAA42F391B9BBF67006145C6 /* CHGRecommendCategory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +226,9 @@
 				FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */,
 				FA575B941B99528800B5652F /* CHGLoginRegisterTextField.h */,
 				FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */,
+				FAA42F3B1B9BBFBD006145C6 /* CHGRecommendCategoryCell.h */,
+				FAA42F3C1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m */,
+				FAA42F3D1B9BBFBD006145C6 /* CHGRecommendCategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -481,6 +494,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA42F3F1B9BBFBD006145C6 /* CHGRecommendCategoryCell.xib in Resources */,
 				FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */,
 				FACD16E31B95678B00339438 /* Images.xcassets in Resources */,
 				FA9A97371B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib in Resources */,
@@ -549,6 +563,8 @@
 				FA8237F11B95EC3600A4E7C8 /* CHGMeViewController.m in Sources */,
 				FA8237F81B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m in Sources */,
 				FA8238031B95F59000A4E7C8 /* CHGNavigationController.m in Sources */,
+				FAA42F3A1B9BBF67006145C6 /* CHGRecommendCategory.m in Sources */,
+				FAA42F3E1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m in Sources */,
 				FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */,
 				FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */,
 				FA8237F51B95EC3600A4E7C8 /* main.m in Sources */,

@@ -7,8 +7,14 @@
 //
 
 #import "CHGRecommendController.h"
+#import <AFNetworking.h>
 
-@interface CHGRecommendController ()
+
+@interface CHGRecommendController ()<UITableViewDataSource , UITableViewDelegate>
+
+@property (nonatomic, strong) NSArray *Categorys;
+
+@property (weak, nonatomic) IBOutlet UITableView *CategoryTableView;
 
 @end
 
@@ -20,7 +26,43 @@
     self.navigationItem.title = @"推荐关注";
     // 设置背景色
     self.view.backgroundColor = CHGGlobalBg;
+    
+    
+    
+    // 请求数据
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"category";
+    params[@"c"] = @"subscribe";
+    
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+    } failure:^(NSURLSessionDataTask * task, NSError * responseObject) {
+        
+    }];
+
+    
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 100;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"chgCell"];
+    
+    cell.textLabel.text = @"111";
+    
+    return cell;
+    
+}
+
+#pragma mark < UITableViewDelegate >
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+}
 
 @end
