@@ -77,7 +77,7 @@
     params[@"c"] = @"topic";
     
     // 发送请求
-    __weak typeof(self) weakSelf = self;
+    CHGWeakSelf
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         
         // 服务器没有数据（一般不会出现这种情况）
@@ -126,28 +126,12 @@
     return cell;
 }
 
-// 即将干掉时
-//- (void)viewWillDisappear:(BOOL)animated
-//{
-//    [super viewWillDisappear:animated];
-//
-//    [SVProgressHUD dismiss];
-//}
+
 
 - (void)dealloc
 {
     // 停止请求(取消所有task)
     [self.manager invalidateSessionCancelingTasks:YES];
-    
-    //    [self.manager.downloadTasks makeObjectsPerformSelector:@selector(cancel)];
-    //    [self.manager.dataTasks makeObjectsPerformSelector:@selector(cancel)];
-    //    [self.manager.uploadTasks makeObjectsPerformSelector:@selector(cancel)];
-    
-    //    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
-    
-    //    for (NSURLSessionTask *task in self.manager.tasks) {
-    //        [task cancel];
-    //    }
     
     [SVProgressHUD dismiss];
 }

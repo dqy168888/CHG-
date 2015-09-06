@@ -12,6 +12,7 @@
 #import "UIView+CHGExtension.h"
 #import <UIKit/UIKit.h>
 #import "UIBarButtonItem+CHGExtension.h"
+#import "UIImage+CHGExtension.h"
 
 // 日志输出
 #ifdef DEBUG // 开发阶段-DEBUG阶段:使用Log
@@ -26,5 +27,8 @@
 #define CHGRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 #define CHGGlobalBg CHGRGBColor(223, 223, 223)
+
+// 弱引用
+#define CHGWeakSelf __weak typeof(self) weakSelf = self;
 
 #endif

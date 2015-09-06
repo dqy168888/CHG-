@@ -29,8 +29,9 @@
 - (void)setTag:(CHGTag *)Tag
 {
     _Tag = Tag;
-
+    
     self.themeNameLabel.text = Tag.theme_name;
+    
     // 设置订阅数
     if (Tag.sub_number > 10000) {
         self.subNumberLabel.text = [NSString stringWithFormat:@"%.1f万人订阅",Tag.sub_number / 10000.0];
@@ -39,7 +40,15 @@
         self.subNumberLabel.text = [NSString stringWithFormat:@"%zd人订阅",Tag.sub_number];
     }
     
-    [self.imageListView sd_setImageWithURL:[NSURL URLWithString:Tag.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    // 设置图片
+    CHGWeakSelf
+    UIImage *placeholderimage =[[UIImage imageNamed:@"defaultUserIcon"] circleImage];
+    [self.imageListView sd_setImageWithURL:[NSURL URLWithString:Tag.image_list] placeholderImage:placeholderimage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        // 如果图片下载失败，就不做任何处理，按照默认的做法：会显示占位图片
+        if (image == nil) return;
+        
+        weakSelf.imageListView.image = [image circleImage];
+    }];
 }
 
 @end
