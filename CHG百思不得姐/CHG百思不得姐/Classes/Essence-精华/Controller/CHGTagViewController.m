@@ -11,14 +11,24 @@
 #import "CHGTagViewCell.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
+#import <SVProgressHUD.h>
 
 @interface CHGTagViewController ()
 
 // tag模型数组
 @property (nonatomic, strong) NSArray *tags;
+@property (nonatomic, weak) AFHTTPSessionManager *manager;
+
 @end
 
 @implementation CHGTagViewController
+- (AFHTTPSessionManager *)manager
+{
+    if (_manager == nil) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
 
 - (NSArray *)tags
 {
@@ -28,12 +38,19 @@
     return _tags;
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor greenColor];
-    
+
     self.navigationItem.title = @"推荐标签";
     
+    [self setTable];
+    
+    [self loadTags];
+}
+
+- (void)setTable
+{
     // 设置背景颜色
     self.view.backgroundColor = CHGGlobalBg;
     
@@ -44,6 +61,13 @@
     
     // 注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CHGTagViewCell class]) bundle:nil] forCellReuseIdentifier:@"tagcell"];
+}
+
+- (void)loadTags
+{
+    // 弹框
+    //    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    [SVProgressHUD show];
     
     // 加载标签数据
     // 请求参数
@@ -53,18 +77,39 @@
     params[@"c"] = @"topic";
     
     // 发送请求
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+    __weak typeof(self) weakSelf = self;
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        // 服务器没有数据（一般不会出现这种情况）
+        if (responseObject == nil) {
+            // 关闭弹框
+            [SVProgressHUD showErrorWithStatus:@"加载标签数据失败"];
+            return;
+        }
+        
         // responseObject：字典数组
-        // self.tags：模型数组
-        // responseObject -> self.tags
-        self.tags = [CHGTag objectArrayWithKeyValuesArray:responseObject];
+        // responseObject -> weakSelf.tags
+        weakSelf.tags = [CHGTag objectArrayWithKeyValuesArray:responseObject];
         
         // 刷新表格
-        [self.tableView reloadData];
+        [weakSelf.tableView reloadData];
+        
+        // 关闭蒙版
+        [SVProgressHUD dismiss];
+        
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        // 如果是取消了任务，就不算请求失败，就直接返回
+        if (error.code == NSURLErrorCancelled) return;
+        
+        if (error.code == NSURLErrorTimedOut) {
+            // 关闭弹框
+            [SVProgressHUD showErrorWithStatus:@"加载标签数据超时，请稍后再试！"];
+        } else {
+            // 关闭弹框
+            [SVProgressHUD showErrorWithStatus:@"加载标签数据失败"];
+        }
         
     }];
-
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -81,5 +126,30 @@
     return cell;
 }
 
+// 即将干掉时
+//- (void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewWillDisappear:animated];
+//
+//    [SVProgressHUD dismiss];
+//}
+
+- (void)dealloc
+{
+    // 停止请求(取消所有task)
+    [self.manager invalidateSessionCancelingTasks:YES];
+    
+    //    [self.manager.downloadTasks makeObjectsPerformSelector:@selector(cancel)];
+    //    [self.manager.dataTasks makeObjectsPerformSelector:@selector(cancel)];
+    //    [self.manager.uploadTasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    //    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    //    for (NSURLSessionTask *task in self.manager.tasks) {
+    //        [task cancel];
+    //    }
+    
+    [SVProgressHUD dismiss];
+}
 
 @end
