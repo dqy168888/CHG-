@@ -21,8 +21,6 @@ static NSString * const CHGDefaultText = @"清除缓存";
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
-        CHGLog(@"%@",CHGCacheFile);
-        
         self.textLabel.text = CHGDefaultText;
         
         // 计算前禁止用户点击cell
@@ -34,10 +32,6 @@ static NSString * const CHGDefaultText = @"清除缓存";
         self.accessoryView = loadingView;
 
         [[[NSOperationQueue alloc] init] addOperationWithBlock:^{
-            
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                
-            });
             
             // 子线程计算缓存大小
             NSInteger size = CHGCacheFile.fileSize;
@@ -75,12 +69,7 @@ static NSString * const CHGDefaultText = @"清除缓存";
     // 子线程删除缓存文件夹
     [[[NSOperationQueue alloc] init] addOperationWithBlock:^{
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            
-        });
-        
         [[NSFileManager defaultManager] removeItemAtPath:CHGCacheFile error:nil];
-        
         
         // 主线程显示UI
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
