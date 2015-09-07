@@ -37,9 +37,9 @@ static NSString * const meCell = @"meCell";
     // 注册cell
     [self.tableView registerClass:[CHGMeCell class] forCellReuseIdentifier:meCell];
     
-    self.tableView.sectionHeaderHeight = CHGCommonMargin;
+    self.tableView.sectionHeaderHeight = 0;
     
-    self.tableView.sectionFooterHeight = 0;
+    self.tableView.sectionFooterHeight = CHGCommonMargin;
     
     // 设置内边距(-25代表：所有内容往上移动25)
     self.tableView.contentInset = UIEdgeInsetsMake(CHGCommonMargin - 35, 0, 0, 0);

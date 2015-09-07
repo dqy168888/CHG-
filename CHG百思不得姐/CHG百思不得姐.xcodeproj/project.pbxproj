@@ -14,6 +14,8 @@
 		FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */; };
 		FA7D4DC31B9DAF410053E39F /* CHGMeFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7D4DC21B9DAF410053E39F /* CHGMeFooter.m */; };
 		FA7D4DC61B9DB52B0053E39F /* CHGSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7D4DC51B9DB52B0053E39F /* CHGSquareButton.m */; };
+		FA7D4DCA1B9DBE430053E39F /* CHGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7D4DC81B9DBE430053E39F /* CHGWebViewController.m */; };
+		FA7D4DCB1B9DBE430053E39F /* CHGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7D4DC91B9DBE430053E39F /* CHGWebViewController.xib */; };
 		FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8237C41B95EC3600A4E7C8 /* CHGEssenceViewController.m */; };
 		FA8237EF1B95EC3600A4E7C8 /* CHGTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8237C61B95EC3600A4E7C8 /* CHGTagViewController.m */; };
 		FA8237F11B95EC3600A4E7C8 /* CHGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8237D21B95EC3600A4E7C8 /* CHGMeViewController.m */; };
@@ -72,6 +74,9 @@
 		FA7D4DC21B9DAF410053E39F /* CHGMeFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGMeFooter.m; sourceTree = "<group>"; };
 		FA7D4DC41B9DB52B0053E39F /* CHGSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGSquareButton.h; sourceTree = "<group>"; };
 		FA7D4DC51B9DB52B0053E39F /* CHGSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGSquareButton.m; sourceTree = "<group>"; };
+		FA7D4DC71B9DBE430053E39F /* CHGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGWebViewController.h; sourceTree = "<group>"; };
+		FA7D4DC81B9DBE430053E39F /* CHGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGWebViewController.m; sourceTree = "<group>"; };
+		FA7D4DC91B9DBE430053E39F /* CHGWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGWebViewController.xib; sourceTree = "<group>"; };
 		FA8237C31B95EC3600A4E7C8 /* CHGEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGEssenceViewController.h; sourceTree = "<group>"; };
 		FA8237C41B95EC3600A4E7C8 /* CHGEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGEssenceViewController.m; sourceTree = "<group>"; };
 		FA8237C51B95EC3600A4E7C8 /* CHGTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTagViewController.h; sourceTree = "<group>"; };
@@ -284,6 +289,9 @@
 				FA8237D21B95EC3600A4E7C8 /* CHGMeViewController.m */,
 				FA8237D31B95EC3600A4E7C8 /* CHGSetingTableViewController.h */,
 				FA8237D41B95EC3600A4E7C8 /* CHGSetingTableViewController.m */,
+				FA7D4DC71B9DBE430053E39F /* CHGWebViewController.h */,
+				FA7D4DC81B9DBE430053E39F /* CHGWebViewController.m */,
+				FA7D4DC91B9DBE430053E39F /* CHGWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -546,6 +554,7 @@
 				FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */,
 				FACD16E31B95678B00339438 /* Images.xcassets in Resources */,
 				FA9A97371B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib in Resources */,
+				FA7D4DCB1B9DBE430053E39F /* CHGWebViewController.xib in Resources */,
 				FA9994171B9C4F1800CF4E83 /* CHGTagViewCell.xib in Resources */,
 				FA8238001B95F12D00A4E7C8 /* CHGFriendTrendsViewController.xib in Resources */,
 			);
@@ -612,6 +621,7 @@
 				FA575B961B99528800B5652F /* CHGLoginRegisterTextField.m in Sources */,
 				FA8237F21B95EC3600A4E7C8 /* CHGSetingTableViewController.m in Sources */,
 				FA8237F11B95EC3600A4E7C8 /* CHGMeViewController.m in Sources */,
+				FA7D4DCA1B9DBE430053E39F /* CHGWebViewController.m in Sources */,
 				FA8237F81B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m in Sources */,
 				FA8238031B95F59000A4E7C8 /* CHGNavigationController.m in Sources */,
 				FA7D4DC31B9DAF410053E39F /* CHGMeFooter.m in Sources */,

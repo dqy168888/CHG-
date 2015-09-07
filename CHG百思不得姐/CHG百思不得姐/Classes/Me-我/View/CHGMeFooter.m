@@ -11,14 +11,15 @@
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import "CHGSquareButton.h"
-#import <UIButton+WebCache.h>
+#import "CHGWebViewController.h"
+
 
 @implementation CHGMeFooter
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor redColor];
+
         
         // 请求参数
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -67,28 +68,29 @@
         CGFloat buttonY = (i / colsCount) * buttonH;
         button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
         
-        // 数据
-        [button setTitle:square.name forState:UIControlStateNormal];
-        // 设置按钮的image
-        [button sd_setImageWithURL:[NSURL URLWithString:square.icon] forState:UIControlStateNormal];
+        // 设置数据
+        button.square = square;
         
-        // 错误示范
-        //        [button.imageView sd_setImageWithURL:[NSURL URLWithString:square.icon]];
+        self.height = CGRectGetMaxY(button.frame);
         
-        // 正确做法
-        //        [[SDWebImageManager sharedManager] downloadImageWithURL:[NSURL URLWithString:square.icon] options:0 progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-        //            [button setImage:image forState:UIControlStateNormal];
-        //        }];
     }
-
     
+    UITableView *tableView = (UITableView *)self.superview;
+    tableView.tableFooterView = self;
 }
 
 
 
 - (void)buttonClick:(CHGSquareButton *)button
 {
-    
+    if ([button.square.url hasPrefix:@"http"]) {
+        
+        CHGWebViewController *webvc = [[CHGWebViewController alloc] init];
+        
+        UITabBarController *rootvc = (UITabBarController *)self.window.rootViewController;
+        UINavigationController *nav = (UINavigationController *)rootvc.selectedViewController;
+        [nav pushViewController:webvc animated:YES];
+    }
 }
 
 

@@ -7,15 +7,23 @@
 //
 
 #import "CHGSquareButton.h"
+#import "CHGSquare.h"
+#import <UIButton+WebCache.h>
 
 @implementation CHGSquareButton
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
+        // 设置按钮label的对齐方式
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
+        
         self.titleLabel.font = [UIFont systemFontOfSize:14];
+        
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        
+        // 设置按钮背景图片  本图片自带分割线
+        [self setBackgroundImage:[UIImage imageNamed:@"mainCellBackground"] forState:UIControlStateNormal];
     }
     return self;
 }
@@ -33,6 +41,16 @@
     self.titleLabel.y = CGRectGetMaxY(self.imageView.frame);
     self.titleLabel.x = 0;
     self.titleLabel.height = self.height - self.titleLabel.y;
+}
+
+- (void)setSquare:(CHGSquare *)square
+{
+    _square = square;
+    
+    [self setTitle:square.name forState:UIControlStateNormal];
+    // 设置按钮的image
+    [self sd_setImageWithURL:[NSURL URLWithString:square.icon] forState:UIControlStateNormal];
+    
 }
 
 @end

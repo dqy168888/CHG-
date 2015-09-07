@@ -1,5 +1,5 @@
 //
-//  CHGSquareButton.h
+//  CHGWebViewController.h
 //  CHG百思不得姐
 //
 //  Created by chenhongen on 15/9/7.
@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class CHGSquare;
-@interface CHGSquareButton : UIButton
 
-@property (nonatomic, strong) CHGSquare *square;
+@interface CHGWebViewController : UIViewController
 
 @end
