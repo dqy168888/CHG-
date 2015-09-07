@@ -87,6 +87,8 @@
         
         CHGWebViewController *webvc = [[CHGWebViewController alloc] init];
         
+        webvc.square = button.square;
+        
         UITabBarController *rootvc = (UITabBarController *)self.window.rootViewController;
         UINavigationController *nav = (UINavigationController *)rootvc.selectedViewController;
         [nav pushViewController:webvc animated:YES];

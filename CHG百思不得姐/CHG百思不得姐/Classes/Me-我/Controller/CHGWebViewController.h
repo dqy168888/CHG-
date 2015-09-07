@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class CHGSquare;
 @interface CHGWebViewController : UIViewController
 
+@property (nonatomic, strong) CHGSquare *square;
 @end
