@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3F3ED8AFA7B055162C33C9C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C4B0987A0D4CFE35629110 /* libPods.a */; };
+		FA03E90D1B9DA66B0027D475 /* CHGMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03E90C1B9DA66B0027D475 /* CHGMeCell.m */; };
+		FA03E9101B9DA6840027D475 /* CHGSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03E90F1B9DA6840027D475 /* CHGSquare.m */; };
 		FA575B961B99528800B5652F /* CHGLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */; };
 		FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */; };
+		FA7D4DC31B9DAF410053E39F /* CHGMeFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7D4DC21B9DAF410053E39F /* CHGMeFooter.m */; };
+		FA7D4DC61B9DB52B0053E39F /* CHGSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7D4DC51B9DB52B0053E39F /* CHGSquareButton.m */; };
 		FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8237C41B95EC3600A4E7C8 /* CHGEssenceViewController.m */; };
 		FA8237EF1B95EC3600A4E7C8 /* CHGTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8237C61B95EC3600A4E7C8 /* CHGTagViewController.m */; };
 		FA8237F11B95EC3600A4E7C8 /* CHGMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8237D21B95EC3600A4E7C8 /* CHGMeViewController.m */; };
@@ -56,10 +60,18 @@
 		27C4B0987A0D4CFE35629110 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6276C1327175266756C8BD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8DFE4000164BE05F311E5DDC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FA03E90B1B9DA66B0027D475 /* CHGMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGMeCell.h; sourceTree = "<group>"; };
+		FA03E90C1B9DA66B0027D475 /* CHGMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGMeCell.m; sourceTree = "<group>"; };
+		FA03E90E1B9DA6840027D475 /* CHGSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGSquare.h; sourceTree = "<group>"; };
+		FA03E90F1B9DA6840027D475 /* CHGSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGSquare.m; sourceTree = "<group>"; };
 		FA575B941B99528800B5652F /* CHGLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGLoginRegisterTextField.h; sourceTree = "<group>"; };
 		FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGLoginRegisterTextField.m; sourceTree = "<group>"; };
 		FA5B04771B98AD9800FE4D92 /* CHGQuickLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGQuickLoginButton.h; sourceTree = "<group>"; };
 		FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGQuickLoginButton.m; sourceTree = "<group>"; };
+		FA7D4DC11B9DAF410053E39F /* CHGMeFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGMeFooter.h; sourceTree = "<group>"; };
+		FA7D4DC21B9DAF410053E39F /* CHGMeFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGMeFooter.m; sourceTree = "<group>"; };
+		FA7D4DC41B9DB52B0053E39F /* CHGSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGSquareButton.h; sourceTree = "<group>"; };
+		FA7D4DC51B9DB52B0053E39F /* CHGSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGSquareButton.m; sourceTree = "<group>"; };
 		FA8237C31B95EC3600A4E7C8 /* CHGEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGEssenceViewController.h; sourceTree = "<group>"; };
 		FA8237C41B95EC3600A4E7C8 /* CHGEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGEssenceViewController.m; sourceTree = "<group>"; };
 		FA8237C51B95EC3600A4E7C8 /* CHGTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTagViewController.h; sourceTree = "<group>"; };
@@ -279,6 +291,8 @@
 		FA8237D51B95EC3600A4E7C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA03E90E1B9DA6840027D475 /* CHGSquare.h */,
+				FA03E90F1B9DA6840027D475 /* CHGSquare.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +300,12 @@
 		FA8237D61B95EC3600A4E7C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA03E90B1B9DA66B0027D475 /* CHGMeCell.h */,
+				FA03E90C1B9DA66B0027D475 /* CHGMeCell.m */,
+				FA7D4DC11B9DAF410053E39F /* CHGMeFooter.h */,
+				FA7D4DC21B9DAF410053E39F /* CHGMeFooter.m */,
+				FA7D4DC41B9DB52B0053E39F /* CHGSquareButton.h */,
+				FA7D4DC51B9DB52B0053E39F /* CHGSquareButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -581,9 +601,11 @@
 				FA8237F31B95EC3600A4E7C8 /* CHGNewViewController.m in Sources */,
 				FA8237EF1B95EC3600A4E7C8 /* CHGTagViewController.m in Sources */,
 				FA8238071B95F9AE00A4E7C8 /* CHGRecommendController.m in Sources */,
+				FA7D4DC61B9DB52B0053E39F /* CHGSquareButton.m in Sources */,
 				FA8237F71B95EC3600A4E7C8 /* CHGTabBar.m in Sources */,
 				FA9A97361B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m in Sources */,
 				FA8237FF1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.m in Sources */,
+				FA03E9101B9DA6840027D475 /* CHGSquare.m in Sources */,
 				FA8237F61B95EC3600A4E7C8 /* CHGTabBarController.m in Sources */,
 				FA8237F41B95EC3600A4E7C8 /* AppDelegate.m in Sources */,
 				FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */,
@@ -592,8 +614,10 @@
 				FA8237F11B95EC3600A4E7C8 /* CHGMeViewController.m in Sources */,
 				FA8237F81B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m in Sources */,
 				FA8238031B95F59000A4E7C8 /* CHGNavigationController.m in Sources */,
+				FA7D4DC31B9DAF410053E39F /* CHGMeFooter.m in Sources */,
 				FAA42F3A1B9BBF67006145C6 /* CHGRecommendCategory.m in Sources */,
 				FA99941D1B9C623C00CF4E83 /* UIImage+CHGExtension.m in Sources */,
+				FA03E90D1B9DA66B0027D475 /* CHGMeCell.m in Sources */,
 				FAA42F3E1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m in Sources */,
 				FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */,
 				FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */,

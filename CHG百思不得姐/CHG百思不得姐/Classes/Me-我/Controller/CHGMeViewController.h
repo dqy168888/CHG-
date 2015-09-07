@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CHGMeViewController : UIViewController
+@interface CHGMeViewController : UITableViewController
 
 @end
