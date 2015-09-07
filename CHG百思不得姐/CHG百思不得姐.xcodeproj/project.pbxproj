@@ -10,6 +10,8 @@
 		3F3ED8AFA7B055162C33C9C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C4B0987A0D4CFE35629110 /* libPods.a */; };
 		FA03E90D1B9DA66B0027D475 /* CHGMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03E90C1B9DA66B0027D475 /* CHGMeCell.m */; };
 		FA03E9101B9DA6840027D475 /* CHGSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03E90F1B9DA6840027D475 /* CHGSquare.m */; };
+		FA1B7F8B1B9DCFED004FD879 /* NSString+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1B7F8A1B9DCFED004FD879 /* NSString+CHGExtension.m */; };
+		FA1B7F8E1B9DD167004FD879 /* CHGClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1B7F8D1B9DD167004FD879 /* CHGClearCacheCell.m */; };
 		FA575B961B99528800B5652F /* CHGLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */; };
 		FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */; };
 		FA7D4DC31B9DAF410053E39F /* CHGMeFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7D4DC21B9DAF410053E39F /* CHGMeFooter.m */; };
@@ -66,6 +68,10 @@
 		FA03E90C1B9DA66B0027D475 /* CHGMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGMeCell.m; sourceTree = "<group>"; };
 		FA03E90E1B9DA6840027D475 /* CHGSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGSquare.h; sourceTree = "<group>"; };
 		FA03E90F1B9DA6840027D475 /* CHGSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGSquare.m; sourceTree = "<group>"; };
+		FA1B7F891B9DCFED004FD879 /* NSString+CHGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CHGExtension.h"; sourceTree = "<group>"; };
+		FA1B7F8A1B9DCFED004FD879 /* NSString+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CHGExtension.m"; sourceTree = "<group>"; };
+		FA1B7F8C1B9DD167004FD879 /* CHGClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGClearCacheCell.h; sourceTree = "<group>"; };
+		FA1B7F8D1B9DD167004FD879 /* CHGClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGClearCacheCell.m; sourceTree = "<group>"; wrapsLines = 0; };
 		FA575B941B99528800B5652F /* CHGLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGLoginRegisterTextField.h; sourceTree = "<group>"; };
 		FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGLoginRegisterTextField.m; sourceTree = "<group>"; };
 		FA5B04771B98AD9800FE4D92 /* CHGQuickLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGQuickLoginButton.h; sourceTree = "<group>"; };
@@ -314,6 +320,8 @@
 				FA7D4DC21B9DAF410053E39F /* CHGMeFooter.m */,
 				FA7D4DC41B9DB52B0053E39F /* CHGSquareButton.h */,
 				FA7D4DC51B9DB52B0053E39F /* CHGSquareButton.m */,
+				FA1B7F8C1B9DD167004FD879 /* CHGClearCacheCell.h */,
+				FA1B7F8D1B9DD167004FD879 /* CHGClearCacheCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,6 +387,8 @@
 				FA99941C1B9C623C00CF4E83 /* UIImage+CHGExtension.m */,
 				FA99941E1B9C662A00CF4E83 /* UIImageView+CHGExtension.h */,
 				FA99941F1B9C662A00CF4E83 /* UIImageView+CHGExtension.m */,
+				FA1B7F891B9DCFED004FD879 /* NSString+CHGExtension.h */,
+				FA1B7F8A1B9DCFED004FD879 /* NSString+CHGExtension.m */,
 			);
 			name = "Category-分类";
 			path = Category;
@@ -634,9 +644,11 @@
 				FAA274621B9C8BB00086B332 /* CHGConst.m in Sources */,
 				FA9994201B9C662A00CF4E83 /* UIImageView+CHGExtension.m in Sources */,
 				FA9994161B9C4F1800CF4E83 /* CHGTagViewCell.m in Sources */,
+				FA1B7F8E1B9DD167004FD879 /* CHGClearCacheCell.m in Sources */,
 				FA8237F51B95EC3600A4E7C8 /* main.m in Sources */,
 				FA8237F91B95EC3600A4E7C8 /* UIView+CHGExtension.m in Sources */,
 				FA9994121B9C4EE900CF4E83 /* CHGTag.m in Sources */,
+				FA1B7F8B1B9DCFED004FD879 /* NSString+CHGExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

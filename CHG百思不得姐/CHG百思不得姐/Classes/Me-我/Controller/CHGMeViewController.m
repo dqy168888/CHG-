@@ -61,7 +61,7 @@ static NSString * const meCell = @"meCell";
 
 - (void)settingClick
 {
-    CHGSetingTableViewController *vc = [[CHGSetingTableViewController alloc] init];
+    CHGSetingTableViewController *vc = [[CHGSetingTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     vc.hidesBottomBarWhenPushed = YES;// 当push这个控制器时,会自动隐藏底部的工具条
     [self.navigationController pushViewController:vc animated:YES];
 }

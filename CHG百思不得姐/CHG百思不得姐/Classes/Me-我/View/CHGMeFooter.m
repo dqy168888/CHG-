@@ -54,7 +54,6 @@
     // 遍历所有的模型
     NSUInteger count = squares.count;
     for (NSUInteger i = 0; i < count; i++) {
-        CHGSquare *square = squares[i];
         
         // 创建按钮
         CHGSquareButton *button = [CHGSquareButton buttonWithType:UIButtonTypeCustom];
@@ -69,8 +68,9 @@
         button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
         
         // 设置数据
-        button.square = square;
+        button.square = squares[i];
         
+        // 设置footer的高度
         self.height = CGRectGetMaxY(button.frame);
         
     }
