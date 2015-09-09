@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (CHGExtension)
+// 计算文件（夹）大小
 - (NSInteger)fileSize;
 @end
