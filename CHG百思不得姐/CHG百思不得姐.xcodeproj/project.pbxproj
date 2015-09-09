@@ -45,6 +45,9 @@
 		FAA42F3A1B9BBF67006145C6 /* CHGRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA42F391B9BBF67006145C6 /* CHGRecommendCategory.m */; };
 		FAA42F3E1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA42F3C1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m */; };
 		FAA42F3F1B9BBFBD006145C6 /* CHGRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA42F3D1B9BBFBD006145C6 /* CHGRecommendCategoryCell.xib */; };
+		FAB68B821BA04B3300110FEA /* CHGPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB68B801BA04B3300110FEA /* CHGPublishViewController.m */; };
+		FAB68B831BA04B3300110FEA /* CHGPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB68B811BA04B3300110FEA /* CHGPublishViewController.xib */; };
+		FAB68B861BA04E3D00110FEA /* CHGPublishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB68B851BA04E3D00110FEA /* CHGPublishButton.m */; };
 		FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */; };
 		FACD16E31B95678B00339438 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD16E21B95678B00339438 /* Images.xcassets */; };
 		FACD16F21B95678B00339438 /* CHG_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16F11B95678B00339438 /* CHG_____Tests.m */; };
@@ -132,6 +135,11 @@
 		FAA42F3B1B9BBFBD006145C6 /* CHGRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGRecommendCategoryCell.h; sourceTree = "<group>"; };
 		FAA42F3C1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGRecommendCategoryCell.m; sourceTree = "<group>"; };
 		FAA42F3D1B9BBFBD006145C6 /* CHGRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		FAB68B7F1BA04B3300110FEA /* CHGPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPublishViewController.h; sourceTree = "<group>"; };
+		FAB68B801BA04B3300110FEA /* CHGPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPublishViewController.m; sourceTree = "<group>"; };
+		FAB68B811BA04B3300110FEA /* CHGPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGPublishViewController.xib; sourceTree = "<group>"; };
+		FAB68B841BA04E3D00110FEA /* CHGPublishButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPublishButton.h; sourceTree = "<group>"; };
+		FAB68B851BA04E3D00110FEA /* CHGPublishButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPublishButton.m; sourceTree = "<group>"; };
 		FACD16CF1B95678B00339438 /* CHG百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHG百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16D31B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16DA1B95678B00339438 /* CHG_____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CHG_____.xcdatamodel"; sourceTree = "<group>"; };
@@ -180,6 +188,7 @@
 		FA8237C01B95EC3600A4E7C8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FAB68B7C1BA04B0100110FEA /* Publish-发布 */,
 				FA8237C11B95EC3600A4E7C8 /* Essence-精华 */,
 				FA8237C91B95EC3600A4E7C8 /* FriendTrends-关注 */,
 				FA8237CF1B95EC3600A4E7C8 /* Me-我 */,
@@ -421,6 +430,34 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FAB68B7C1BA04B0100110FEA /* Publish-发布 */ = {
+			isa = PBXGroup;
+			children = (
+				FAB68B7D1BA04B0100110FEA /* Controller */,
+				FAB68B7E1BA04B0100110FEA /* View */,
+			);
+			path = "Publish-发布";
+			sourceTree = "<group>";
+		};
+		FAB68B7D1BA04B0100110FEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAB68B7F1BA04B3300110FEA /* CHGPublishViewController.h */,
+				FAB68B801BA04B3300110FEA /* CHGPublishViewController.m */,
+				FAB68B811BA04B3300110FEA /* CHGPublishViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAB68B7E1BA04B0100110FEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAB68B841BA04E3D00110FEA /* CHGPublishButton.h */,
+				FAB68B851BA04E3D00110FEA /* CHGPublishButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FACD16C61B95678B00339438 = {
 			isa = PBXGroup;
 			children = (
@@ -565,6 +602,7 @@
 				FACD16E31B95678B00339438 /* Images.xcassets in Resources */,
 				FA9A97371B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib in Resources */,
 				FA7D4DCB1B9DBE430053E39F /* CHGWebViewController.xib in Resources */,
+				FAB68B831BA04B3300110FEA /* CHGPublishViewController.xib in Resources */,
 				FA9994171B9C4F1800CF4E83 /* CHGTagViewCell.xib in Resources */,
 				FA8238001B95F12D00A4E7C8 /* CHGFriendTrendsViewController.xib in Resources */,
 			);
@@ -643,6 +681,8 @@
 				FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */,
 				FAA274621B9C8BB00086B332 /* CHGConst.m in Sources */,
 				FA9994201B9C662A00CF4E83 /* UIImageView+CHGExtension.m in Sources */,
+				FAB68B861BA04E3D00110FEA /* CHGPublishButton.m in Sources */,
+				FAB68B821BA04B3300110FEA /* CHGPublishViewController.m in Sources */,
 				FA9994161B9C4F1800CF4E83 /* CHGTagViewCell.m in Sources */,
 				FA1B7F8E1B9DD167004FD879 /* CHGClearCacheCell.m in Sources */,
 				FA8237F51B95EC3600A4E7C8 /* main.m in Sources */,

@@ -34,4 +34,8 @@
 // 弱引用
 #define CHGWeakSelf __weak typeof(self) weakSelf = self;
 
+// 屏幕尺寸
+#define CHGScreenH [UIScreen mainScreen].bounds.size.height
+#define CHGScreenW [UIScreen mainScreen].bounds.size.width
+
 #endif
