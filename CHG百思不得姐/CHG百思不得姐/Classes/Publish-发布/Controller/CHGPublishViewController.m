@@ -9,15 +9,30 @@
 #import "CHGPublishViewController.h"
 #import "CHGPublishButton.h"
 #import <POP.h>
+#import "CHGPostWordViewController.h"
+#import "CHGNavigationController.h"
 
 @interface CHGPublishViewController ()
+
+/** 标语 */
 @property (nonatomic, weak) UIImageView *sloganView;
 /** 动画时间 */
 @property (nonatomic, strong) NSArray *times;
+/** 按钮 */
+@property (nonatomic, strong) NSMutableArray *buttons;
+
 
 @end
 
 @implementation CHGPublishViewController
+
+- (NSMutableArray *)buttons
+{
+    if (!_buttons) {
+        _buttons = [NSMutableArray array];
+    }
+    return _buttons;
+}
 
 - (NSArray *)times
 {
@@ -37,6 +52,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.userInteractionEnabled = NO;
+    
     // 设置标语
     [self setupSlogan];
     
@@ -54,12 +71,19 @@
     [self.view addSubview:sloganView];
     self.sloganView = sloganView;
     
+    // 添加动画
     POPSpringAnimation *anm = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
     anm.toValue = @(sloganY);
     anm.springBounciness = 10;
     anm.springSpeed = 10;
     // CACurrentMediaTime()获得的是当前时间
     anm.beginTime = CACurrentMediaTime() + [self.times.lastObject doubleValue];
+    CHGWeakSelf;
+    [anm setCompletionBlock:^(POPAnimation *anm, BOOL finished) {
+        // 开始交互
+        weakSelf.view.userInteractionEnabled = YES;
+    }];
+    
     [sloganView.layer pop_addAnimation:anm forKey:nil];
 }
 
@@ -90,7 +114,9 @@
         [button setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
         
         [self.view addSubview:button];
+        [self.buttons addObject:button];
         
+        // 添加动画
         POPSpringAnimation *anm = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
         anm.fromValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonY - CHGScreenH, buttonW, buttonH)];
         anm.toValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonY, buttonW, buttonH)];
@@ -99,29 +125,82 @@
         // CACurrentMediaTime()获得的是当前时间
         anm.beginTime = CACurrentMediaTime() + [self.times[i] doubleValue];
         [button pop_addAnimation:anm forKey:nil];
-        
     }
+
+}
+
+#pragma mark - 退出动画
+- (void)exit:(void (^)())task
+{
+    self.view.userInteractionEnabled = NO;
+    
+    for (int i = 0; i < self.buttons.count; i ++) {
+        
+        CHGPublishButton *button = self.buttons[i];
+        
+        POPBasicAnimation *anm = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+        anm.toValue = @(button.layer.position.y + CHGScreenH);
+        // CACurrentMediaTime()获得的是当前时间
+        anm.beginTime = CACurrentMediaTime() + [self.times[i] doubleValue];
+        [button.layer pop_addAnimation:anm forKey:nil];
+    }
+    
+    // 使用基本动画
+    POPBasicAnimation *anm = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    anm.toValue = @(self.sloganView.layer.position.y + CHGScreenH);
+    // CACurrentMediaTime()获得的是当前时间
+    anm.beginTime = CACurrentMediaTime() + [self.times.lastObject doubleValue];
+    
+    [anm setCompletionBlock:^(POPAnimation *anm, BOOL finished) {
+        [self dismissViewControllerAnimated:NO completion:nil];
+        if (task) task();
+    }];
+    
+    [self.sloganView.layer pop_addAnimation:anm forKey:nil];
 }
 
 - (void)buttonClick:(CHGPublishButton *)button
 {
-    
-    
+    [self exit:^{
+        NSUInteger index = [self.buttons indexOfObject:button];
+        switch (index) {
+            case 0:
+            {};
+                break;
+            case 2:
+            {
+                CHGPostWordViewController *PostWordVC = [[CHGPostWordViewController alloc] init];
+                [self.view.window.rootViewController presentViewController:[[CHGNavigationController alloc] initWithRootViewController:PostWordVC] animated:YES completion:nil];
+            };
+                break;
+            case 1:
+            {};
+                break;
+            case 3:
+            {};
+                break;
+            case 4:
+            {};
+                break;
+            case 5:
+            {};
+                break;
+            default:
+                break;
+        }
+    }];
 }
-
 
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    [self exit:nil];
 }
 
-- (IBAction)backbtn:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+- (IBAction)cancel{
+    
+    [self exit:nil];
 }
+
 
 @end
