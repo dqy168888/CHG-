@@ -37,7 +37,7 @@
 - (NSArray *)times
 {
     if (!_times) {
-        CGFloat interval = 0.1; // 时间间隔
+        CGFloat interval = 0.0; // 时间间隔
         _times = @[@(5 * interval),
                    @(4 * interval),
                    @(3 * interval),

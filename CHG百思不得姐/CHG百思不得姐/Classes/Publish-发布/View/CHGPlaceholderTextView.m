@@ -75,17 +75,18 @@
     [self setNeedsDisplay];
 }
 
-- (void)setFrame:(CGRect)frame
-{
-    [super setFrame:frame];
-    [self setNeedsDisplay];
-}
+//- (void)setFrame:(CGRect)frame
+//{
+//    [super setFrame:frame];
+//    [self setNeedsDisplay];
+//}
 
 - (void)setText:(NSString *)text
 {
     [super setText:text];
     [self setNeedsDisplay];
 }
+
 
 - (void)setAttributedText:(NSAttributedString *)attributedText
 {

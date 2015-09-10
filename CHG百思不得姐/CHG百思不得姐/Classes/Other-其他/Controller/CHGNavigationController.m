@@ -21,8 +21,28 @@
 {
     // 当导航栏用在CHGNavigationController中, appearance设置才会生效
     //    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:[self class], nil];
+    
+    // 设置导航栏背景
     UINavigationBar *bar = [UINavigationBar appearance];
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    // 设置标题文字属性
+    NSMutableDictionary *barAttrs = [NSMutableDictionary dictionary];
+    barAttrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
+    [bar setTitleTextAttributes:barAttrs];
+    
+    /** 设置UIBarButtonItem */
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    
+    // UIControlStateNormal
+    NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
+    normalAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    normalAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+    [item setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
+    
+    // UIControlStateDisabled
+    NSMutableDictionary *disabledAttrs = [NSMutableDictionary dictionary];
+    disabledAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    [item setTitleTextAttributes:disabledAttrs forState:UIControlStateDisabled];
 }
 
 - (void)viewDidLoad {
