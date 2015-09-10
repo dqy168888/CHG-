@@ -10,7 +10,7 @@
 
 @interface UIImageView (CHGExtension)
 /**
- * 设置头像
+ * 根据URL下载图片并设置头像 （配合 UIImage+CHGExtension）
  */
 - (void)setHeader:(NSString *)url;
 @end

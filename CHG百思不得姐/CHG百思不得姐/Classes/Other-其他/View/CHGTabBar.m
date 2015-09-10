@@ -34,9 +34,7 @@
 - (void)publishClick
 {
     CHGPublishViewController *publishVC = [[CHGPublishViewController alloc] init];
-    [self.window.rootViewController presentViewController:publishVC animated:YES completion:^{
-        
-    }];
+    [self.window.rootViewController presentViewController:publishVC animated:NO completion:nil];
 }
 
 

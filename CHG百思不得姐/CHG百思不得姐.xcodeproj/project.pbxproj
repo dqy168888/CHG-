@@ -53,6 +53,7 @@
 		FACD16F21B95678B00339438 /* CHG_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16F11B95678B00339438 /* CHG_____Tests.m */; };
 		FAF3F0481BA1178B008B46EC /* CHGPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F0471BA1178B008B46EC /* CHGPostWordViewController.m */; };
 		FAF3F04E1BA11CB7008B46EC /* CHGPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F04D1BA11CB7008B46EC /* CHGPlaceholderTextView.m */; };
+		FAF3F0511BA15BFD008B46EC /* CHGPlaceholderTextView2.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F0501BA15BFD008B46EC /* CHGPlaceholderTextView2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,8 @@
 		FAF3F0471BA1178B008B46EC /* CHGPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPostWordViewController.m; sourceTree = "<group>"; };
 		FAF3F04C1BA11CB7008B46EC /* CHGPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPlaceholderTextView.h; sourceTree = "<group>"; };
 		FAF3F04D1BA11CB7008B46EC /* CHGPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPlaceholderTextView.m; sourceTree = "<group>"; };
+		FAF3F04F1BA15BFD008B46EC /* CHGPlaceholderTextView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPlaceholderTextView2.h; sourceTree = "<group>"; };
+		FAF3F0501BA15BFD008B46EC /* CHGPlaceholderTextView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPlaceholderTextView2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +201,6 @@
 				FA8237C11B95EC3600A4E7C8 /* Essence-精华 */,
 				FA8237C91B95EC3600A4E7C8 /* FriendTrends-关注 */,
 				FA8237CF1B95EC3600A4E7C8 /* Me-我 */,
-				FA8237D71B95EC3600A4E7C8 /* New-新帖 */,
 				FA8237DD1B95EC3600A4E7C8 /* Other-其他 */,
 			);
 			path = Classes;
@@ -296,6 +298,7 @@
 		FA8237CF1B95EC3600A4E7C8 /* Me-我 */ = {
 			isa = PBXGroup;
 			children = (
+				FA8237D71B95EC3600A4E7C8 /* New-新帖 */,
 				FA8237D01B95EC3600A4E7C8 /* Controller */,
 				FA8237D51B95EC3600A4E7C8 /* Model */,
 				FA8237D61B95EC3600A4E7C8 /* View */,
@@ -348,7 +351,8 @@
 				FA8237DB1B95EC3600A4E7C8 /* Model */,
 				FA8237DC1B95EC3600A4E7C8 /* View */,
 			);
-			path = "New-新帖";
+			name = "New-新帖";
+			path = "../New-新帖";
 			sourceTree = "<group>";
 		};
 		FA8237D81B95EC3600A4E7C8 /* Controller */ = {
@@ -464,6 +468,8 @@
 				FAB68B851BA04E3D00110FEA /* CHGPublishButton.m */,
 				FAF3F04C1BA11CB7008B46EC /* CHGPlaceholderTextView.h */,
 				FAF3F04D1BA11CB7008B46EC /* CHGPlaceholderTextView.m */,
+				FAF3F04F1BA15BFD008B46EC /* CHGPlaceholderTextView2.h */,
+				FAF3F0501BA15BFD008B46EC /* CHGPlaceholderTextView2.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -680,6 +686,7 @@
 				FA8237F21B95EC3600A4E7C8 /* CHGSetingTableViewController.m in Sources */,
 				FA8237F11B95EC3600A4E7C8 /* CHGMeViewController.m in Sources */,
 				FAF3F0481BA1178B008B46EC /* CHGPostWordViewController.m in Sources */,
+				FAF3F0511BA15BFD008B46EC /* CHGPlaceholderTextView2.m in Sources */,
 				FA7D4DCA1B9DBE430053E39F /* CHGWebViewController.m in Sources */,
 				FA8237F81B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m in Sources */,
 				FA8238031B95F59000A4E7C8 /* CHGNavigationController.m in Sources */,

@@ -98,7 +98,7 @@
     
     CGFloat buttonW = CHGScreenW / maxColsCount;
     CGFloat buttonH = buttonW * 0.85;
-    CGFloat buttonStartY = ( CHGScreenH - buttonH * rowsCount ) / 2 ;
+    CGFloat buttonStartY = ( CHGScreenH - buttonH * rowsCount ) * 0.5 ;
     for (int i = 0; i < count; ++i) {
         
         CHGPublishButton *button = [CHGPublishButton buttonWithType:UIButtonTypeCustom];

@@ -29,6 +29,7 @@
          // 如果图片下载失败，就不做任何处理，按照默认的做法：会显示占位图片
          if (image == nil) return;
          
+         // 返回一张圆形图片
          weakSelf.image = [image circleImage];
      }];
 }

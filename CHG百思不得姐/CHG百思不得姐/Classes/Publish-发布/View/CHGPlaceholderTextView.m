@@ -57,11 +57,15 @@
     
 }
 
-- (void)setFont:(UIFont *)font
+// 若是不写  进入发表界面 占位文字不能随textView上下滚动
+- (void)layoutSubviews
 {
-    [super setFont:font];
+    [super layoutSubviews];
+    
     [self setNeedsDisplay];
 }
+
+#pragma mark - setter
 
 - (void)setPlaceholderColor:(UIColor *)placeholderColor
 {
@@ -75,11 +79,11 @@
     [self setNeedsDisplay];
 }
 
-//- (void)setFrame:(CGRect)frame
-//{
-//    [super setFrame:frame];
-//    [self setNeedsDisplay];
-//}
+- (void)setFont:(UIFont *)font
+{
+    [super setFont:font];
+    [self setNeedsDisplay];
+}
 
 - (void)setText:(NSString *)text
 {
