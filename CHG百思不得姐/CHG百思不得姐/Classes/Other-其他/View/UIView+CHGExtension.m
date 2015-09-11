@@ -5,6 +5,11 @@
 
 @implementation UIView (CHGExtension)
 
++ (instancetype)viewFromXib
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+}
+
 - (void)setSize:(CGSize)size
 {
     CGRect frame = self.frame;

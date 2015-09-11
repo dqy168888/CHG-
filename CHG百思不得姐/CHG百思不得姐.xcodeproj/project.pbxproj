@@ -34,6 +34,8 @@
 		FA8238031B95F59000A4E7C8 /* CHGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8238021B95F59000A4E7C8 /* CHGNavigationController.m */; };
 		FA8238071B95F9AE00A4E7C8 /* CHGRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8238051B95F9AE00A4E7C8 /* CHGRecommendController.m */; };
 		FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8238061B95F9AE00A4E7C8 /* CHGRecommendController.xib */; };
+		FA8FA77F1BA2EF6D00AAD48A /* CHGPostWordToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8FA77E1BA2EF6D00AAD48A /* CHGPostWordToolbar.m */; };
+		FA8FA7811BA2EF8A00AAD48A /* CHGPostWordToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8FA7801BA2EF8A00AAD48A /* CHGPostWordToolbar.xib */; };
 		FA9994121B9C4EE900CF4E83 /* CHGTag.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9994111B9C4EE900CF4E83 /* CHGTag.m */; };
 		FA9994161B9C4F1800CF4E83 /* CHGTagViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9994141B9C4F1800CF4E83 /* CHGTagViewCell.m */; };
 		FA9994171B9C4F1800CF4E83 /* CHGTagViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9994151B9C4F1800CF4E83 /* CHGTagViewCell.xib */; };
@@ -119,6 +121,9 @@
 		FA8238041B95F9AE00A4E7C8 /* CHGRecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGRecommendController.h; sourceTree = "<group>"; };
 		FA8238051B95F9AE00A4E7C8 /* CHGRecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGRecommendController.m; sourceTree = "<group>"; };
 		FA8238061B95F9AE00A4E7C8 /* CHGRecommendController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGRecommendController.xib; sourceTree = "<group>"; };
+		FA8FA77D1BA2EF6D00AAD48A /* CHGPostWordToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPostWordToolbar.h; sourceTree = "<group>"; };
+		FA8FA77E1BA2EF6D00AAD48A /* CHGPostWordToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPostWordToolbar.m; sourceTree = "<group>"; };
+		FA8FA7801BA2EF8A00AAD48A /* CHGPostWordToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGPostWordToolbar.xib; sourceTree = "<group>"; };
 		FA9994101B9C4EE900CF4E83 /* CHGTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTag.h; sourceTree = "<group>"; };
 		FA9994111B9C4EE900CF4E83 /* CHGTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTag.m; sourceTree = "<group>"; };
 		FA9994131B9C4F1800CF4E83 /* CHGTagViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTagViewCell.h; sourceTree = "<group>"; };
@@ -470,6 +475,9 @@
 				FAF3F04D1BA11CB7008B46EC /* CHGPlaceholderTextView.m */,
 				FAF3F04F1BA15BFD008B46EC /* CHGPlaceholderTextView2.h */,
 				FAF3F0501BA15BFD008B46EC /* CHGPlaceholderTextView2.m */,
+				FA8FA77D1BA2EF6D00AAD48A /* CHGPostWordToolbar.h */,
+				FA8FA77E1BA2EF6D00AAD48A /* CHGPostWordToolbar.m */,
+				FA8FA7801BA2EF8A00AAD48A /* CHGPostWordToolbar.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -621,6 +629,7 @@
 				FAB68B831BA04B3300110FEA /* CHGPublishViewController.xib in Resources */,
 				FA9994171B9C4F1800CF4E83 /* CHGTagViewCell.xib in Resources */,
 				FA8238001B95F12D00A4E7C8 /* CHGFriendTrendsViewController.xib in Resources */,
+				FA8FA7811BA2EF8A00AAD48A /* CHGPostWordToolbar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +712,7 @@
 				FAB68B861BA04E3D00110FEA /* CHGPublishButton.m in Sources */,
 				FAB68B821BA04B3300110FEA /* CHGPublishViewController.m in Sources */,
 				FA9994161B9C4F1800CF4E83 /* CHGTagViewCell.m in Sources */,
+				FA8FA77F1BA2EF6D00AAD48A /* CHGPostWordToolbar.m in Sources */,
 				FA1B7F8E1B9DD167004FD879 /* CHGClearCacheCell.m in Sources */,
 				FA8237F51B95EC3600A4E7C8 /* main.m in Sources */,
 				FA8237F91B95EC3600A4E7C8 /* UIView+CHGExtension.m in Sources */,

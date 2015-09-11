@@ -9,10 +9,12 @@
 #import "CHGPostWordViewController.h"
 #import "CHGPlaceholderTextView.h"
 #import "CHGPlaceholderTextView2.h"
+#import "CHGPostWordToolbar.h"
 
 @interface CHGPostWordViewController ()<UITextViewDelegate>
 /** 文本框 */
 @property (nonatomic, weak) CHGPlaceholderTextView2 *textView;
+@property (nonatomic, strong) CHGPostWordToolbar *textTool;
 @end
 
 @implementation CHGPostWordViewController
@@ -23,8 +25,38 @@
     [self setupNva];
     
     [self setupTextView];
+    
+    [self setupTextTool];
 }
 
+- (void)setupTextTool
+{
+    CHGPostWordToolbar *TextTool = [CHGPostWordToolbar viewFromXib];
+    TextTool.x = 0;
+    TextTool.y = self.view.height - TextTool.height;
+    TextTool.width = self.view.width;
+    [self.view addSubview:TextTool];
+    self.textTool = TextTool;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(KeyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)KeyboardWillChangeFrame:(NSNotification *)note
+{
+    CGFloat duration = [note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    [UIView animateWithDuration:duration animations:^{
+        // 工具条平移的距离 == 键盘最终的Y值 - 屏幕高度
+        CGFloat ty = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y - CHGScreenH;
+        self.textTool.transform = CGAffineTransformMakeTranslation(0, ty);
+    }];
+
+}
 
 - (void)setupNva
 {
