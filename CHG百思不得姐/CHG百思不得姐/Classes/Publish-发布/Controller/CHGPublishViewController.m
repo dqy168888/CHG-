@@ -4,7 +4,7 @@
 //
 //  Created by chenhongen on 15/9/9.
 //  Copyright (c) 2015年 陈弘根. All rights reserved.
-//
+//  发布界面
 
 #import "CHGPublishViewController.h"
 #import "CHGPublishButton.h"

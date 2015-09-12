@@ -50,6 +50,8 @@
 		FAB68B821BA04B3300110FEA /* CHGPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB68B801BA04B3300110FEA /* CHGPublishViewController.m */; };
 		FAB68B831BA04B3300110FEA /* CHGPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB68B811BA04B3300110FEA /* CHGPublishViewController.xib */; };
 		FAB68B861BA04E3D00110FEA /* CHGPublishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB68B851BA04E3D00110FEA /* CHGPublishButton.m */; };
+		FAC068871BA46B3D00A7EAC9 /* CHGAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC068861BA46B3D00A7EAC9 /* CHGAddTagViewController.m */; };
+		FAC0688A1BA46ED900A7EAC9 /* UITextField+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC068891BA46ED900A7EAC9 /* UITextField+CHGExtension.m */; };
 		FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */; };
 		FACD16E31B95678B00339438 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD16E21B95678B00339438 /* Images.xcassets */; };
 		FACD16F21B95678B00339438 /* CHG_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16F11B95678B00339438 /* CHG_____Tests.m */; };
@@ -148,6 +150,10 @@
 		FAB68B811BA04B3300110FEA /* CHGPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGPublishViewController.xib; sourceTree = "<group>"; };
 		FAB68B841BA04E3D00110FEA /* CHGPublishButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPublishButton.h; sourceTree = "<group>"; };
 		FAB68B851BA04E3D00110FEA /* CHGPublishButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPublishButton.m; sourceTree = "<group>"; };
+		FAC068851BA46B3D00A7EAC9 /* CHGAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGAddTagViewController.h; sourceTree = "<group>"; };
+		FAC068861BA46B3D00A7EAC9 /* CHGAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGAddTagViewController.m; sourceTree = "<group>"; };
+		FAC068881BA46ED900A7EAC9 /* UITextField+CHGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+CHGExtension.h"; sourceTree = "<group>"; };
+		FAC068891BA46ED900A7EAC9 /* UITextField+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CHGExtension.m"; sourceTree = "<group>"; };
 		FACD16CF1B95678B00339438 /* CHG百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHG百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16D31B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16DA1B95678B00339438 /* CHG_____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CHG_____.xcdatamodel"; sourceTree = "<group>"; };
@@ -413,6 +419,8 @@
 				FA99941F1B9C662A00CF4E83 /* UIImageView+CHGExtension.m */,
 				FA1B7F891B9DCFED004FD879 /* NSString+CHGExtension.h */,
 				FA1B7F8A1B9DCFED004FD879 /* NSString+CHGExtension.m */,
+				FAC068881BA46ED900A7EAC9 /* UITextField+CHGExtension.h */,
+				FAC068891BA46ED900A7EAC9 /* UITextField+CHGExtension.m */,
 			);
 			name = "Category-分类";
 			path = Category;
@@ -462,6 +470,8 @@
 				FAB68B811BA04B3300110FEA /* CHGPublishViewController.xib */,
 				FAF3F0461BA1178B008B46EC /* CHGPostWordViewController.h */,
 				FAF3F0471BA1178B008B46EC /* CHGPostWordViewController.m */,
+				FAC068851BA46B3D00A7EAC9 /* CHGAddTagViewController.h */,
+				FAC068861BA46B3D00A7EAC9 /* CHGAddTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -694,6 +704,8 @@
 				FA575B961B99528800B5652F /* CHGLoginRegisterTextField.m in Sources */,
 				FA8237F21B95EC3600A4E7C8 /* CHGSetingTableViewController.m in Sources */,
 				FA8237F11B95EC3600A4E7C8 /* CHGMeViewController.m in Sources */,
+				FAC0688A1BA46ED900A7EAC9 /* UITextField+CHGExtension.m in Sources */,
+				FAC068871BA46B3D00A7EAC9 /* CHGAddTagViewController.m in Sources */,
 				FAF3F0481BA1178B008B46EC /* CHGPostWordViewController.m in Sources */,
 				FAF3F0511BA15BFD008B46EC /* CHGPlaceholderTextView2.m in Sources */,
 				FA7D4DCA1B9DBE430053E39F /* CHGWebViewController.m in Sources */,

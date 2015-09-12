@@ -4,7 +4,7 @@
 //
 //  Created by chenhongen on 15/9/10.
 //  Copyright (c) 2015年 陈弘根. All rights reserved.
-//
+//  发段子
 
 #import "CHGPostWordViewController.h"
 #import "CHGPlaceholderTextView.h"
@@ -82,6 +82,13 @@
     [self.view addSubview:textView];
     
     self.textView = textView;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.textView becomeFirstResponder];
 }
 
 - (void)post

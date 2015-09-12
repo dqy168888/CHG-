@@ -16,6 +16,7 @@
 #import "UIImageView+CHGExtension.h"
 #import "CHGConst.h"
 #import "NSString+CHGExtension.h"
+#import "UITextField+CHGExtension.h"
 
 // 日志输出
 #ifdef DEBUG // 开发阶段-DEBUG阶段:使用Log
