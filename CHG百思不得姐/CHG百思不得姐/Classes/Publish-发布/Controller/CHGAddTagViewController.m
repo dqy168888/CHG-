@@ -108,13 +108,25 @@
 // 输入文字时设置提醒按钮的 位置和内容
 - (void)textDidChange
 {
+    // 提醒按钮
     if (self.textField.hasText) {
-        self.tipButton.hidden = NO;
-        self.tipButton.y = CGRectGetMaxY(self.textField.frame) + CHGCommonSmallMargin;
-        [self.tipButton setTitle:[NSString stringWithFormat:@"添加标签：%@", self.textField.text] forState:UIControlStateNormal];
-        
-    }else
-    {
+        NSString *text = self.textField.text;
+        NSString *lastChar = [text substringFromIndex:text.length - 1];
+        if ([lastChar isEqualToString:@","]
+            || [lastChar isEqualToString:@"，"]) { // 最后一个输入的字符是逗号
+            // 去掉文本框最后一个逗号
+            self.textField.text = [text substringToIndex:text.length - 1];
+            
+            // 点击提醒按钮
+            [self tipClick];
+        } else { // 最后一个输入的字符不是逗号
+            // 排布文本框
+            [self setupTextFieldFrame];
+            
+            self.tipButton.hidden = NO;
+            [self.tipButton setTitle:[NSString stringWithFormat:@"添加标签：%@", text] forState:UIControlStateNormal];
+        }
+    } else {
         self.tipButton.hidden = YES;
     }
 }
@@ -125,56 +137,46 @@
     // 添加标签按钮
     CHGTagButton *newTagButton = [[CHGTagButton alloc] init];
     [newTagButton setTitle:[NSString stringWithFormat:@"%@", self.textField.text] forState:UIControlStateNormal];
-    [newTagButton addTarget:self action:@selector(deletebutton) forControlEvents:UIControlEventTouchUpInside];
+    [newTagButton addTarget:self action:@selector(tagClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:newTagButton];
 
     // 设置按钮的位置
     // 最后一个标签按钮
-    UIButton *lastTagutton = self.tagButtons.lastObject;
-    if (lastTagutton) { // 不是第一个标签
-        // 左边的总宽度
-        CGFloat leftWidth = CGRectGetMaxX(lastTagutton.frame) + CHGCommonSmallMargin;
-        // 右边剩下的宽度
-        CGFloat rightWidth = self.contentView.width - leftWidth;
-        if (rightWidth >= newTagButton.width) { // 跟最后一个按钮处在同一行
-            newTagButton.x = leftWidth;
-            newTagButton.y = lastTagutton.y;
-        } else { // 下一行
-            newTagButton.x = 0;
-            newTagButton.y = CGRectGetMaxY(lastTagutton.frame) + CHGCommonSmallMargin;
-        }
-    } else { // 第一个标签按钮
-        newTagButton.x = 0;
-        newTagButton.y = 0;
-    }
+    CHGTagButton *lastTagutton = self.tagButtons.lastObject;
+    [self setupTagButtonFrame:newTagButton referenceTagButton:lastTagutton];
     
     // 将新创建的按钮添加到数组中
     [self.tagButtons addObject:newTagButton];
     
     // 调整textfield的位置
-    // 左边的总宽度
-    CGFloat leftWidth = CGRectGetMaxX(newTagButton.frame) + CHGCommonSmallMargin;
-    // 右边剩下的宽度
-    CGFloat rightWidth = self.contentView.width - leftWidth;
-    
-    if (rightWidth >= 100) { // 跟新添加的标签按钮处在同一行
-        self.textField.x = leftWidth;
-        self.textField.y = newTagButton.y;
-    }else
-    {   // 先标签的下一行
-        self.textField.x = 0;
-        self.textField.y = CGRectGetMaxY(newTagButton.frame) + CHGCommonSmallMargin;
-    }
-    
+    [self setupTextFieldFrame];
     self.textField.text = nil;
     
     self.tipButton.hidden = YES;
 }
 
-// 删除标签时
-- (void)deletebutton
+/**
+ 点击了标签按钮
+ */
+- (void)tagClick:(CHGTagButton *)clickedTagButton
 {
-
+    // 即将被删除的标签按钮的索引
+    NSUInteger index = [self.tagButtons indexOfObject:clickedTagButton];
+    
+    // 删除按钮
+    [clickedTagButton removeFromSuperview];
+    [self.tagButtons removeObject:clickedTagButton];
+    
+    // 处理后面的标签按钮
+    for (NSUInteger i = index; i < self.tagButtons.count; i++) {
+        CHGTagButton *tagButton = self.tagButtons[i];
+        // 如果i不为0，就参照上一个标签按钮
+        CHGTagButton *previousTagButton = (i == 0) ? nil : self.tagButtons[i - 1];
+        [self setupTagButtonFrame:tagButton referenceTagButton:previousTagButton];
+    }
+    
+    // 排布文本框
+    [self setupTextFieldFrame];
 }
 
 
@@ -188,7 +190,54 @@
     CHGLog(@"点击了发表按钮");
 }
 
+#pragma mark - 设置控件的frame
+/**
+ * 设置标签按钮的frame
+ * @param tagButton 需要设置frame的标签按钮
+ * @param referenceTagButton 计算tagButton的frame时参照的标签按钮
+ */
+- (void)setupTagButtonFrame:(CHGTagButton *)tagButton referenceTagButton:(CHGTagButton *)referenceTagButton
+{
+    // 没有参照按钮（tagButton是第一个标签按钮）
+    if (referenceTagButton == nil) {
+        tagButton.x = 0;
+        tagButton.y = 0;
+        return;
+    }
+    
+    // tagButton不是第一个标签按钮
+    CGFloat leftWidth = CGRectGetMaxX(referenceTagButton.frame) + CHGCommonSmallMargin;
+    CGFloat rightWidth = self.contentView.width - leftWidth;
+    if (rightWidth >= tagButton.width) { // 跟上一个标签按钮处在同一行
+        tagButton.x = leftWidth;
+        tagButton.y = referenceTagButton.y;
+    } else { // 下一行
+        tagButton.x = 0;
+        tagButton.y = CGRectGetMaxY(referenceTagButton.frame) + CHGCommonSmallMargin;
+    }
+}
 
+- (void)setupTextFieldFrame
+{
+    CGFloat textW = [self.textField.text sizeWithAttributes:@{NSFontAttributeName : self.textField.font}].width;
+    textW = MAX(100, textW);
+    
+    CHGTagButton *lastTagButton = self.tagButtons.lastObject;
+    CGFloat leftWidth = CGRectGetMaxX(lastTagButton.frame) + CHGCommonSmallMargin;
+    CGFloat rightWidth = self.contentView.width - leftWidth;
+    if (rightWidth >= textW) { // 跟新添加的标签按钮处在同一行
+        self.textField.x = leftWidth;
+        self.textField.y = lastTagButton.y;
+    } else { // 换行
+        self.textField.x = 0;
+        self.textField.y = CGRectGetMaxY(lastTagButton.frame) + CHGCommonSmallMargin;
+    }
+    
+    // 排布提醒按钮
+    self.tipButton.y = CGRectGetMaxY(self.textField.frame) + CHGCommonSmallMargin;
+}
+
+#pragma mark - <UITextFieldDelegate>
 /**
  点击右下角return按钮就会调用这个方法
  */
@@ -198,4 +247,5 @@
     CHGLog(@"%s",__func__);
     return YES;
 }
+
 @end
