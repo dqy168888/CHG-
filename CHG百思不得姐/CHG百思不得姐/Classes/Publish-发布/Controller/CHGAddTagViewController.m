@@ -8,12 +8,14 @@
 
 #import "CHGAddTagViewController.h"
 #import "CHGTagButton.h"
+#import "CHGTagTextField.h"
+#import <SVProgressHUD.h>
 
 @interface CHGAddTagViewController ()<UITextFieldDelegate>
 /** 用来容纳所有按钮和文本框 */
 @property (nonatomic, weak) UIView *contentView;
 /** 文本框 */
-@property (nonatomic, weak) UITextField *textField;
+@property (nonatomic, weak) CHGTagTextField *textField;
 /** 提醒按钮 */
 @property (nonatomic, weak) UIButton *tipButton;
 /** 存放所有的标签按钮 */
@@ -65,6 +67,17 @@
     [self setupContentView];
     [self setupTextField];
     
+    [self setupTags];
+    
+}
+
+- (void)setupTags
+{
+    self.textField.text = @"哈哈";
+    [self tipClick];
+    
+    self.textField.text = @"呵呵";
+    [self tipClick];
 }
 
 - (void)setupContentView
@@ -80,7 +93,7 @@
 
 - (void)setupTextField
 {
-    UITextField *textField = [[UITextField alloc] init];
+    CHGTagTextField *textField = [[CHGTagTextField alloc] init];
     [textField addTarget:self action:@selector(textDidChange) forControlEvents:UIControlEventEditingChanged];
     textField.width = self.contentView.width;
     textField.height = CHGTagH;
@@ -94,6 +107,17 @@
     [self.contentView addSubview:textField];
     // 刷新的前提：这个控件已经被添加到父控件
     [textField layoutIfNeeded];
+    
+    
+    CHGWeakSelf;
+    // 设置点击删除键需要执行的操作
+    textField.deleteBackwardOperation = ^{
+        // 判断文本框是否有文字
+        if (weakSelf.textField.hasText) return;
+        
+        // 点击了最后一个标签按钮（删掉最后一个标签按钮）
+        [weakSelf tagClick:weakSelf.tagButtons.lastObject];
+    };
 }
 
 - (void)setupNav
@@ -115,7 +139,8 @@
         if ([lastChar isEqualToString:@","]
             || [lastChar isEqualToString:@"，"]) { // 最后一个输入的字符是逗号
             // 去掉文本框最后一个逗号
-            self.textField.text = [text substringToIndex:text.length - 1];
+//            self.textField.text = [text substringToIndex:text.length - 1];
+            [self.textField deleteBackward];
             
             // 点击提醒按钮
             [self tipClick];
@@ -134,6 +159,12 @@
 // 点击提醒按钮
 - (void)tipClick
 {
+//    if (self.textField.hasText == NO) return;
+    
+    if (self.tagButtons.count == 5) {
+        [SVProgressHUD showErrorWithStatus:@"最多添加5个标签" maskType:SVProgressHUDMaskTypeBlack];
+        return;
+    }
     // 添加标签按钮
     CHGTagButton *newTagButton = [[CHGTagButton alloc] init];
     [newTagButton setTitle:[NSString stringWithFormat:@"%@", self.textField.text] forState:UIControlStateNormal];

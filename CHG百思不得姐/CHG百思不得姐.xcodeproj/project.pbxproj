@@ -53,6 +53,7 @@
 		FAC068871BA46B3D00A7EAC9 /* CHGAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC068861BA46B3D00A7EAC9 /* CHGAddTagViewController.m */; };
 		FAC0688A1BA46ED900A7EAC9 /* UITextField+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC068891BA46ED900A7EAC9 /* UITextField+CHGExtension.m */; };
 		FAC0688D1BA47DCF00A7EAC9 /* CHGTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0688C1BA47DCF00A7EAC9 /* CHGTagButton.m */; };
+		FAC068901BA48BCA00A7EAC9 /* CHGTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0688F1BA48BCA00A7EAC9 /* CHGTagTextField.m */; };
 		FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */; };
 		FACD16E31B95678B00339438 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD16E21B95678B00339438 /* Images.xcassets */; };
 		FACD16F21B95678B00339438 /* CHG_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16F11B95678B00339438 /* CHG_____Tests.m */; };
@@ -157,6 +158,8 @@
 		FAC068891BA46ED900A7EAC9 /* UITextField+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CHGExtension.m"; sourceTree = "<group>"; };
 		FAC0688B1BA47DCF00A7EAC9 /* CHGTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTagButton.h; sourceTree = "<group>"; };
 		FAC0688C1BA47DCF00A7EAC9 /* CHGTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTagButton.m; sourceTree = "<group>"; };
+		FAC0688E1BA48BCA00A7EAC9 /* CHGTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTagTextField.h; sourceTree = "<group>"; };
+		FAC0688F1BA48BCA00A7EAC9 /* CHGTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTagTextField.m; sourceTree = "<group>"; };
 		FACD16CF1B95678B00339438 /* CHG百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHG百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16D31B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16DA1B95678B00339438 /* CHG_____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CHG_____.xcdatamodel"; sourceTree = "<group>"; };
@@ -493,6 +496,8 @@
 				FA8FA7801BA2EF8A00AAD48A /* CHGPostWordToolbar.xib */,
 				FAC0688B1BA47DCF00A7EAC9 /* CHGTagButton.h */,
 				FAC0688C1BA47DCF00A7EAC9 /* CHGTagButton.m */,
+				FAC0688E1BA48BCA00A7EAC9 /* CHGTagTextField.h */,
+				FAC0688F1BA48BCA00A7EAC9 /* CHGTagTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -736,6 +741,7 @@
 				FA8237F91B95EC3600A4E7C8 /* UIView+CHGExtension.m in Sources */,
 				FA9994121B9C4EE900CF4E83 /* CHGTag.m in Sources */,
 				FA1B7F8B1B9DCFED004FD879 /* NSString+CHGExtension.m in Sources */,
+				FAC068901BA48BCA00A7EAC9 /* CHGTagTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
