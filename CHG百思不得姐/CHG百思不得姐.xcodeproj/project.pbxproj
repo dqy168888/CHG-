@@ -52,6 +52,7 @@
 		FAB68B861BA04E3D00110FEA /* CHGPublishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB68B851BA04E3D00110FEA /* CHGPublishButton.m */; };
 		FAC068871BA46B3D00A7EAC9 /* CHGAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC068861BA46B3D00A7EAC9 /* CHGAddTagViewController.m */; };
 		FAC0688A1BA46ED900A7EAC9 /* UITextField+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC068891BA46ED900A7EAC9 /* UITextField+CHGExtension.m */; };
+		FAC0688D1BA47DCF00A7EAC9 /* CHGTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC0688C1BA47DCF00A7EAC9 /* CHGTagButton.m */; };
 		FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */; };
 		FACD16E31B95678B00339438 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD16E21B95678B00339438 /* Images.xcassets */; };
 		FACD16F21B95678B00339438 /* CHG_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16F11B95678B00339438 /* CHG_____Tests.m */; };
@@ -154,6 +155,8 @@
 		FAC068861BA46B3D00A7EAC9 /* CHGAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGAddTagViewController.m; sourceTree = "<group>"; };
 		FAC068881BA46ED900A7EAC9 /* UITextField+CHGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+CHGExtension.h"; sourceTree = "<group>"; };
 		FAC068891BA46ED900A7EAC9 /* UITextField+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CHGExtension.m"; sourceTree = "<group>"; };
+		FAC0688B1BA47DCF00A7EAC9 /* CHGTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTagButton.h; sourceTree = "<group>"; };
+		FAC0688C1BA47DCF00A7EAC9 /* CHGTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTagButton.m; sourceTree = "<group>"; };
 		FACD16CF1B95678B00339438 /* CHG百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHG百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16D31B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16DA1B95678B00339438 /* CHG_____.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CHG_____.xcdatamodel"; sourceTree = "<group>"; };
@@ -488,6 +491,8 @@
 				FA8FA77D1BA2EF6D00AAD48A /* CHGPostWordToolbar.h */,
 				FA8FA77E1BA2EF6D00AAD48A /* CHGPostWordToolbar.m */,
 				FA8FA7801BA2EF8A00AAD48A /* CHGPostWordToolbar.xib */,
+				FAC0688B1BA47DCF00A7EAC9 /* CHGTagButton.h */,
+				FAC0688C1BA47DCF00A7EAC9 /* CHGTagButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -690,6 +695,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC0688D1BA47DCF00A7EAC9 /* CHGTagButton.m in Sources */,
 				FA8237F31B95EC3600A4E7C8 /* CHGNewViewController.m in Sources */,
 				FA8237EF1B95EC3600A4E7C8 /* CHGTagViewController.m in Sources */,
 				FA8238071B95F9AE00A4E7C8 /* CHGRecommendController.m in Sources */,
