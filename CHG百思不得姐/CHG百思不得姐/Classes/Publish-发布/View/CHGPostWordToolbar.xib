@@ -51,7 +51,7 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3Z-EF-1rh" userLabel="顶部">
                     <rect key="frame" x="5" y="0.0" width="357" height="60"/>
-                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="Ay1-Dj-nV3"/>
                     </constraints>
@@ -68,7 +68,9 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="bottomViewHeight" destination="ALW-76-aMe" id="iQJ-uK-4sT"/>
                 <outlet property="top" destination="o3Z-EF-1rh" id="YKJ-hj-0z0"/>
+                <outlet property="topViewHeight" destination="Ay1-Dj-nV3" id="UmY-EG-4PX"/>
             </connections>
             <point key="canvasLocation" x="223.5" y="187.5"/>
         </view>

@@ -13,7 +13,9 @@
 
 @interface CHGPostWordToolbar ()
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomViewHeight;
 @property (weak, nonatomic) IBOutlet UIView *top;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topViewHeight;
 /** 所有的标签label */
 @property (nonatomic, strong) NSMutableArray *tagLabels;
 /** 加号按钮 */
@@ -38,6 +40,8 @@
     [addbutton addTarget:self action:@selector(addClick) forControlEvents:UIControlEventTouchUpInside];
     [self.top addSubview:addbutton];
     self.addButton = addbutton;
+    
+    [self createTagLabels:@[@"吐槽",@"糗事"]];
 }
 
 - (void)addClick
@@ -87,8 +91,18 @@
         [newTagLabel sizeToFit];
         newTagLabel.height = CHGTagH;
         newTagLabel.width = newTagLabel.width + CHGCommonSmallMargin * 2 ;
+    }
+    // 若不手动刷新  不会调用layoutSubviews  按钮全部挤在了 0 0
+    [self setNeedsLayout];
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    // 位置
+    for (int i = 0; i < self.tagLabels.count; ++i) {
+        UILabel *newTagLabel = self.tagLabels[i];
         
-        // 位置
         if (i == 0) {
             newTagLabel.x = 0;
             newTagLabel.y = 0;
@@ -124,6 +138,12 @@
             self.addButton.y = CGRectGetMaxY(lastTagLabel.frame) + CHGCommonSmallMargin;
         }
     }
-}
 
+    // 计算工具条的高度
+    self.topViewHeight.constant = CGRectGetMaxY(self.addButton.frame);
+    CGFloat oldHeight = self.height;
+    self.height = self.topViewHeight.constant + self.bottomViewHeight.constant + CHGCommonSmallMargin;
+    self.y += oldHeight - self.height;
+}
 @end
+
