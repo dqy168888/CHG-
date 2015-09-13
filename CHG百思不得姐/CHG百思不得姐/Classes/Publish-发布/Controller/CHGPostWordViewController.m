@@ -99,7 +99,7 @@
 
 - (void)cancel
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 #pragma mark - <UITextViewDelegate>
