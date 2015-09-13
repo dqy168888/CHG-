@@ -15,6 +15,11 @@
 		FA575B961B99528800B5652F /* CHGLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */; };
 		FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */; };
 		FA6A0F9C1BA5D0B8003F2E48 /* CHGTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6A0F9B1BA5D0B8003F2E48 /* CHGTitleButton.m */; };
+		FA6A0F9F1BA5DFFB003F2E48 /* CHGAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6A0F9E1BA5DFFB003F2E48 /* CHGAllViewController.m */; };
+		FA6A0FA21BA5E011003F2E48 /* CHGVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6A0FA11BA5E011003F2E48 /* CHGVideoViewController.m */; };
+		FA6A0FA51BA5E023003F2E48 /* CHGVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6A0FA41BA5E023003F2E48 /* CHGVoiceViewController.m */; };
+		FA6A0FA81BA5E038003F2E48 /* CHGPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6A0FA71BA5E038003F2E48 /* CHGPictureViewController.m */; };
+		FA6A0FAB1BA5E046003F2E48 /* CHGWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6A0FAA1BA5E046003F2E48 /* CHGWordViewController.m */; };
 		FA7D4DC31B9DAF410053E39F /* CHGMeFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7D4DC21B9DAF410053E39F /* CHGMeFooter.m */; };
 		FA7D4DC61B9DB52B0053E39F /* CHGSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7D4DC51B9DB52B0053E39F /* CHGSquareButton.m */; };
 		FA7D4DCA1B9DBE430053E39F /* CHGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7D4DC81B9DBE430053E39F /* CHGWebViewController.m */; };
@@ -91,6 +96,16 @@
 		FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGQuickLoginButton.m; sourceTree = "<group>"; };
 		FA6A0F9A1BA5D0B8003F2E48 /* CHGTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTitleButton.h; sourceTree = "<group>"; };
 		FA6A0F9B1BA5D0B8003F2E48 /* CHGTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTitleButton.m; sourceTree = "<group>"; };
+		FA6A0F9D1BA5DFFB003F2E48 /* CHGAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGAllViewController.h; sourceTree = "<group>"; };
+		FA6A0F9E1BA5DFFB003F2E48 /* CHGAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGAllViewController.m; sourceTree = "<group>"; };
+		FA6A0FA01BA5E011003F2E48 /* CHGVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGVideoViewController.h; sourceTree = "<group>"; };
+		FA6A0FA11BA5E011003F2E48 /* CHGVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGVideoViewController.m; sourceTree = "<group>"; };
+		FA6A0FA31BA5E023003F2E48 /* CHGVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGVoiceViewController.h; sourceTree = "<group>"; };
+		FA6A0FA41BA5E023003F2E48 /* CHGVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGVoiceViewController.m; sourceTree = "<group>"; };
+		FA6A0FA61BA5E038003F2E48 /* CHGPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPictureViewController.h; sourceTree = "<group>"; };
+		FA6A0FA71BA5E038003F2E48 /* CHGPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPictureViewController.m; sourceTree = "<group>"; };
+		FA6A0FA91BA5E046003F2E48 /* CHGWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGWordViewController.h; sourceTree = "<group>"; };
+		FA6A0FAA1BA5E046003F2E48 /* CHGWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGWordViewController.m; sourceTree = "<group>"; };
 		FA7D4DC11B9DAF410053E39F /* CHGMeFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGMeFooter.h; sourceTree = "<group>"; };
 		FA7D4DC21B9DAF410053E39F /* CHGMeFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGMeFooter.m; sourceTree = "<group>"; };
 		FA7D4DC41B9DB52B0053E39F /* CHGSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGSquareButton.h; sourceTree = "<group>"; };
@@ -244,6 +259,16 @@
 				FA8237C41B95EC3600A4E7C8 /* CHGEssenceViewController.m */,
 				FA8237C51B95EC3600A4E7C8 /* CHGTagViewController.h */,
 				FA8237C61B95EC3600A4E7C8 /* CHGTagViewController.m */,
+				FA6A0F9D1BA5DFFB003F2E48 /* CHGAllViewController.h */,
+				FA6A0F9E1BA5DFFB003F2E48 /* CHGAllViewController.m */,
+				FA6A0FA01BA5E011003F2E48 /* CHGVideoViewController.h */,
+				FA6A0FA11BA5E011003F2E48 /* CHGVideoViewController.m */,
+				FA6A0FA31BA5E023003F2E48 /* CHGVoiceViewController.h */,
+				FA6A0FA41BA5E023003F2E48 /* CHGVoiceViewController.m */,
+				FA6A0FA61BA5E038003F2E48 /* CHGPictureViewController.h */,
+				FA6A0FA71BA5E038003F2E48 /* CHGPictureViewController.m */,
+				FA6A0FA91BA5E046003F2E48 /* CHGWordViewController.h */,
+				FA6A0FAA1BA5E046003F2E48 /* CHGWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -707,12 +732,14 @@
 				FAC0688D1BA47DCF00A7EAC9 /* CHGTagButton.m in Sources */,
 				FA8237F31B95EC3600A4E7C8 /* CHGNewViewController.m in Sources */,
 				FA8237EF1B95EC3600A4E7C8 /* CHGTagViewController.m in Sources */,
+				FA6A0F9F1BA5DFFB003F2E48 /* CHGAllViewController.m in Sources */,
 				FA8238071B95F9AE00A4E7C8 /* CHGRecommendController.m in Sources */,
 				FA7D4DC61B9DB52B0053E39F /* CHGSquareButton.m in Sources */,
 				FA8237F71B95EC3600A4E7C8 /* CHGTabBar.m in Sources */,
 				FA9A97361B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m in Sources */,
 				FA8237FF1B95F12D00A4E7C8 /* CHGFriendTrendsViewController.m in Sources */,
 				FA03E9101B9DA6840027D475 /* CHGSquare.m in Sources */,
+				FA6A0FA51BA5E023003F2E48 /* CHGVoiceViewController.m in Sources */,
 				FA8237F61B95EC3600A4E7C8 /* CHGTabBarController.m in Sources */,
 				FA8237F41B95EC3600A4E7C8 /* AppDelegate.m in Sources */,
 				FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */,
@@ -725,6 +752,7 @@
 				FAF3F0481BA1178B008B46EC /* CHGPostWordViewController.m in Sources */,
 				FAF3F0511BA15BFD008B46EC /* CHGPlaceholderTextView2.m in Sources */,
 				FA7D4DCA1B9DBE430053E39F /* CHGWebViewController.m in Sources */,
+				FA6A0FA81BA5E038003F2E48 /* CHGPictureViewController.m in Sources */,
 				FA8237F81B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m in Sources */,
 				FA8238031B95F59000A4E7C8 /* CHGNavigationController.m in Sources */,
 				FA7D4DC31B9DAF410053E39F /* CHGMeFooter.m in Sources */,
@@ -732,9 +760,11 @@
 				FAF3F04E1BA11CB7008B46EC /* CHGPlaceholderTextView.m in Sources */,
 				FA99941D1B9C623C00CF4E83 /* UIImage+CHGExtension.m in Sources */,
 				FA03E90D1B9DA66B0027D475 /* CHGMeCell.m in Sources */,
+				FA6A0FAB1BA5E046003F2E48 /* CHGWordViewController.m in Sources */,
 				FAA42F3E1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m in Sources */,
 				FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */,
 				FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */,
+				FA6A0FA21BA5E011003F2E48 /* CHGVideoViewController.m in Sources */,
 				FAA274621B9C8BB00086B332 /* CHGConst.m in Sources */,
 				FA9994201B9C662A00CF4E83 /* UIImageView+CHGExtension.m in Sources */,
 				FAB68B861BA04E3D00110FEA /* CHGPublishButton.m in Sources */,

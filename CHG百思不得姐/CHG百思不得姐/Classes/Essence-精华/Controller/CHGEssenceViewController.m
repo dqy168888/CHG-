@@ -9,6 +9,11 @@
 #import "CHGEssenceViewController.h"
 #import "CHGTagViewController.h"
 #import "CHGTitleButton.h"
+#import "CHGAllViewController.h"
+#import "CHGVideoViewController.h"
+#import "CHGVoiceViewController.h"
+#import "CHGPictureViewController.h"
+#import "CHGWordViewController.h"
 
 @interface CHGEssenceViewController ()
 
@@ -40,10 +45,35 @@
     [super viewDidLoad];
     
     [self setupNav];
+    
+    [self setupChildVcs];
 
     [self setupScrollView];
     
     [self setupTitlesView];
+}
+
+- (void)setupChildVcs
+{
+    CHGAllViewController *all = [[CHGAllViewController alloc] init];
+    all.title = @"全部";
+    [self addChildViewController:all];
+    
+    CHGVideoViewController *video = [[CHGVideoViewController alloc] init];
+    video.title = @"视频";
+    [self addChildViewController:video];
+    
+    CHGVoiceViewController *voice = [[CHGVoiceViewController alloc] init];
+    voice.title = @"声音";
+    [self addChildViewController:voice];
+    
+    CHGPictureViewController *picture = [[CHGPictureViewController alloc] init];
+    picture.title = @"图片";
+    [self addChildViewController:picture];
+    
+    CHGWordViewController *word = [[CHGWordViewController alloc] init];
+    word.title = @"段子";
+    [self addChildViewController:word];
 }
 
 - (void)setupTitlesView
@@ -56,11 +86,10 @@
     self.titlesView = titlesView;
     
     // 标签栏内部的标签按钮
-    NSArray *titles = @[@"全部", @"视频", @"声音", @"图片", @"段子"];
-    int count = (int)titles.count;
+    NSUInteger count = self.childViewControllers.count;
     CGFloat titleButtonW = self.view.width / count;
     CGFloat titleButtonH = titlesView.height;
-    for (int i = 0; i < titles.count; ++i) {
+    for (int i = 0; i < count; ++i) {
         // 创建标签按钮
         CHGTitleButton *titleButton = [CHGTitleButton buttonWithType:UIButtonTypeCustom];
 //        titleButton.backgroundColor = CHGRandomColor;
@@ -69,7 +98,9 @@
         [titlesView addSubview:titleButton];
         [self.titleButtons addObject:titleButton];
         
-        [titleButton setTitle:titles[i] forState:UIControlStateNormal];
+        // 设置文字
+        NSString *title = [self.childViewControllers[i] title];
+        [titleButton setTitle:title forState:UIControlStateNormal];
         
         // 设置标签按钮frame
         titleButton.frame = CGRectMake(i * titleButtonW, 0, titleButtonW, titleButtonH);
@@ -98,9 +129,14 @@
 
 - (void)setupScrollView
 {
+    // 不要让系统自动设置scrollView的偏移量（顶部导航栏和底部tabbar）
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.frame = self.view.bounds;
     scrollView.backgroundColor = CHGGlobalBg;
+    
+    scrollView.contentSize = CGSizeMake(self.childViewControllers.count * self.view.width, 0);
     [self.view addSubview:scrollView];
     self.scrollView = scrollView;
 }
@@ -125,6 +161,12 @@
         self.titleBottomView.width = titleButton.titleLabel.width;
         self.titleBottomView.centerX = titleButton.centerX;
     }];
+    
+    // 滚动到指定的控制器
+
+    CGPoint offset = self.scrollView.contentOffset;
+    offset.x = self.view.width * [self.titleButtons indexOfObject:titleButton];
+    [self.scrollView setContentOffset:offset animated:YES];
 }
 
 - (void)tagClick
