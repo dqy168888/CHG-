@@ -67,7 +67,7 @@
     [self setupContentView];
     [self setupTextField];
     
-    [self setupTags];
+//    [self setupTags];
     
 }
 
@@ -102,6 +102,7 @@
     textField.placeholderColor = [UIColor grayColor];
     self.textField = textField;
     
+    textField.delegate = self;
     [textField becomeFirstResponder];
     
     [self.contentView addSubview:textField];
@@ -112,8 +113,9 @@
     CHGWeakSelf;
     // 设置点击删除键需要执行的操作
     textField.deleteBackwardOperation = ^{
-        // 判断文本框是否有文字
-        if (weakSelf.textField.hasText) return;
+        // 判断文本框是否有文字 或者在没有标签时的情况下
+//        if (weakSelf.textField.hasText) return;// 直接回删tipButton会显示出来
+        if (weakSelf.textField.hasText || weakSelf.tagButtons.count == 0) return;
         
         // 点击了最后一个标签按钮（删掉最后一个标签按钮）
         [weakSelf tagClick:weakSelf.tagButtons.lastObject];
@@ -159,7 +161,8 @@
 // 点击提醒按钮
 - (void)tipClick
 {
-//    if (self.textField.hasText == NO) return;
+    // 如果不判断  换行或者逗号会创建 一个空的标签
+    if (self.textField.hasText == NO) return;
     
     if (self.tagButtons.count == 5) {
         [SVProgressHUD showErrorWithStatus:@"最多添加5个标签" maskType:SVProgressHUDMaskTypeBlack];
@@ -218,7 +221,10 @@
 
 - (void)done
 {
-    CHGLog(@"点击了发表按钮");
+    // 将self.tagButtons中存放的所有对象的currentTitle属性值取出来，放到一个新的数组中，并返回
+    NSArray *tags = [self.tagButtons valueForKeyPath:@"currentTitle"];
+    !self.getTagsBlock ? :self.getTagsBlock(tags);
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - 设置控件的frame
@@ -254,14 +260,20 @@
     textW = MAX(100, textW);
     
     CHGTagButton *lastTagButton = self.tagButtons.lastObject;
-    CGFloat leftWidth = CGRectGetMaxX(lastTagButton.frame) + CHGCommonSmallMargin;
-    CGFloat rightWidth = self.contentView.width - leftWidth;
-    if (rightWidth >= textW) { // 跟新添加的标签按钮处在同一行
-        self.textField.x = leftWidth;
-        self.textField.y = lastTagButton.y;
-    } else { // 换行
+    if (lastTagButton == nil) { // 没有标签时
         self.textField.x = 0;
-        self.textField.y = CGRectGetMaxY(lastTagButton.frame) + CHGCommonSmallMargin;
+        self.textField.y = 0;
+    }else
+    {
+        CGFloat leftWidth = CGRectGetMaxX(lastTagButton.frame) + CHGCommonSmallMargin;
+        CGFloat rightWidth = self.contentView.width - leftWidth;
+        if (rightWidth >= textW) { // 跟新添加的标签按钮处在同一行
+            self.textField.x = leftWidth;
+            self.textField.y = lastTagButton.y;
+        } else { // 换行
+            self.textField.x = 0;
+            self.textField.y = CGRectGetMaxY(lastTagButton.frame) + CHGCommonSmallMargin;
+        }
     }
     
     // 排布提醒按钮
@@ -270,12 +282,11 @@
 
 #pragma mark - <UITextFieldDelegate>
 /**
- 点击右下角return按钮就会调用这个方法
+ 点击右下角return按钮就会调用这个方法  ps：千万不要忘记设置代理。。。不然你会发现你的换行失灵了 2333333
  */
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self tipClick];
-    CHGLog(@"%s",__func__);
     return YES;
 }
 

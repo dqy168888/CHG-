@@ -4,7 +4,7 @@
 //
 //  Created by chenhongen on 15/9/10.
 //  Copyright (c) 2015年 陈弘根. All rights reserved.
-//
+//  发段子的textView
 
 #import "CHGPlaceholderTextView2.h"
 

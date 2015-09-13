@@ -4,7 +4,7 @@
 //
 //  Created by chenhongen on 15/9/13.
 //  Copyright (c) 2015年 陈弘根. All rights reserved.
-//
+//  添加标签的textfield
 
 #import "CHGTagTextField.h"
 

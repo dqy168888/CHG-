@@ -32,6 +32,7 @@
 - (void)setupTextTool
 {
     CHGPostWordToolbar *TextTool = [CHGPostWordToolbar viewFromXib];
+//    self.textView.inputAccessoryView = TextTool;// 用系统的键盘辅助工具
     TextTool.x = 0;
     TextTool.y = self.view.height - TextTool.height;
     TextTool.width = self.view.width;

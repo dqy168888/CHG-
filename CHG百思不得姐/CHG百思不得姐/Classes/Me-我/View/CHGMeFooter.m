@@ -19,7 +19,8 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-
+        
+        self.backgroundColor = [UIColor whiteColor];
         
         // 请求参数
         NSMutableDictionary *params = [NSMutableDictionary dictionary];

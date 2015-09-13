@@ -4,7 +4,7 @@
 //
 //  Created by chenhongen on 15/9/10.
 //
-//
+//  发段子的textView
 
 #import "CHGPlaceholderTextView.h"
 

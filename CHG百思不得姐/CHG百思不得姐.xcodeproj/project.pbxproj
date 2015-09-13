@@ -217,6 +217,7 @@
 				FAB68B7C1BA04B0100110FEA /* Publish-发布 */,
 				FA8237C11B95EC3600A4E7C8 /* Essence-精华 */,
 				FA8237C91B95EC3600A4E7C8 /* FriendTrends-关注 */,
+				FA8237D71B95EC3600A4E7C8 /* New-新帖 */,
 				FA8237CF1B95EC3600A4E7C8 /* Me-我 */,
 				FA8237DD1B95EC3600A4E7C8 /* Other-其他 */,
 			);
@@ -315,7 +316,6 @@
 		FA8237CF1B95EC3600A4E7C8 /* Me-我 */ = {
 			isa = PBXGroup;
 			children = (
-				FA8237D71B95EC3600A4E7C8 /* New-新帖 */,
 				FA8237D01B95EC3600A4E7C8 /* Controller */,
 				FA8237D51B95EC3600A4E7C8 /* Model */,
 				FA8237D61B95EC3600A4E7C8 /* View */,
@@ -368,8 +368,7 @@
 				FA8237DB1B95EC3600A4E7C8 /* Model */,
 				FA8237DC1B95EC3600A4E7C8 /* View */,
 			);
-			name = "New-新帖";
-			path = "../New-新帖";
+			path = "New-新帖";
 			sourceTree = "<group>";
 		};
 		FA8237D81B95EC3600A4E7C8 /* Controller */ = {

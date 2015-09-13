@@ -50,7 +50,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3Z-EF-1rh" userLabel="顶部">
-                    <rect key="frame" x="0.0" y="0.0" width="367" height="60"/>
+                    <rect key="frame" x="5" y="0.0" width="357" height="60"/>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="Ay1-Dj-nV3"/>
@@ -63,8 +63,8 @@
                 <constraint firstAttribute="trailing" secondItem="cce-Bw-hsV" secondAttribute="trailing" id="LI7-91-9fy"/>
                 <constraint firstItem="o3Z-EF-1rh" firstAttribute="top" secondItem="Jax-VQ-Jm5" secondAttribute="top" id="M6K-AT-QXc"/>
                 <constraint firstAttribute="bottom" secondItem="cce-Bw-hsV" secondAttribute="bottom" id="dX4-9V-ZcZ"/>
-                <constraint firstItem="o3Z-EF-1rh" firstAttribute="leading" secondItem="Jax-VQ-Jm5" secondAttribute="leading" id="kNw-Bh-LeH"/>
-                <constraint firstAttribute="trailing" secondItem="o3Z-EF-1rh" secondAttribute="trailing" id="oKo-Hl-30f"/>
+                <constraint firstItem="o3Z-EF-1rh" firstAttribute="leading" secondItem="Jax-VQ-Jm5" secondAttribute="leading" constant="5" id="kNw-Bh-LeH"/>
+                <constraint firstAttribute="trailing" secondItem="o3Z-EF-1rh" secondAttribute="trailing" constant="5" id="oKo-Hl-30f"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
