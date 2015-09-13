@@ -67,17 +67,16 @@
     [self setupContentView];
     [self setupTextField];
     
-//    [self setupTags];
+    [self setupTags];
     
 }
 
 - (void)setupTags
 {
-    self.textField.text = @"哈哈";
-    [self tipClick];
-    
-    self.textField.text = @"呵呵";
-    [self tipClick];
+    for (NSString *tag in self.tags) {
+        self.textField.text = tag;
+        [self tipClick];
+    }
 }
 
 - (void)setupContentView

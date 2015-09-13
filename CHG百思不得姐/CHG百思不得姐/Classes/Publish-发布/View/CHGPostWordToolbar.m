@@ -57,6 +57,8 @@
         
         [self createTagLabels:tags];
     };
+    
+    addtagVC.tags = [self.tagLabels valueForKeyPath:@"text"];
     CHGNavigationController *nav = [[CHGNavigationController alloc] initWithRootViewController:addtagVC];
     
     
