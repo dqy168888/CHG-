@@ -15,7 +15,7 @@
 #import "CHGPictureViewController.h"
 #import "CHGWordViewController.h"
 
-@interface CHGEssenceViewController ()
+@interface CHGEssenceViewController ()<UIScrollViewDelegate>
 
 @property (nonatomic, weak) UIScrollView *scrollView;
 /** 标题栏 */
@@ -129,16 +129,23 @@
 
 - (void)setupScrollView
 {
-    // 不要让系统自动设置scrollView的偏移量（顶部导航栏和底部tabbar）
+    // 不要让系统自动设置scrollView的内边距（顶部导航栏 = 64和底部tabbar = 44）
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.frame = self.view.bounds;
     scrollView.backgroundColor = CHGGlobalBg;
+    scrollView.delegate = self;
+    
+    // 设置分页
+    scrollView.pagingEnabled = YES;
     
     scrollView.contentSize = CGSizeMake(self.childViewControllers.count * self.view.width, 0);
     [self.view addSubview:scrollView];
     self.scrollView = scrollView;
+    
+    // 默认显示第0个子控制器
+    [self scrollViewDidEndScrollingAnimation:scrollView];
 }
 
 - (void)setupNav
@@ -163,7 +170,6 @@
     }];
     
     // 滚动到指定的控制器
-
     CGPoint offset = self.scrollView.contentOffset;
     offset.x = self.view.width * [self.titleButtons indexOfObject:titleButton];
     [self.scrollView setContentOffset:offset animated:YES];
@@ -177,4 +183,34 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+#pragma mark <UIScrollViewDelegate>
+/**
+ * 当滚动动画完毕的时候调用（通过代码setContentOffset:animated:让scrollView滚动完毕后，就会调用这个方法）
+ */
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+
+    int index = scrollView.contentOffset.x / scrollView.width;
+    UIViewController *willShowChildVc = self.childViewControllers[index];
+    
+    if (willShowChildVc.isViewLoaded) return;
+    willShowChildVc.view.frame = scrollView.bounds;
+    [scrollView addSubview:willShowChildVc.view];
+}
+
+/**
+ * 当减速完毕的时候调用（人为拖拽scrollView，手松开后scrollView慢慢减速完毕到静止）
+ */
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self scrollViewDidEndScrollingAnimation:scrollView];
+    
+    int index = scrollView.contentOffset.x / scrollView.width;
+    CHGTitleButton *titleButton = self.titleButtons[index];
+    [self titleClick:titleButton];
+    
+}
+
+
 @end
+
