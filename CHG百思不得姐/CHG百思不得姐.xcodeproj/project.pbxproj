@@ -63,6 +63,9 @@
 		FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */; };
 		FACD16E31B95678B00339438 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD16E21B95678B00339438 /* Images.xcassets */; };
 		FACD16F21B95678B00339438 /* CHG_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16F11B95678B00339438 /* CHG_____Tests.m */; };
+		FAF1BD551BA6ECA10071C8B8 /* CHGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF1BD531BA6ECA10071C8B8 /* CHGTopicCell.m */; };
+		FAF1BD561BA6ECA10071C8B8 /* CHGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1BD541BA6ECA10071C8B8 /* CHGTopicCell.xib */; };
+		FAF1BD591BA6ECBC0071C8B8 /* CHGTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF1BD581BA6ECBC0071C8B8 /* CHGTopic.m */; };
 		FAF3F0481BA1178B008B46EC /* CHGPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F0471BA1178B008B46EC /* CHGPostWordViewController.m */; };
 		FAF3F04E1BA11CB7008B46EC /* CHGPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F04D1BA11CB7008B46EC /* CHGPlaceholderTextView.m */; };
 		FAF3F0511BA15BFD008B46EC /* CHGPlaceholderTextView2.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F0501BA15BFD008B46EC /* CHGPlaceholderTextView2.m */; };
@@ -185,6 +188,11 @@
 		FACD16EB1B95678B00339438 /* CHG百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CHG百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16F01B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16F11B95678B00339438 /* CHG_____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CHG_____Tests.m"; sourceTree = "<group>"; };
+		FAF1BD521BA6ECA10071C8B8 /* CHGTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicCell.h; sourceTree = "<group>"; };
+		FAF1BD531BA6ECA10071C8B8 /* CHGTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicCell.m; sourceTree = "<group>"; };
+		FAF1BD541BA6ECA10071C8B8 /* CHGTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicCell.xib; sourceTree = "<group>"; };
+		FAF1BD571BA6ECBB0071C8B8 /* CHGTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopic.h; sourceTree = "<group>"; };
+		FAF1BD581BA6ECBC0071C8B8 /* CHGTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopic.m; sourceTree = "<group>"; };
 		FAF3F0461BA1178B008B46EC /* CHGPostWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPostWordViewController.h; sourceTree = "<group>"; };
 		FAF3F0471BA1178B008B46EC /* CHGPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPostWordViewController.m; sourceTree = "<group>"; };
 		FAF3F04C1BA11CB7008B46EC /* CHGPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPlaceholderTextView.h; sourceTree = "<group>"; };
@@ -278,6 +286,8 @@
 			children = (
 				FA9994101B9C4EE900CF4E83 /* CHGTag.h */,
 				FA9994111B9C4EE900CF4E83 /* CHGTag.m */,
+				FAF1BD571BA6ECBB0071C8B8 /* CHGTopic.h */,
+				FAF1BD581BA6ECBC0071C8B8 /* CHGTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,6 +300,9 @@
 				FA9994151B9C4F1800CF4E83 /* CHGTagViewCell.xib */,
 				FA6A0F9A1BA5D0B8003F2E48 /* CHGTitleButton.h */,
 				FA6A0F9B1BA5D0B8003F2E48 /* CHGTitleButton.m */,
+				FAF1BD521BA6ECA10071C8B8 /* CHGTopicCell.h */,
+				FAF1BD531BA6ECA10071C8B8 /* CHGTopicCell.m */,
+				FAF1BD541BA6ECA10071C8B8 /* CHGTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -679,6 +692,7 @@
 				FA9994171B9C4F1800CF4E83 /* CHGTagViewCell.xib in Resources */,
 				FA8238001B95F12D00A4E7C8 /* CHGFriendTrendsViewController.xib in Resources */,
 				FA8FA7811BA2EF8A00AAD48A /* CHGPostWordToolbar.xib in Resources */,
+				FAF1BD561BA6ECA10071C8B8 /* CHGTopicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,6 +768,7 @@
 				FA7D4DCA1B9DBE430053E39F /* CHGWebViewController.m in Sources */,
 				FA6A0FA81BA5E038003F2E48 /* CHGPictureViewController.m in Sources */,
 				FA8237F81B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m in Sources */,
+				FAF1BD551BA6ECA10071C8B8 /* CHGTopicCell.m in Sources */,
 				FA8238031B95F59000A4E7C8 /* CHGNavigationController.m in Sources */,
 				FA7D4DC31B9DAF410053E39F /* CHGMeFooter.m in Sources */,
 				FAA42F3A1B9BBF67006145C6 /* CHGRecommendCategory.m in Sources */,
@@ -772,6 +787,7 @@
 				FA9994161B9C4F1800CF4E83 /* CHGTagViewCell.m in Sources */,
 				FA8FA77F1BA2EF6D00AAD48A /* CHGPostWordToolbar.m in Sources */,
 				FA1B7F8E1B9DD167004FD879 /* CHGClearCacheCell.m in Sources */,
+				FAF1BD591BA6ECBC0071C8B8 /* CHGTopic.m in Sources */,
 				FA8237F51B95EC3600A4E7C8 /* main.m in Sources */,
 				FA8237F91B95EC3600A4E7C8 /* UIView+CHGExtension.m in Sources */,
 				FA9994121B9C4EE900CF4E83 /* CHGTag.m in Sources */,

@@ -16,7 +16,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    // 设置内边距
+    self.tableView.contentInset = UIEdgeInsetsMake(CHGNavBarMaxY + CHGTitlesViewH, 0, CHGTabBarH, 0);
+    self.tableView.backgroundColor = CHGGlobalBg;
+    // 设置滚动条的范围
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
 }
 
 #pragma mark - Table view data source

@@ -17,3 +17,9 @@ CGFloat const CHGNavBarMaxY = 64;
 
 /** 标签的高度 */
 CGFloat const CHGTagH = 25;
+
+/** UITabBar的高度 */
+CGFloat const CHGTabBarH = 49;
+
+/** XMGTitlesView的高度 */
+CGFloat const CHGTitlesViewH = 35;
