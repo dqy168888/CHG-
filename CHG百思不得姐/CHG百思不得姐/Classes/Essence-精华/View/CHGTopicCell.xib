@@ -108,19 +108,19 @@
                                 </state>
                                 <state key="highlighted" image="mainCellCommentClick"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="Mbr-Dg-c0d">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="Mbr-Dg-c0d" userLabel="按钮之间的分割线">
                                 <rect key="frame" x="76" y="1" width="1" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="PG1-Pe-PjH"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="6MZ-x0-V1U">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="6MZ-x0-V1U" userLabel="按钮之间的分割线">
                                 <rect key="frame" x="152" y="1" width="1" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="Oc1-sO-xBR"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="kSO-N9-c0O">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-button-line" translatesAutoresizingMaskIntoConstraints="NO" id="kSO-N9-c0O" userLabel="按钮之间的分割线">
                                 <rect key="frame" x="228" y="1" width="1" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="tEB-cb-Roi"/>

@@ -12,6 +12,8 @@
 #import <AFNetworking.h>
 #import <MJRefresh.h>
 #import <MJExtension.h>
+#import "CHGChiBaoZiFooter.h"
+#import "CHGChiBaoZiHeader.h"
 /*
  1.要想让一个scrollView的内容能够穿透整个屏幕
  1> 让scrollView的frame占据整个屏幕
@@ -66,13 +68,13 @@ static NSString * const CHGTopicCellID = @"Topic";
 
 - (void)setupRefresh
 {
-    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
+    self.tableView.header = [CHGChiBaoZiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
     // 自动改变透明度
     self.tableView.header.automaticallyChangeAlpha = YES;
     
     [self.tableView.header beginRefreshing];
     
-    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
+    self.tableView.footer = [CHGChiBaoZiFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
 }
 
 - (void)loadNewTopics
