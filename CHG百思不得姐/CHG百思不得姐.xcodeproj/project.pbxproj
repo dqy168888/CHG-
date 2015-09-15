@@ -63,9 +63,9 @@
 		FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACD16D91B95678B00339438 /* CHG_____.xcdatamodeld */; };
 		FACD16E31B95678B00339438 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACD16E21B95678B00339438 /* Images.xcassets */; };
 		FACD16F21B95678B00339438 /* CHG_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FACD16F11B95678B00339438 /* CHG_____Tests.m */; };
-		FADF575E1BA7B55B00395122 /* CHGChiBaoZiFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF575D1BA7B55B00395122 /* CHGChiBaoZiFooter.m */; };
-		FADF57611BA7B58C00395122 /* CHGChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF57601BA7B58C00395122 /* CHGChiBaoZiHeader.m */; };
 		FADF57641BA7BC8E00395122 /* NSDate+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF57631BA7BC8E00395122 /* NSDate+CHGExtension.m */; };
+		FADF576B1BA7CDC400395122 /* CHGChiBaoZiFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF57681BA7CDC400395122 /* CHGChiBaoZiFooter.m */; };
+		FADF576C1BA7CDC400395122 /* CHGChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF576A1BA7CDC400395122 /* CHGChiBaoZiHeader.m */; };
 		FAF1BD551BA6ECA10071C8B8 /* CHGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF1BD531BA6ECA10071C8B8 /* CHGTopicCell.m */; };
 		FAF1BD561BA6ECA10071C8B8 /* CHGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1BD541BA6ECA10071C8B8 /* CHGTopicCell.xib */; };
 		FAF1BD591BA6ECBC0071C8B8 /* CHGTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF1BD581BA6ECBC0071C8B8 /* CHGTopic.m */; };
@@ -191,12 +191,12 @@
 		FACD16EB1B95678B00339438 /* CHG百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CHG百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACD16F01B95678B00339438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACD16F11B95678B00339438 /* CHG_____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CHG_____Tests.m"; sourceTree = "<group>"; };
-		FADF575C1BA7B55B00395122 /* CHGChiBaoZiFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGChiBaoZiFooter.h; sourceTree = "<group>"; };
-		FADF575D1BA7B55B00395122 /* CHGChiBaoZiFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGChiBaoZiFooter.m; sourceTree = "<group>"; };
-		FADF575F1BA7B58C00395122 /* CHGChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGChiBaoZiHeader.h; sourceTree = "<group>"; };
-		FADF57601BA7B58C00395122 /* CHGChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGChiBaoZiHeader.m; sourceTree = "<group>"; };
 		FADF57621BA7BC8E00395122 /* NSDate+CHGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CHGExtension.h"; sourceTree = "<group>"; };
 		FADF57631BA7BC8E00395122 /* NSDate+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CHGExtension.m"; sourceTree = "<group>"; };
+		FADF57671BA7CDC400395122 /* CHGChiBaoZiFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGChiBaoZiFooter.h; sourceTree = "<group>"; };
+		FADF57681BA7CDC400395122 /* CHGChiBaoZiFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGChiBaoZiFooter.m; sourceTree = "<group>"; };
+		FADF57691BA7CDC400395122 /* CHGChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGChiBaoZiHeader.h; sourceTree = "<group>"; };
+		FADF576A1BA7CDC400395122 /* CHGChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGChiBaoZiHeader.m; sourceTree = "<group>"; };
 		FAF1BD521BA6ECA10071C8B8 /* CHGTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicCell.h; sourceTree = "<group>"; };
 		FAF1BD531BA6ECA10071C8B8 /* CHGTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicCell.m; sourceTree = "<group>"; };
 		FAF1BD541BA6ECA10071C8B8 /* CHGTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicCell.xib; sourceTree = "<group>"; };
@@ -304,6 +304,7 @@
 		FA8237C81B95EC3600A4E7C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FADF57661BA7CDC400395122 /* 刷新控件 */,
 				FA9994131B9C4F1800CF4E83 /* CHGTagViewCell.h */,
 				FA9994141B9C4F1800CF4E83 /* CHGTagViewCell.m */,
 				FA9994151B9C4F1800CF4E83 /* CHGTagViewCell.xib */,
@@ -312,10 +313,6 @@
 				FAF1BD521BA6ECA10071C8B8 /* CHGTopicCell.h */,
 				FAF1BD531BA6ECA10071C8B8 /* CHGTopicCell.m */,
 				FAF1BD541BA6ECA10071C8B8 /* CHGTopicCell.xib */,
-				FADF575C1BA7B55B00395122 /* CHGChiBaoZiFooter.h */,
-				FADF575D1BA7B55B00395122 /* CHGChiBaoZiFooter.m */,
-				FADF575F1BA7B58C00395122 /* CHGChiBaoZiHeader.h */,
-				FADF57601BA7B58C00395122 /* CHGChiBaoZiHeader.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -615,6 +612,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FADF57661BA7CDC400395122 /* 刷新控件 */ = {
+			isa = PBXGroup;
+			children = (
+				FADF57671BA7CDC400395122 /* CHGChiBaoZiFooter.h */,
+				FADF57681BA7CDC400395122 /* CHGChiBaoZiFooter.m */,
+				FADF57691BA7CDC400395122 /* CHGChiBaoZiHeader.h */,
+				FADF576A1BA7CDC400395122 /* CHGChiBaoZiHeader.m */,
+			);
+			path = "刷新控件";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -787,7 +795,6 @@
 				FAF1BD551BA6ECA10071C8B8 /* CHGTopicCell.m in Sources */,
 				FA8238031B95F59000A4E7C8 /* CHGNavigationController.m in Sources */,
 				FA7D4DC31B9DAF410053E39F /* CHGMeFooter.m in Sources */,
-				FADF575E1BA7B55B00395122 /* CHGChiBaoZiFooter.m in Sources */,
 				FAA42F3A1B9BBF67006145C6 /* CHGRecommendCategory.m in Sources */,
 				FAF3F04E1BA11CB7008B46EC /* CHGPlaceholderTextView.m in Sources */,
 				FA99941D1B9C623C00CF4E83 /* UIImage+CHGExtension.m in Sources */,
@@ -795,6 +802,7 @@
 				FA6A0FAB1BA5E046003F2E48 /* CHGWordViewController.m in Sources */,
 				FAA42F3E1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m in Sources */,
 				FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */,
+				FADF576B1BA7CDC400395122 /* CHGChiBaoZiFooter.m in Sources */,
 				FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */,
 				FA6A0FA21BA5E011003F2E48 /* CHGVideoViewController.m in Sources */,
 				FAA274621B9C8BB00086B332 /* CHGConst.m in Sources */,
@@ -804,8 +812,8 @@
 				FA9994161B9C4F1800CF4E83 /* CHGTagViewCell.m in Sources */,
 				FA8FA77F1BA2EF6D00AAD48A /* CHGPostWordToolbar.m in Sources */,
 				FA1B7F8E1B9DD167004FD879 /* CHGClearCacheCell.m in Sources */,
+				FADF576C1BA7CDC400395122 /* CHGChiBaoZiHeader.m in Sources */,
 				FAF1BD591BA6ECBC0071C8B8 /* CHGTopic.m in Sources */,
-				FADF57611BA7B58C00395122 /* CHGChiBaoZiHeader.m in Sources */,
 				FA8237F51B95EC3600A4E7C8 /* main.m in Sources */,
 				FA8237F91B95EC3600A4E7C8 /* UIView+CHGExtension.m in Sources */,
 				FA9994121B9C4EE900CF4E83 /* CHGTag.m in Sources */,

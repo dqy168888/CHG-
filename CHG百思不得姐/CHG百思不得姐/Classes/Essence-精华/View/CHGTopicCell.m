@@ -68,15 +68,15 @@
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
     [alert addAction: [UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        CHGLogFunc;
+
     }]];
     
     [alert addAction: [UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        CHGLogFunc;
+
     }]];
     
     [alert addAction: [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-        CHGLogFunc;
+
     }]];
     
     [self.window.rootViewController presentViewController:alert animated:YES completion:nil];

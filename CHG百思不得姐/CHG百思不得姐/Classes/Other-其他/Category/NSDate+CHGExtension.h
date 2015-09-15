@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDate (CHGExtension)
-- (NSDateComponents *)intervalToDate:(NSDate *)date;
-- (NSDateComponents *)intervalToNow;
+//- (NSDateComponents *)intervalToDate:(NSDate *)date;
+//- (NSDateComponents *)intervalToNow;
 
 /**
- * 比较from和self的时间差值
+ * 比较from和self的时间差值（当前时间 - 发帖时间）
  */
 - (NSDateComponents *)deltaFrom:(NSDate *)from;
 
