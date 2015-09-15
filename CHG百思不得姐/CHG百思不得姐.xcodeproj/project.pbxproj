@@ -249,8 +249,8 @@
 		FA8237C01B95EC3600A4E7C8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FAB68B7C1BA04B0100110FEA /* Publish-发布 */,
 				FA8237C11B95EC3600A4E7C8 /* Essence-精华 */,
+				FAB68B7C1BA04B0100110FEA /* Publish-发布 */,
 				FA8237C91B95EC3600A4E7C8 /* FriendTrends-关注 */,
 				FA8237D71B95EC3600A4E7C8 /* New-新帖 */,
 				FA8237CF1B95EC3600A4E7C8 /* Me-我 */,
