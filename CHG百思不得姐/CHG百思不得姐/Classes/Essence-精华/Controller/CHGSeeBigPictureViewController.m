@@ -10,32 +10,24 @@
 #import <UIImageView+WebCache.h>
 #import "CHGTopic.h"
 #import <SVProgressHUD.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+
 
 @interface CHGSeeBigPictureViewController ()<UIScrollViewDelegate>
-
+/** 图片 */
 @property (nonatomic, weak) UIImageView *imageView;
+/** 相册库 */
+@property (nonatomic, strong) ALAssetsLibrary *library;
 @end
 
 @implementation CHGSeeBigPictureViewController
-- (IBAction)back:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
-- (IBAction)save:(id)sender {
-    // 将图片写入手机相册
-    UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-}
-
-// 写入手机相册方法的回调  必须要能接受三个参数 
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+- (ALAssetsLibrary *)library
 {
-    if (error) {
-        [SVProgressHUD showErrorWithStatus:@"保存失败！"];
-    }else
-    {
-        [SVProgressHUD showSuccessWithStatus:@"保存成功"];
+    if (!_library) {
+        _library = [[ALAssetsLibrary alloc] init];
     }
-    
+    return _library;
 }
 
 
@@ -73,7 +65,99 @@
     if (maxScale > 1.0) {
         scrollView.maximumZoomScale = maxScale;
     }
+    
+}
 
+static NSString * const CHGGroupNameKey = @"CHGGroupNameKey";
+static NSString * const CHGDefaultGroupName = @"百思不得姐";
+
+- (NSString *)groupName
+{
+    // 先从沙盒中取得名字
+    NSString *groupName = [[NSUserDefaults standardUserDefaults] stringForKey:CHGGroupNameKey];
+    if (groupName == nil) { // 沙盒中没有存储任何文件夹的名字
+        groupName = CHGDefaultGroupName;
+        
+        // 存储名字到沙盒中
+        [[NSUserDefaults standardUserDefaults] setObject:groupName forKey:CHGGroupNameKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    return groupName;
+}
+
+
+- (IBAction)back:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)save:(id)sender {
+    
+    // 获得相册名
+    __block NSString *groupName = [self groupName];
+    
+    // 图片库
+    __weak ALAssetsLibrary *weakLibrary = self.library;
+    
+    CHGWeakSelf;
+    // 创建文件夹
+    [weakLibrary addAssetsGroupAlbumWithName:groupName resultBlock:^(ALAssetsGroup *group) {
+        if (group) { // 新创建的文件夹
+            // 添加图片到文件夹中
+            [weakSelf addImageToGroup:group];
+        } else { // 文件夹已经存在
+            [weakLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+                NSString *name = [group valueForProperty:ALAssetsGroupPropertyName];
+                if ([name isEqualToString:groupName]) { // 是自己创建的文件夹
+                    // 添加图片到文件夹中
+                    [weakSelf addImageToGroup:group];
+                    
+                    *stop = YES; // 停止遍历
+                } else if ([name isEqualToString:@"Camera Roll"]) {
+                    // 文件夹被用户强制删除了
+                    groupName = [groupName stringByAppendingString:@" "];
+                    // 存储新的名字
+                    [[NSUserDefaults standardUserDefaults] setObject:groupName forKey:CHGGroupNameKey];
+                    [[NSUserDefaults standardUserDefaults] synchronize];
+                    // 创建新的文件夹
+                    [weakLibrary addAssetsGroupAlbumWithName:groupName resultBlock:^(ALAssetsGroup *group) {
+                        // 添加图片到文件夹中
+                        [weakSelf addImageToGroup:group];
+                    } failureBlock:nil];
+                }
+            } failureBlock:nil];
+        }
+    } failureBlock:nil];
+}
+
+/**
+ * 添加一张图片到某个文件夹中
+ */
+- (void)addImageToGroup:(ALAssetsGroup *)group
+{
+    __weak ALAssetsLibrary *weakLibrary = self.library;
+    // 需要保存的图片
+    CGImageRef image = self.imageView.image.CGImage;
+    
+    // 添加图片到【相机胶卷】
+    [weakLibrary writeImageToSavedPhotosAlbum:image metadata:nil completionBlock:^(NSURL *assetURL, NSError *error) {
+        [weakLibrary assetForURL:assetURL resultBlock:^(ALAsset *asset) {
+            // 添加一张图片到自定义的文件夹中
+            [group addAsset:asset];
+            [SVProgressHUD showSuccessWithStatus:@"保存成功!"];
+        } failureBlock:nil];
+    }];
+}
+
+// 写入手机相册方法的回调  必须要能接受三个参数 
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (error) {
+        [SVProgressHUD showErrorWithStatus:@"保存失败！"];
+    }else
+    {
+        [SVProgressHUD showSuccessWithStatus:@"保存成功"];
+    }
 }
 
 #pragma mark - <UIScrollViewDelegate>
@@ -81,4 +165,6 @@
 {
     return self.imageView;
 }
+
+
 @end

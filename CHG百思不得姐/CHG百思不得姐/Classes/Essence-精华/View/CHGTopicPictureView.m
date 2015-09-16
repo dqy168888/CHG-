@@ -12,6 +12,7 @@
 #import "CHGTopic.h"
 #import "CHGSeeBigPictureViewController.h"
 
+
 @interface CHGTopicPictureView()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -35,13 +36,17 @@
     
     self.labeledCircularProgress.progressLabel.textColor = [UIColor whiteColor];
     
+    // 开放交互能力
     self.imageView.userInteractionEnabled = YES;
+    // 添加点击手势
     [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick)]];
 }
 
 - (void)imageClick
 {
+    // 图片没有下载好之前不能跳转
     if (self.imageView.image == nil) return;
+    
     CHGSeeBigPictureViewController *seeBigImageVC = [[CHGSeeBigPictureViewController alloc] init];
     seeBigImageVC.topic = self.topic;
     [self.window.rootViewController presentViewController:seeBigImageVC animated:YES completion:nil];
