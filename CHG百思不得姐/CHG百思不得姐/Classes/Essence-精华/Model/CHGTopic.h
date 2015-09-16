@@ -8,6 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    /** 图片 */
+    CHGTopicTypePicture = 10,
+    
+    /** 段子(文字) */
+    CHGTopicTypeWord = 29,
+    
+    /** 声音 */
+    CHGTopicTypeVoice = 31,
+    
+    /** 视频 */
+    CHGTopicTypeVideo = 41
+} CHGTopicType;
+
 @interface CHGTopic : NSObject
 // 用户 -- 发帖者
 /** 用户的名字 */
@@ -26,4 +40,12 @@
 @property (nonatomic, assign) NSInteger repost;
 /** 评论数量 */
 @property (nonatomic, assign) NSInteger comment;
+
+/** 类型 */
+@property (nonatomic, assign) CHGTopicType type;
+/** 图片的宽度 */
+@property (nonatomic, assign) CGFloat width;
+/** 图片的高度 */
+@property (nonatomic, assign) CGFloat height;
+
 @end

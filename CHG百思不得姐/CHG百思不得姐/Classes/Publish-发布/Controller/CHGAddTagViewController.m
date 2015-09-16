@@ -253,6 +253,9 @@
     }
 }
 
+/**
+ * 设置文本框的frame
+ */
 - (void)setupTextFieldFrame
 {
     CGFloat textW = [self.textField.text sizeWithAttributes:@{NSFontAttributeName : self.textField.font}].width;

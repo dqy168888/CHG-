@@ -23,3 +23,9 @@ CGFloat const CHGTabBarH = 49;
 
 /** XMGTitlesView的高度 */
 CGFloat const CHGTitlesViewH = 35;
+
+/** 帖子-文字的Y值 */
+CGFloat const CHGTopicTextY = 55;
+
+/** 帖子-底部工具条的高度 */
+CGFloat const CHGTopicToolbarH = 35;

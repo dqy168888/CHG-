@@ -89,7 +89,7 @@
         
         
         // 设置label的frame
-        // 尺寸
+        // 尺寸 
         [newTagLabel sizeToFit];
         newTagLabel.height = CHGTagH;
         newTagLabel.width = newTagLabel.width + CHGCommonSmallMargin * 2 ;

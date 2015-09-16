@@ -8,6 +8,7 @@
 
 #import "CHGTopicCell.h"
 #import "CHGTopic.h"
+#import "CHGTopicPictureView.h"
 
 @interface CHGTopicCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -18,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *caiButton;
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+/** 图片 */
+@property (nonatomic, weak) CHGTopicPictureView *pictureView;
 
 @end
 @implementation CHGTopicCell
@@ -41,7 +44,26 @@
     [self setupButtonTitle:self.caiButton number:topic.cai placeholder:@"踩"];
     [self setupButtonTitle:self.repostButton number:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton number:topic.comment placeholder:@"评论"];
+    
+    // 根据帖子的类型决定中间的内容
+    if (topic.type == CHGTopicTypePicture) { // 图片
+        self.pictureView.hidden = NO;
+    } else if (topic.type == CHGTopicTypeVoice) { // 声音
+        self.pictureView.hidden = YES;
+    } else if (topic.type == CHGTopicTypeVideo) { // 视频
+        self.pictureView.hidden = YES;
+    } else if (topic.type == CHGTopicTypeWord) { // 文字
+        self.pictureView.hidden = YES;
+    }
+    
 }
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+}
+
 
 /**
  * 设置工具条按钮的文字

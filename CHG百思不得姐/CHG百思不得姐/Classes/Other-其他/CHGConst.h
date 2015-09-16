@@ -22,3 +22,9 @@ UIKIT_EXTERN CGFloat const CHGTabBarH;
 
 /** XMGTitlesView的高度 */
 UIKIT_EXTERN CGFloat const CHGTitlesViewH;
+
+/** 帖子-文字的Y值 */
+UIKIT_EXTERN CGFloat const CHGTopicTextY;
+
+/** 帖子-底部工具条的高度 */
+UIKIT_EXTERN CGFloat const CHGTopicToolbarH;

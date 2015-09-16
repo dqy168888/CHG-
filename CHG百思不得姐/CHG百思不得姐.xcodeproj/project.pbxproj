@@ -72,6 +72,8 @@
 		FAF3F0481BA1178B008B46EC /* CHGPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F0471BA1178B008B46EC /* CHGPostWordViewController.m */; };
 		FAF3F04E1BA11CB7008B46EC /* CHGPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F04D1BA11CB7008B46EC /* CHGPlaceholderTextView.m */; };
 		FAF3F0511BA15BFD008B46EC /* CHGPlaceholderTextView2.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F0501BA15BFD008B46EC /* CHGPlaceholderTextView2.m */; };
+		FAF615261BA98970009B2496 /* CHGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF615251BA98970009B2496 /* CHGTopicPictureView.m */; };
+		FAF615281BA98984009B2496 /* CHGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF615271BA98984009B2496 /* CHGTopicPictureView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +210,9 @@
 		FAF3F04D1BA11CB7008B46EC /* CHGPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPlaceholderTextView.m; sourceTree = "<group>"; };
 		FAF3F04F1BA15BFD008B46EC /* CHGPlaceholderTextView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPlaceholderTextView2.h; sourceTree = "<group>"; };
 		FAF3F0501BA15BFD008B46EC /* CHGPlaceholderTextView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPlaceholderTextView2.m; sourceTree = "<group>"; };
+		FAF615241BA98970009B2496 /* CHGTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicPictureView.h; sourceTree = "<group>"; };
+		FAF615251BA98970009B2496 /* CHGTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicPictureView.m; sourceTree = "<group>"; };
+		FAF615271BA98984009B2496 /* CHGTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicPictureView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +318,9 @@
 				FAF1BD521BA6ECA10071C8B8 /* CHGTopicCell.h */,
 				FAF1BD531BA6ECA10071C8B8 /* CHGTopicCell.m */,
 				FAF1BD541BA6ECA10071C8B8 /* CHGTopicCell.xib */,
+				FAF615241BA98970009B2496 /* CHGTopicPictureView.h */,
+				FAF615251BA98970009B2496 /* CHGTopicPictureView.m */,
+				FAF615271BA98984009B2496 /* CHGTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -707,6 +715,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA42F3F1B9BBFBD006145C6 /* CHGRecommendCategoryCell.xib in Resources */,
+				FAF615281BA98984009B2496 /* CHGTopicPictureView.xib in Resources */,
 				FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */,
 				FACD16E31B95678B00339438 /* Images.xcassets in Resources */,
 				FA9A97371B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib in Resources */,
@@ -786,6 +795,7 @@
 				FAC0688A1BA46ED900A7EAC9 /* UITextField+CHGExtension.m in Sources */,
 				FA6A0F9C1BA5D0B8003F2E48 /* CHGTitleButton.m in Sources */,
 				FADF57641BA7BC8E00395122 /* NSDate+CHGExtension.m in Sources */,
+				FAF615261BA98970009B2496 /* CHGTopicPictureView.m in Sources */,
 				FAC068871BA46B3D00A7EAC9 /* CHGAddTagViewController.m in Sources */,
 				FAF3F0481BA1178B008B46EC /* CHGPostWordViewController.m in Sources */,
 				FAF3F0511BA15BFD008B46EC /* CHGPlaceholderTextView2.m in Sources */,
