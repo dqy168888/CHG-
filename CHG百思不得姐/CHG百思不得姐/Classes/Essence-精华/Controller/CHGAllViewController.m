@@ -161,29 +161,9 @@ static NSString * const CHGTopicCellID = @"Topic";
 #pragma mark <UITableViewDelegate>
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // cellHeight = 文字的y值 + 文字高度 + 10 + 图片高度 + 10 + 底部高度 + 10
-    CGFloat cellHeight = CHGTopicTextY;
-    
     CHGTopic *topic = self.topics[indexPath.row];
-    
-    CGFloat textW = CHGScreenW - 2 * CHGCommonMargin;
-    //    CGFloat textH = [topic.text sizeWithFont:[UIFont systemFontOfSize:15] constrainedToSize:CGSizeMake(textW, MAXFLOAT)].height;
-    CGFloat textH = [topic.text boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size.height;
-    cellHeight += textH + CHGCommonMargin;
-    
-    if (topic.type != CHGTopicTypeWord) {
-        
-        CGFloat contentW = textW;
-        // 图片的高度 * 内容的宽度 / 图片的宽度
-        CGFloat contentH = topic.height * contentW / topic.width;
-        
-        cellHeight += contentH + CHGCommonMargin;
-    }
-    
-    // 再加上底部高度
-    cellHeight += CHGTopicToolbarH + CHGCommonMargin;
-    
-    return cellHeight;
+
+    return topic.cellHeight;
 }
 
 @end

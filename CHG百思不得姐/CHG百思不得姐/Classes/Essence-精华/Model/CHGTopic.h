@@ -32,6 +32,7 @@ typedef enum {
 @property (nonatomic, copy) NSString *text;
 /** 帖子审核通过的时间 */
 @property (nonatomic, copy) NSString *created_at;
+
 /** 顶数量 */
 @property (nonatomic, assign) NSInteger ding;
 /** 踩数量 */
@@ -47,5 +48,24 @@ typedef enum {
 @property (nonatomic, assign) CGFloat width;
 /** 图片的高度 */
 @property (nonatomic, assign) CGFloat height;
+
+/** 小图 */
+@property (nonatomic, copy) NSString *image0;
+/** 大图 */
+@property (nonatomic, copy) NSString *image1;
+/** 中图 */
+@property (nonatomic, copy) NSString *image2;
+
+/** 是否为动态图 */
+@property (nonatomic, assign) BOOL is_gif;
+
+/***** 额外增加的属性 ******/
+/** cell的高度 */
+@property (nonatomic, assign) CGFloat cellHeight;
+/** 中间内容的frame */
+@property (nonatomic, assign) CGRect contentFrame;
+/** 是否大图片 */
+@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
+
 
 @end

@@ -25,6 +25,16 @@
 @end
 @implementation CHGTopicCell
 
+- (CHGTopicPictureView *)pictureView
+{
+    if (_pictureView == nil) {
+        CHGTopicPictureView *pictureView = [CHGTopicPictureView viewFromXib];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
+
 - (void)awakeFromNib
 {
     // 设置cell的背景图片
@@ -48,6 +58,9 @@
     // 根据帖子的类型决定中间的内容
     if (topic.type == CHGTopicTypePicture) { // 图片
         self.pictureView.hidden = NO;
+        self.pictureView.frame = topic.contentFrame;
+        self.pictureView.topic = topic;
+        
     } else if (topic.type == CHGTopicTypeVoice) { // 声音
         self.pictureView.hidden = YES;
     } else if (topic.type == CHGTopicTypeVideo) { // 视频
@@ -57,13 +70,6 @@
     }
     
 }
-
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    
-}
-
 
 /**
  * 设置工具条按钮的文字

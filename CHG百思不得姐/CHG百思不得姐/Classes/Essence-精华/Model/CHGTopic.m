@@ -62,6 +62,44 @@
 
 }
 
+- (CGFloat)cellHeight
+{
+    
+    if (_cellHeight == 0) {
+    
+        // cellHeight = 文字的y值 + 文字高度 + 10 + 图片高度 + 10 + 底部高度 + 10
+        _cellHeight = CHGTopicTextY;
+        
+        CGFloat textW = CHGScreenW - 2 * CHGCommonMargin;
+        CGFloat textH = [self.text boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size.height;
+        _cellHeight += textH + CHGCommonMargin;
+        
+        if (self.type != CHGTopicTypeWord) {
+            
+            CGFloat contentW = textW;
+            // 图片的高度 * 内容的宽度 / 图片的宽度
+            CGFloat contentH = self.height * contentW / self.width;
+            
+            if (contentH >= CHGScreenH) {
+                contentH = 200;
+                self.bigPicture = YES;
+            }
+            CGFloat contentX = CHGCommonMargin;
+            CGFloat contentY = _cellHeight;
+            
+            self.contentFrame = CGRectMake(contentX, contentY, contentW, contentH);
+            
+            _cellHeight += contentH + CHGCommonMargin;
+        }
+        
+        // 再加上底部高度
+        _cellHeight += CHGTopicToolbarH + CHGCommonMargin;
+            
+    }
+    
+    return _cellHeight;
+}
+
 @end
 
 /*

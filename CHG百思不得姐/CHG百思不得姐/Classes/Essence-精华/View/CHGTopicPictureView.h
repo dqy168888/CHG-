@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CHGTopic;
 @interface CHGTopicPictureView : UIView
-
+@property (nonatomic, strong) CHGTopic *topic;
 @end
