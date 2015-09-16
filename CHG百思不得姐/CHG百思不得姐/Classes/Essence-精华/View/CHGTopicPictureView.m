@@ -10,6 +10,7 @@
 #import <DALabeledCircularProgressView.h>
 #import <UIImageView+WebCache.h>
 #import "CHGTopic.h"
+#import "CHGSeeBigPictureViewController.h"
 
 @interface CHGTopicPictureView()
 
@@ -27,23 +28,35 @@
 {
     // 清空自动伸缩属性
     self.autoresizingMask = UIViewAutoresizingNone;
+    // 每下载一点图片数据，就会调用一次这个block
+    self.labeledCircularProgress.hidden = NO;
+    // 设置圆角
+    self.labeledCircularProgress.roundedCorners = 5;
+    
+    self.labeledCircularProgress.progressLabel.textColor = [UIColor whiteColor];
+    
+    self.imageView.userInteractionEnabled = YES;
+    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick)]];
+}
+
+- (void)imageClick
+{
+    if (self.imageView.image == nil) return;
+    CHGSeeBigPictureViewController *seeBigImageVC = [[CHGSeeBigPictureViewController alloc] init];
+    seeBigImageVC.topic = self.topic;
+    [self.window.rootViewController presentViewController:seeBigImageVC animated:YES completion:nil];
 }
 
 - (void)setTopic:(CHGTopic *)topic
 {
+     _topic = topic;
     CHGWeakSelf;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.image1] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) { // 下载时
         
-        // 每下载一点图片数据，就会调用一次这个block
-        weakSelf.labeledCircularProgress.hidden = NO;
-        // 设置圆角
-        weakSelf.labeledCircularProgress.roundedCorners = 5;
         // 下载进度
         weakSelf.labeledCircularProgress.progress = 1.0 * receivedSize / expectedSize;
         
         weakSelf.labeledCircularProgress.progressLabel.text = [NSString stringWithFormat:@"%.0f%%", weakSelf.labeledCircularProgress.progress * 100];
-        
-        weakSelf.labeledCircularProgress.progressLabel.textColor = [UIColor whiteColor];
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         // 下载完毕

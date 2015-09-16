@@ -69,6 +69,8 @@
 		FAF1BD551BA6ECA10071C8B8 /* CHGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF1BD531BA6ECA10071C8B8 /* CHGTopicCell.m */; };
 		FAF1BD561BA6ECA10071C8B8 /* CHGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1BD541BA6ECA10071C8B8 /* CHGTopicCell.xib */; };
 		FAF1BD591BA6ECBC0071C8B8 /* CHGTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF1BD581BA6ECBC0071C8B8 /* CHGTopic.m */; };
+		FAF2F60B1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F6091BA9B6DF0068C276 /* CHGSeeBigPictureViewController.m */; };
+		FAF2F60C1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF2F60A1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.xib */; };
 		FAF3F0481BA1178B008B46EC /* CHGPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F0471BA1178B008B46EC /* CHGPostWordViewController.m */; };
 		FAF3F04E1BA11CB7008B46EC /* CHGPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F04D1BA11CB7008B46EC /* CHGPlaceholderTextView.m */; };
 		FAF3F0511BA15BFD008B46EC /* CHGPlaceholderTextView2.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F0501BA15BFD008B46EC /* CHGPlaceholderTextView2.m */; };
@@ -204,6 +206,9 @@
 		FAF1BD541BA6ECA10071C8B8 /* CHGTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicCell.xib; sourceTree = "<group>"; };
 		FAF1BD571BA6ECBB0071C8B8 /* CHGTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopic.h; sourceTree = "<group>"; };
 		FAF1BD581BA6ECBC0071C8B8 /* CHGTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopic.m; sourceTree = "<group>"; };
+		FAF2F6081BA9B6DF0068C276 /* CHGSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGSeeBigPictureViewController.h; sourceTree = "<group>"; };
+		FAF2F6091BA9B6DF0068C276 /* CHGSeeBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGSeeBigPictureViewController.m; sourceTree = "<group>"; };
+		FAF2F60A1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGSeeBigPictureViewController.xib; sourceTree = "<group>"; };
 		FAF3F0461BA1178B008B46EC /* CHGPostWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPostWordViewController.h; sourceTree = "<group>"; };
 		FAF3F0471BA1178B008B46EC /* CHGPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPostWordViewController.m; sourceTree = "<group>"; };
 		FAF3F04C1BA11CB7008B46EC /* CHGPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPlaceholderTextView.h; sourceTree = "<group>"; };
@@ -291,6 +296,9 @@
 				FA6A0FA71BA5E038003F2E48 /* CHGPictureViewController.m */,
 				FA6A0FA91BA5E046003F2E48 /* CHGWordViewController.h */,
 				FA6A0FAA1BA5E046003F2E48 /* CHGWordViewController.m */,
+				FAF2F6081BA9B6DF0068C276 /* CHGSeeBigPictureViewController.h */,
+				FAF2F6091BA9B6DF0068C276 /* CHGSeeBigPictureViewController.m */,
+				FAF2F60A1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -717,6 +725,7 @@
 				FAA42F3F1B9BBFBD006145C6 /* CHGRecommendCategoryCell.xib in Resources */,
 				FAF615281BA98984009B2496 /* CHGTopicPictureView.xib in Resources */,
 				FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */,
+				FAF2F60C1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.xib in Resources */,
 				FACD16E31B95678B00339438 /* Images.xcassets in Resources */,
 				FA9A97371B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib in Resources */,
 				FA7D4DCB1B9DBE430053E39F /* CHGWebViewController.xib in Resources */,
@@ -809,6 +818,7 @@
 				FAF3F04E1BA11CB7008B46EC /* CHGPlaceholderTextView.m in Sources */,
 				FA99941D1B9C623C00CF4E83 /* UIImage+CHGExtension.m in Sources */,
 				FA03E90D1B9DA66B0027D475 /* CHGMeCell.m in Sources */,
+				FAF2F60B1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.m in Sources */,
 				FA6A0FAB1BA5E046003F2E48 /* CHGWordViewController.m in Sources */,
 				FAA42F3E1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m in Sources */,
 				FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */,
