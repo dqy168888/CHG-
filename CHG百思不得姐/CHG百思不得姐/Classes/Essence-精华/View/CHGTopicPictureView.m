@@ -4,7 +4,7 @@
 //
 //  Created by chenhongen on 15/9/16.
 //  Copyright (c) 2015年 陈弘根. All rights reserved.
-//
+//  cell中间显示图片
 
 #import "CHGTopicPictureView.h"
 #import <DALabeledCircularProgressView.h>
@@ -21,7 +21,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *seeBigPictureButton;
 
-@property (nonatomic, strong) IBOutlet DALabeledCircularProgressView *labeledCircularProgress;
+@property (nonatomic, weak) IBOutlet DALabeledCircularProgressView *labeledCircularProgress;
 @end
 @implementation CHGTopicPictureView
 
@@ -29,8 +29,7 @@
 {
     // 清空自动伸缩属性
     self.autoresizingMask = UIViewAutoresizingNone;
-    // 每下载一点图片数据，就会调用一次这个block
-    self.labeledCircularProgress.hidden = NO;
+    
     // 设置圆角
     self.labeledCircularProgress.roundedCorners = 5;
     
@@ -57,7 +56,8 @@
      _topic = topic;
     CHGWeakSelf;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.image1] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) { // 下载时
-        
+        // 每下载一点图片数据，就会调用一次这个block
+        self.labeledCircularProgress.hidden = NO;
         // 下载进度
         weakSelf.labeledCircularProgress.progress = 1.0 * receivedSize / expectedSize;
         
@@ -77,7 +77,7 @@
         self.imageView.clipsToBounds = YES;
     }else
     {   // 不是大图的情况
-        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        self.imageView.contentMode = UIViewContentModeScaleToFill;
         self.imageView.clipsToBounds = NO;
     }
 }

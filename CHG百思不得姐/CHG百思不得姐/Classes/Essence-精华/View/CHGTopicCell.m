@@ -9,6 +9,9 @@
 #import "CHGTopicCell.h"
 #import "CHGTopic.h"
 #import "CHGTopicPictureView.h"
+#import "CHGTopicVideoView.h"
+#import "CHGTopicVoiceView.h"
+
 
 @interface CHGTopicCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -21,6 +24,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 /** 图片 */
 @property (nonatomic, weak) CHGTopicPictureView *pictureView;
+/** 视频 */
+@property (nonatomic, weak) CHGTopicVideoView *videoView;
+/** 声音 */
+@property (nonatomic, weak) CHGTopicVoiceView *voiceView;
 
 @end
 @implementation CHGTopicCell
@@ -34,6 +41,27 @@
     }
     return _pictureView;
 }
+
+- (CHGTopicVideoView *)videoView
+{
+    if (_videoView == nil) {
+        CHGTopicVideoView *videoView = [CHGTopicVideoView viewFromXib];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
+}
+
+- (CHGTopicVoiceView *)voiceView
+{
+    if (_voiceView == nil) {
+        CHGTopicVoiceView *voiceView = [CHGTopicVoiceView viewFromXib];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
+}
+
 
 - (void)awakeFromNib
 {
@@ -57,16 +85,33 @@
     
     // 根据帖子的类型决定中间的内容
     if (topic.type == CHGTopicTypePicture) { // 图片
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
         self.pictureView.hidden = NO;
         self.pictureView.frame = topic.contentFrame;
         self.pictureView.topic = topic;
         
     } else if (topic.type == CHGTopicTypeVoice) { // 声音
+        
         self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = NO;
+        self.voiceView.frame = topic.contentFrame;
+        self.voiceView.topic = topic;
+        
     } else if (topic.type == CHGTopicTypeVideo) { // 视频
+        
         self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = NO;
+        self.videoView.frame = topic.contentFrame;
+        self.videoView.topic = topic;
+
     } else if (topic.type == CHGTopicTypeWord) { // 文字
+        
         self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
+        self.voiceView.hidden = YES;
     }
     
 }

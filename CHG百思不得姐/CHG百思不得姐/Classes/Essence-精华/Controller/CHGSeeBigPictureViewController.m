@@ -40,13 +40,14 @@
     scrollView.delegate = self;
     scrollView.backgroundColor = [UIColor blackColor];
     [self.view insertSubview:scrollView atIndex:0];
+    scrollView.userInteractionEnabled = YES;
     
     // 添加图片
     UIImageView *imageView = [[UIImageView alloc] init];
     [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.image1]];
     [scrollView addSubview:imageView];
     self.imageView = imageView;
-    
+    imageView.userInteractionEnabled = YES;
     
     imageView.x = 0;
     imageView.width = CHGScreenW;
@@ -90,6 +91,12 @@ static NSString * const CHGDefaultGroupName = @"百思不得姐";
 - (IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    [super touchesBegan:touches withEvent:event];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 
 - (IBAction)save:(id)sender {
     

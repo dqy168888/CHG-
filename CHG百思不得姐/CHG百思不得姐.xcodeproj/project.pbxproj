@@ -12,6 +12,10 @@
 		FA03E9101B9DA6840027D475 /* CHGSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03E90F1B9DA6840027D475 /* CHGSquare.m */; };
 		FA1B7F8B1B9DCFED004FD879 /* NSString+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1B7F8A1B9DCFED004FD879 /* NSString+CHGExtension.m */; };
 		FA1B7F8E1B9DD167004FD879 /* CHGClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1B7F8D1B9DD167004FD879 /* CHGClearCacheCell.m */; };
+		FA4530EA1BAAA69B002990D7 /* CHGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4530E91BAAA69B002990D7 /* CHGTopicVideoView.m */; };
+		FA4530EC1BAAA948002990D7 /* CHGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4530EB1BAAA948002990D7 /* CHGTopicVideoView.xib */; };
+		FA4530EF1BAAB6FC002990D7 /* CHGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4530EE1BAAB6FC002990D7 /* CHGTopicVoiceView.m */; };
+		FA4530F11BAAB749002990D7 /* CHGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4530F01BAAB749002990D7 /* CHGTopicVoiceView.xib */; };
 		FA575B961B99528800B5652F /* CHGLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */; };
 		FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */; };
 		FA6A0F9C1BA5D0B8003F2E48 /* CHGTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6A0F9B1BA5D0B8003F2E48 /* CHGTitleButton.m */; };
@@ -100,6 +104,12 @@
 		FA1B7F8A1B9DCFED004FD879 /* NSString+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CHGExtension.m"; sourceTree = "<group>"; };
 		FA1B7F8C1B9DD167004FD879 /* CHGClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGClearCacheCell.h; sourceTree = "<group>"; };
 		FA1B7F8D1B9DD167004FD879 /* CHGClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGClearCacheCell.m; sourceTree = "<group>"; wrapsLines = 0; };
+		FA4530E81BAAA69B002990D7 /* CHGTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicVideoView.h; sourceTree = "<group>"; };
+		FA4530E91BAAA69B002990D7 /* CHGTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicVideoView.m; sourceTree = "<group>"; };
+		FA4530EB1BAAA948002990D7 /* CHGTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicVideoView.xib; sourceTree = "<group>"; };
+		FA4530ED1BAAB6FC002990D7 /* CHGTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicVoiceView.h; sourceTree = "<group>"; };
+		FA4530EE1BAAB6FC002990D7 /* CHGTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicVoiceView.m; sourceTree = "<group>"; };
+		FA4530F01BAAB749002990D7 /* CHGTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicVoiceView.xib; sourceTree = "<group>"; };
 		FA575B941B99528800B5652F /* CHGLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGLoginRegisterTextField.h; sourceTree = "<group>"; };
 		FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGLoginRegisterTextField.m; sourceTree = "<group>"; };
 		FA5B04771B98AD9800FE4D92 /* CHGQuickLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGQuickLoginButton.h; sourceTree = "<group>"; };
@@ -329,6 +339,12 @@
 				FAF615241BA98970009B2496 /* CHGTopicPictureView.h */,
 				FAF615251BA98970009B2496 /* CHGTopicPictureView.m */,
 				FAF615271BA98984009B2496 /* CHGTopicPictureView.xib */,
+				FA4530E81BAAA69B002990D7 /* CHGTopicVideoView.h */,
+				FA4530E91BAAA69B002990D7 /* CHGTopicVideoView.m */,
+				FA4530EB1BAAA948002990D7 /* CHGTopicVideoView.xib */,
+				FA4530ED1BAAB6FC002990D7 /* CHGTopicVoiceView.h */,
+				FA4530EE1BAAB6FC002990D7 /* CHGTopicVoiceView.m */,
+				FA4530F01BAAB749002990D7 /* CHGTopicVoiceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -725,6 +741,8 @@
 				FAA42F3F1B9BBFBD006145C6 /* CHGRecommendCategoryCell.xib in Resources */,
 				FAF615281BA98984009B2496 /* CHGTopicPictureView.xib in Resources */,
 				FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */,
+				FA4530EC1BAAA948002990D7 /* CHGTopicVideoView.xib in Resources */,
+				FA4530F11BAAB749002990D7 /* CHGTopicVoiceView.xib in Resources */,
 				FAF2F60C1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.xib in Resources */,
 				FACD16E31B95678B00339438 /* Images.xcassets in Resources */,
 				FA9A97371B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib in Resources */,
@@ -785,6 +803,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC0688D1BA47DCF00A7EAC9 /* CHGTagButton.m in Sources */,
+				FA4530EF1BAAB6FC002990D7 /* CHGTopicVoiceView.m in Sources */,
 				FA8237F31B95EC3600A4E7C8 /* CHGNewViewController.m in Sources */,
 				FA8237EF1B95EC3600A4E7C8 /* CHGTagViewController.m in Sources */,
 				FA6A0F9F1BA5DFFB003F2E48 /* CHGAllViewController.m in Sources */,
@@ -801,6 +820,7 @@
 				FA575B961B99528800B5652F /* CHGLoginRegisterTextField.m in Sources */,
 				FA8237F21B95EC3600A4E7C8 /* CHGSetingTableViewController.m in Sources */,
 				FA8237F11B95EC3600A4E7C8 /* CHGMeViewController.m in Sources */,
+				FA4530EA1BAAA69B002990D7 /* CHGTopicVideoView.m in Sources */,
 				FAC0688A1BA46ED900A7EAC9 /* UITextField+CHGExtension.m in Sources */,
 				FA6A0F9C1BA5D0B8003F2E48 /* CHGTitleButton.m in Sources */,
 				FADF57641BA7BC8E00395122 /* NSDate+CHGExtension.m in Sources */,
