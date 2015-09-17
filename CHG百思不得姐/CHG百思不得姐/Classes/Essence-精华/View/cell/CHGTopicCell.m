@@ -28,6 +28,10 @@
 @property (nonatomic, weak) CHGTopicVideoView *videoView;
 /** 声音 */
 @property (nonatomic, weak) CHGTopicVoiceView *voiceView;
+/** 最热评论view */
+@property (weak, nonatomic) IBOutlet UIView *hotView;
+/** 最热评论内容 */
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
 @end
 @implementation CHGTopicCell
@@ -112,6 +116,17 @@
         self.pictureView.hidden = YES;
         self.videoView.hidden = YES;
         self.voiceView.hidden = YES;
+    }
+    
+    NSDictionary *cmt = topic.top_cmt.firstObject;
+    if (cmt) {
+        NSString *username = cmt[@"user"][@"username"];
+        NSString *content = cmt[@"content"];
+        self.hotView.hidden = NO;
+        self.contentLabel.text = [NSString stringWithFormat:@"%@ : %@",username,content];
+    }else
+    {
+        self.hotView.hidden = YES;
     }
     
 }

@@ -16,6 +16,8 @@
 @interface CHGSeeBigPictureViewController ()<UIScrollViewDelegate>
 /** 图片 */
 @property (nonatomic, weak) UIImageView *imageView;
+/** 图片 */
+@property (nonatomic, weak) UIScrollView *scrollView;
 /** 相册库 */
 @property (nonatomic, strong) ALAssetsLibrary *library;
 @end
@@ -34,20 +36,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupScrollView];
+    // 开放交互能力
+    self.scrollView.userInteractionEnabled = YES;
+    // 添加点击手势
+    [self.scrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back:)]];
+}
+
+- (void)setupScrollView
+{
     // 添加滚动
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.frame = CGRectMake(0, 0, CHGScreenW, CHGScreenH);
     scrollView.delegate = self;
     scrollView.backgroundColor = [UIColor blackColor];
     [self.view insertSubview:scrollView atIndex:0];
-    scrollView.userInteractionEnabled = YES;
+    self.scrollView = scrollView;
     
     // 添加图片
     UIImageView *imageView = [[UIImageView alloc] init];
-    [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.image1]];
+    [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image]];
     [scrollView addSubview:imageView];
     self.imageView = imageView;
-    imageView.userInteractionEnabled = YES;
     
     imageView.x = 0;
     imageView.width = CHGScreenW;
@@ -62,9 +72,10 @@
     }
     
     // 伸缩
-    CGFloat maxScale = self.topic.height / imageView.height;
+    CGFloat maxScale = self.topic.height  / imageView.height;
     if (maxScale > 1.0) {
         scrollView.maximumZoomScale = maxScale;
+        scrollView.minimumZoomScale = 1 / maxScale;
     }
     
 }
@@ -94,7 +105,7 @@ static NSString * const CHGDefaultGroupName = @"百思不得姐";
 
 //- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 //{
-//    [super touchesBegan:touches withEvent:event];
+////    [super touchesBegan:touches withEvent:event];
 //    [self dismissViewControllerAnimated:YES completion:nil];
 //}
 

@@ -12,10 +12,16 @@
 		FA03E9101B9DA6840027D475 /* CHGSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03E90F1B9DA6840027D475 /* CHGSquare.m */; };
 		FA1B7F8B1B9DCFED004FD879 /* NSString+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1B7F8A1B9DCFED004FD879 /* NSString+CHGExtension.m */; };
 		FA1B7F8E1B9DD167004FD879 /* CHGClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1B7F8D1B9DD167004FD879 /* CHGClearCacheCell.m */; };
-		FA4530EA1BAAA69B002990D7 /* CHGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4530E91BAAA69B002990D7 /* CHGTopicVideoView.m */; };
-		FA4530EC1BAAA948002990D7 /* CHGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4530EB1BAAA948002990D7 /* CHGTopicVideoView.xib */; };
-		FA4530EF1BAAB6FC002990D7 /* CHGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4530EE1BAAB6FC002990D7 /* CHGTopicVoiceView.m */; };
-		FA4530F11BAAB749002990D7 /* CHGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4530F01BAAB749002990D7 /* CHGTopicVoiceView.xib */; };
+		FA4531031BAAE5FE002990D7 /* CHGTagViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4530F41BAAE5FE002990D7 /* CHGTagViewCell.m */; };
+		FA4531041BAAE5FE002990D7 /* CHGTagViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4530F51BAAE5FE002990D7 /* CHGTagViewCell.xib */; };
+		FA4531051BAAE5FE002990D7 /* CHGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4530F71BAAE5FE002990D7 /* CHGTopicCell.m */; };
+		FA4531061BAAE5FE002990D7 /* CHGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4530F81BAAE5FE002990D7 /* CHGTopicCell.xib */; };
+		FA4531071BAAE5FE002990D7 /* CHGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4530FB1BAAE5FE002990D7 /* CHGTopicPictureView.m */; };
+		FA4531081BAAE5FE002990D7 /* CHGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4530FC1BAAE5FE002990D7 /* CHGTopicPictureView.xib */; };
+		FA4531091BAAE5FE002990D7 /* CHGTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4530FE1BAAE5FE002990D7 /* CHGTopicVideoView.m */; };
+		FA45310A1BAAE5FE002990D7 /* CHGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4530FF1BAAE5FE002990D7 /* CHGTopicVideoView.xib */; };
+		FA45310B1BAAE5FE002990D7 /* CHGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4531011BAAE5FE002990D7 /* CHGTopicVoiceView.m */; };
+		FA45310C1BAAE5FE002990D7 /* CHGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4531021BAAE5FE002990D7 /* CHGTopicVoiceView.xib */; };
 		FA575B961B99528800B5652F /* CHGLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */; };
 		FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */; };
 		FA6A0F9C1BA5D0B8003F2E48 /* CHGTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6A0F9B1BA5D0B8003F2E48 /* CHGTitleButton.m */; };
@@ -47,8 +53,6 @@
 		FA8FA77F1BA2EF6D00AAD48A /* CHGPostWordToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8FA77E1BA2EF6D00AAD48A /* CHGPostWordToolbar.m */; };
 		FA8FA7811BA2EF8A00AAD48A /* CHGPostWordToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8FA7801BA2EF8A00AAD48A /* CHGPostWordToolbar.xib */; };
 		FA9994121B9C4EE900CF4E83 /* CHGTag.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9994111B9C4EE900CF4E83 /* CHGTag.m */; };
-		FA9994161B9C4F1800CF4E83 /* CHGTagViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9994141B9C4F1800CF4E83 /* CHGTagViewCell.m */; };
-		FA9994171B9C4F1800CF4E83 /* CHGTagViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9994151B9C4F1800CF4E83 /* CHGTagViewCell.xib */; };
 		FA99941D1B9C623C00CF4E83 /* UIImage+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA99941C1B9C623C00CF4E83 /* UIImage+CHGExtension.m */; };
 		FA9994201B9C662A00CF4E83 /* UIImageView+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA99941F1B9C662A00CF4E83 /* UIImageView+CHGExtension.m */; };
 		FA9A97361B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A97341B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m */; };
@@ -70,16 +74,12 @@
 		FADF57641BA7BC8E00395122 /* NSDate+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF57631BA7BC8E00395122 /* NSDate+CHGExtension.m */; };
 		FADF576B1BA7CDC400395122 /* CHGChiBaoZiFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF57681BA7CDC400395122 /* CHGChiBaoZiFooter.m */; };
 		FADF576C1BA7CDC400395122 /* CHGChiBaoZiHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF576A1BA7CDC400395122 /* CHGChiBaoZiHeader.m */; };
-		FAF1BD551BA6ECA10071C8B8 /* CHGTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF1BD531BA6ECA10071C8B8 /* CHGTopicCell.m */; };
-		FAF1BD561BA6ECA10071C8B8 /* CHGTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF1BD541BA6ECA10071C8B8 /* CHGTopicCell.xib */; };
 		FAF1BD591BA6ECBC0071C8B8 /* CHGTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF1BD581BA6ECBC0071C8B8 /* CHGTopic.m */; };
 		FAF2F60B1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF2F6091BA9B6DF0068C276 /* CHGSeeBigPictureViewController.m */; };
 		FAF2F60C1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF2F60A1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.xib */; };
 		FAF3F0481BA1178B008B46EC /* CHGPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F0471BA1178B008B46EC /* CHGPostWordViewController.m */; };
 		FAF3F04E1BA11CB7008B46EC /* CHGPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F04D1BA11CB7008B46EC /* CHGPlaceholderTextView.m */; };
 		FAF3F0511BA15BFD008B46EC /* CHGPlaceholderTextView2.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F0501BA15BFD008B46EC /* CHGPlaceholderTextView2.m */; };
-		FAF615261BA98970009B2496 /* CHGTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF615251BA98970009B2496 /* CHGTopicPictureView.m */; };
-		FAF615281BA98984009B2496 /* CHGTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF615271BA98984009B2496 /* CHGTopicPictureView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,12 +104,21 @@
 		FA1B7F8A1B9DCFED004FD879 /* NSString+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CHGExtension.m"; sourceTree = "<group>"; };
 		FA1B7F8C1B9DD167004FD879 /* CHGClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGClearCacheCell.h; sourceTree = "<group>"; };
 		FA1B7F8D1B9DD167004FD879 /* CHGClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGClearCacheCell.m; sourceTree = "<group>"; wrapsLines = 0; };
-		FA4530E81BAAA69B002990D7 /* CHGTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicVideoView.h; sourceTree = "<group>"; };
-		FA4530E91BAAA69B002990D7 /* CHGTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicVideoView.m; sourceTree = "<group>"; };
-		FA4530EB1BAAA948002990D7 /* CHGTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicVideoView.xib; sourceTree = "<group>"; };
-		FA4530ED1BAAB6FC002990D7 /* CHGTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicVoiceView.h; sourceTree = "<group>"; };
-		FA4530EE1BAAB6FC002990D7 /* CHGTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicVoiceView.m; sourceTree = "<group>"; };
-		FA4530F01BAAB749002990D7 /* CHGTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicVoiceView.xib; sourceTree = "<group>"; };
+		FA4530F31BAAE5FE002990D7 /* CHGTagViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTagViewCell.h; sourceTree = "<group>"; };
+		FA4530F41BAAE5FE002990D7 /* CHGTagViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTagViewCell.m; sourceTree = "<group>"; };
+		FA4530F51BAAE5FE002990D7 /* CHGTagViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTagViewCell.xib; sourceTree = "<group>"; };
+		FA4530F61BAAE5FE002990D7 /* CHGTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicCell.h; sourceTree = "<group>"; };
+		FA4530F71BAAE5FE002990D7 /* CHGTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicCell.m; sourceTree = "<group>"; };
+		FA4530F81BAAE5FE002990D7 /* CHGTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicCell.xib; sourceTree = "<group>"; };
+		FA4530FA1BAAE5FE002990D7 /* CHGTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicPictureView.h; sourceTree = "<group>"; };
+		FA4530FB1BAAE5FE002990D7 /* CHGTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicPictureView.m; sourceTree = "<group>"; };
+		FA4530FC1BAAE5FE002990D7 /* CHGTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicPictureView.xib; sourceTree = "<group>"; };
+		FA4530FD1BAAE5FE002990D7 /* CHGTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicVideoView.h; sourceTree = "<group>"; };
+		FA4530FE1BAAE5FE002990D7 /* CHGTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicVideoView.m; sourceTree = "<group>"; };
+		FA4530FF1BAAE5FE002990D7 /* CHGTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicVideoView.xib; sourceTree = "<group>"; };
+		FA4531001BAAE5FE002990D7 /* CHGTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicVoiceView.h; sourceTree = "<group>"; };
+		FA4531011BAAE5FE002990D7 /* CHGTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicVoiceView.m; sourceTree = "<group>"; };
+		FA4531021BAAE5FE002990D7 /* CHGTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicVoiceView.xib; sourceTree = "<group>"; };
 		FA575B941B99528800B5652F /* CHGLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGLoginRegisterTextField.h; sourceTree = "<group>"; };
 		FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGLoginRegisterTextField.m; sourceTree = "<group>"; };
 		FA5B04771B98AD9800FE4D92 /* CHGQuickLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGQuickLoginButton.h; sourceTree = "<group>"; };
@@ -168,9 +177,6 @@
 		FA8FA7801BA2EF8A00AAD48A /* CHGPostWordToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGPostWordToolbar.xib; sourceTree = "<group>"; };
 		FA9994101B9C4EE900CF4E83 /* CHGTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTag.h; sourceTree = "<group>"; };
 		FA9994111B9C4EE900CF4E83 /* CHGTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTag.m; sourceTree = "<group>"; };
-		FA9994131B9C4F1800CF4E83 /* CHGTagViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTagViewCell.h; sourceTree = "<group>"; };
-		FA9994141B9C4F1800CF4E83 /* CHGTagViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTagViewCell.m; sourceTree = "<group>"; };
-		FA9994151B9C4F1800CF4E83 /* CHGTagViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTagViewCell.xib; sourceTree = "<group>"; };
 		FA99941B1B9C623C00CF4E83 /* UIImage+CHGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CHGExtension.h"; sourceTree = "<group>"; };
 		FA99941C1B9C623C00CF4E83 /* UIImage+CHGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CHGExtension.m"; sourceTree = "<group>"; };
 		FA99941E1B9C662A00CF4E83 /* UIImageView+CHGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CHGExtension.h"; sourceTree = "<group>"; };
@@ -211,9 +217,6 @@
 		FADF57681BA7CDC400395122 /* CHGChiBaoZiFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGChiBaoZiFooter.m; sourceTree = "<group>"; };
 		FADF57691BA7CDC400395122 /* CHGChiBaoZiHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGChiBaoZiHeader.h; sourceTree = "<group>"; };
 		FADF576A1BA7CDC400395122 /* CHGChiBaoZiHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGChiBaoZiHeader.m; sourceTree = "<group>"; };
-		FAF1BD521BA6ECA10071C8B8 /* CHGTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicCell.h; sourceTree = "<group>"; };
-		FAF1BD531BA6ECA10071C8B8 /* CHGTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicCell.m; sourceTree = "<group>"; };
-		FAF1BD541BA6ECA10071C8B8 /* CHGTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicCell.xib; sourceTree = "<group>"; };
 		FAF1BD571BA6ECBB0071C8B8 /* CHGTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopic.h; sourceTree = "<group>"; };
 		FAF1BD581BA6ECBC0071C8B8 /* CHGTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopic.m; sourceTree = "<group>"; };
 		FAF2F6081BA9B6DF0068C276 /* CHGSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGSeeBigPictureViewController.h; sourceTree = "<group>"; };
@@ -225,9 +228,6 @@
 		FAF3F04D1BA11CB7008B46EC /* CHGPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPlaceholderTextView.m; sourceTree = "<group>"; };
 		FAF3F04F1BA15BFD008B46EC /* CHGPlaceholderTextView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPlaceholderTextView2.h; sourceTree = "<group>"; };
 		FAF3F0501BA15BFD008B46EC /* CHGPlaceholderTextView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPlaceholderTextView2.m; sourceTree = "<group>"; };
-		FAF615241BA98970009B2496 /* CHGTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicPictureView.h; sourceTree = "<group>"; };
-		FAF615251BA98970009B2496 /* CHGTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicPictureView.m; sourceTree = "<group>"; };
-		FAF615271BA98984009B2496 /* CHGTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicPictureView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +264,35 @@
 				27C4B0987A0D4CFE35629110 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA4530F21BAAE5FE002990D7 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA4530F31BAAE5FE002990D7 /* CHGTagViewCell.h */,
+				FA4530F41BAAE5FE002990D7 /* CHGTagViewCell.m */,
+				FA4530F51BAAE5FE002990D7 /* CHGTagViewCell.xib */,
+				FA4530F61BAAE5FE002990D7 /* CHGTopicCell.h */,
+				FA4530F71BAAE5FE002990D7 /* CHGTopicCell.m */,
+				FA4530F81BAAE5FE002990D7 /* CHGTopicCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		FA4530F91BAAE5FE002990D7 /* 内容模块 */ = {
+			isa = PBXGroup;
+			children = (
+				FA4530FA1BAAE5FE002990D7 /* CHGTopicPictureView.h */,
+				FA4530FB1BAAE5FE002990D7 /* CHGTopicPictureView.m */,
+				FA4530FC1BAAE5FE002990D7 /* CHGTopicPictureView.xib */,
+				FA4530FD1BAAE5FE002990D7 /* CHGTopicVideoView.h */,
+				FA4530FE1BAAE5FE002990D7 /* CHGTopicVideoView.m */,
+				FA4530FF1BAAE5FE002990D7 /* CHGTopicVideoView.xib */,
+				FA4531001BAAE5FE002990D7 /* CHGTopicVoiceView.h */,
+				FA4531011BAAE5FE002990D7 /* CHGTopicVoiceView.m */,
+				FA4531021BAAE5FE002990D7 /* CHGTopicVoiceView.xib */,
+			);
+			path = "内容模块";
 			sourceTree = "<group>";
 		};
 		FA8237C01B95EC3600A4E7C8 /* Classes */ = {
@@ -327,24 +356,11 @@
 		FA8237C81B95EC3600A4E7C8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA4530F21BAAE5FE002990D7 /* cell */,
+				FA4530F91BAAE5FE002990D7 /* 内容模块 */,
 				FADF57661BA7CDC400395122 /* 刷新控件 */,
-				FA9994131B9C4F1800CF4E83 /* CHGTagViewCell.h */,
-				FA9994141B9C4F1800CF4E83 /* CHGTagViewCell.m */,
-				FA9994151B9C4F1800CF4E83 /* CHGTagViewCell.xib */,
 				FA6A0F9A1BA5D0B8003F2E48 /* CHGTitleButton.h */,
 				FA6A0F9B1BA5D0B8003F2E48 /* CHGTitleButton.m */,
-				FAF1BD521BA6ECA10071C8B8 /* CHGTopicCell.h */,
-				FAF1BD531BA6ECA10071C8B8 /* CHGTopicCell.m */,
-				FAF1BD541BA6ECA10071C8B8 /* CHGTopicCell.xib */,
-				FAF615241BA98970009B2496 /* CHGTopicPictureView.h */,
-				FAF615251BA98970009B2496 /* CHGTopicPictureView.m */,
-				FAF615271BA98984009B2496 /* CHGTopicPictureView.xib */,
-				FA4530E81BAAA69B002990D7 /* CHGTopicVideoView.h */,
-				FA4530E91BAAA69B002990D7 /* CHGTopicVideoView.m */,
-				FA4530EB1BAAA948002990D7 /* CHGTopicVideoView.xib */,
-				FA4530ED1BAAB6FC002990D7 /* CHGTopicVoiceView.h */,
-				FA4530EE1BAAB6FC002990D7 /* CHGTopicVoiceView.m */,
-				FA4530F01BAAB749002990D7 /* CHGTopicVoiceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -738,20 +754,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4531081BAAE5FE002990D7 /* CHGTopicPictureView.xib in Resources */,
 				FAA42F3F1B9BBFBD006145C6 /* CHGRecommendCategoryCell.xib in Resources */,
-				FAF615281BA98984009B2496 /* CHGTopicPictureView.xib in Resources */,
+				FA4531061BAAE5FE002990D7 /* CHGTopicCell.xib in Resources */,
+				FA45310A1BAAE5FE002990D7 /* CHGTopicVideoView.xib in Resources */,
+				FA45310C1BAAE5FE002990D7 /* CHGTopicVoiceView.xib in Resources */,
 				FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */,
-				FA4530EC1BAAA948002990D7 /* CHGTopicVideoView.xib in Resources */,
-				FA4530F11BAAB749002990D7 /* CHGTopicVoiceView.xib in Resources */,
 				FAF2F60C1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.xib in Resources */,
 				FACD16E31B95678B00339438 /* Images.xcassets in Resources */,
+				FA4531041BAAE5FE002990D7 /* CHGTagViewCell.xib in Resources */,
 				FA9A97371B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib in Resources */,
 				FA7D4DCB1B9DBE430053E39F /* CHGWebViewController.xib in Resources */,
 				FAB68B831BA04B3300110FEA /* CHGPublishViewController.xib in Resources */,
-				FA9994171B9C4F1800CF4E83 /* CHGTagViewCell.xib in Resources */,
 				FA8238001B95F12D00A4E7C8 /* CHGFriendTrendsViewController.xib in Resources */,
 				FA8FA7811BA2EF8A00AAD48A /* CHGPostWordToolbar.xib in Resources */,
-				FAF1BD561BA6ECA10071C8B8 /* CHGTopicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,8 +819,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC0688D1BA47DCF00A7EAC9 /* CHGTagButton.m in Sources */,
-				FA4530EF1BAAB6FC002990D7 /* CHGTopicVoiceView.m in Sources */,
+				FA45310B1BAAE5FE002990D7 /* CHGTopicVoiceView.m in Sources */,
 				FA8237F31B95EC3600A4E7C8 /* CHGNewViewController.m in Sources */,
+				FA4531051BAAE5FE002990D7 /* CHGTopicCell.m in Sources */,
 				FA8237EF1B95EC3600A4E7C8 /* CHGTagViewController.m in Sources */,
 				FA6A0F9F1BA5DFFB003F2E48 /* CHGAllViewController.m in Sources */,
 				FA8238071B95F9AE00A4E7C8 /* CHGRecommendController.m in Sources */,
@@ -819,19 +836,18 @@
 				FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */,
 				FA575B961B99528800B5652F /* CHGLoginRegisterTextField.m in Sources */,
 				FA8237F21B95EC3600A4E7C8 /* CHGSetingTableViewController.m in Sources */,
+				FA4531091BAAE5FE002990D7 /* CHGTopicVideoView.m in Sources */,
 				FA8237F11B95EC3600A4E7C8 /* CHGMeViewController.m in Sources */,
-				FA4530EA1BAAA69B002990D7 /* CHGTopicVideoView.m in Sources */,
 				FAC0688A1BA46ED900A7EAC9 /* UITextField+CHGExtension.m in Sources */,
+				FA4531071BAAE5FE002990D7 /* CHGTopicPictureView.m in Sources */,
 				FA6A0F9C1BA5D0B8003F2E48 /* CHGTitleButton.m in Sources */,
 				FADF57641BA7BC8E00395122 /* NSDate+CHGExtension.m in Sources */,
-				FAF615261BA98970009B2496 /* CHGTopicPictureView.m in Sources */,
 				FAC068871BA46B3D00A7EAC9 /* CHGAddTagViewController.m in Sources */,
 				FAF3F0481BA1178B008B46EC /* CHGPostWordViewController.m in Sources */,
 				FAF3F0511BA15BFD008B46EC /* CHGPlaceholderTextView2.m in Sources */,
 				FA7D4DCA1B9DBE430053E39F /* CHGWebViewController.m in Sources */,
 				FA6A0FA81BA5E038003F2E48 /* CHGPictureViewController.m in Sources */,
 				FA8237F81B95EC3600A4E7C8 /* UIBarButtonItem+CHGExtension.m in Sources */,
-				FAF1BD551BA6ECA10071C8B8 /* CHGTopicCell.m in Sources */,
 				FA8238031B95F59000A4E7C8 /* CHGNavigationController.m in Sources */,
 				FA7D4DC31B9DAF410053E39F /* CHGMeFooter.m in Sources */,
 				FAA42F3A1B9BBF67006145C6 /* CHGRecommendCategory.m in Sources */,
@@ -849,7 +865,6 @@
 				FA9994201B9C662A00CF4E83 /* UIImageView+CHGExtension.m in Sources */,
 				FAB68B861BA04E3D00110FEA /* CHGPublishButton.m in Sources */,
 				FAB68B821BA04B3300110FEA /* CHGPublishViewController.m in Sources */,
-				FA9994161B9C4F1800CF4E83 /* CHGTagViewCell.m in Sources */,
 				FA8FA77F1BA2EF6D00AAD48A /* CHGPostWordToolbar.m in Sources */,
 				FA1B7F8E1B9DD167004FD879 /* CHGClearCacheCell.m in Sources */,
 				FADF576C1BA7CDC400395122 /* CHGChiBaoZiHeader.m in Sources */,
@@ -858,6 +873,7 @@
 				FA8237F91B95EC3600A4E7C8 /* UIView+CHGExtension.m in Sources */,
 				FA9994121B9C4EE900CF4E83 /* CHGTag.m in Sources */,
 				FA1B7F8B1B9DCFED004FD879 /* NSString+CHGExtension.m in Sources */,
+				FA4531031BAAE5FE002990D7 /* CHGTagViewCell.m in Sources */,
 				FAC068901BA48BCA00A7EAC9 /* CHGTagTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

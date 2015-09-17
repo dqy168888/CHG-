@@ -28,3 +28,6 @@ UIKIT_EXTERN CGFloat const CHGTopicTextY;
 
 /** 帖子-底部工具条的高度 */
 UIKIT_EXTERN CGFloat const CHGTopicToolbarH;
+
+/** 帖子-最热评论-顶部的高度 */
+UIKIT_EXTERN CGFloat const CHGTopicTopCmtTopH;

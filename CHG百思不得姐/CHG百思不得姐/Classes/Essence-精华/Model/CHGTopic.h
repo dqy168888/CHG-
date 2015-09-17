@@ -24,6 +24,10 @@ typedef enum {
 
 @interface CHGTopic : NSObject
 // 用户 -- 发帖者
+
+/** id */
+@property (nonatomic, copy) NSString *ID; // id
+
 /** 用户的名字 */
 @property (nonatomic, copy) NSString *name;
 /** 用户的头像 */
@@ -50,11 +54,11 @@ typedef enum {
 @property (nonatomic, assign) CGFloat height;
 
 /** 小图 */
-@property (nonatomic, copy) NSString *image0;
+@property (nonatomic, copy) NSString *small_image; // image0
 /** 大图 */
-@property (nonatomic, copy) NSString *image1;
+@property (nonatomic, copy) NSString *large_image; // image1
 /** 中图 */
-@property (nonatomic, copy) NSString *image2;
+@property (nonatomic, copy) NSString *middle_image; // image2
 
 /** 是否为动态图 */
 @property (nonatomic, assign) BOOL is_gif;
@@ -66,6 +70,8 @@ typedef enum {
 /** 播放数量 */
 @property (nonatomic, assign) NSInteger playcount;
 
+/** 最热评论 */
+@property (nonatomic, strong) NSArray *top_cmt;
 
 /***** 额外增加的属性 ******/
 /** cell的高度 */

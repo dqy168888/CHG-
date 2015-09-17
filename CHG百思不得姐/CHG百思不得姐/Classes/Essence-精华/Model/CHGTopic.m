@@ -6,6 +6,34 @@
 //  Copyright (c) 2015年 陈弘根. All rights reserved.
 //
 
+/*
+ // NSString -> NSDate
+ NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+ // 设置日期格式（解析字符串中的日期元素）
+ fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+ 
+ // 生成2个NSDate对象，用来比较时间差值
+ NSDate *createdAtDate = [fmt dateFromString:topic.created_at]; // 发帖时间
+ NSDate *nowDate = [NSDate date]; // 手机当前时间
+ 
+ // 获得createdAtDate和nowDate之间相差的秒数
+ NSTimeInterval interval = [nowDate timeIntervalSinceDate:createdAtDate];
+ */
+
+/**
+ 服务器返回的日期
+ 1> 时间字符串：2015-09-13 18:13:03
+ NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+ fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+ NSDate *date = [fmt dateFromString:时间字符串];
+ 
+ 2> 时间戳：5646456456546
+ NSDate *date = [NSDate dateWithTimeIntervalSince1970:时间戳/1000.0];
+ */
+
+// 时间戳：从1970-1-1 00:00:00开始到现在为止走过的毫秒数
+
+
 #import "CHGTopic.h"
 /*
  一、今年
@@ -29,6 +57,21 @@
  * 2014-08-07 18:06:56
  */
 @implementation CHGTopic
+
+#pragma mark - mjextension
+/**
+ * 属性名-字典key的映射（key-mapping）
+ */
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{
+             @"ID" : @"id",
+             @"small_image" : @"image0",
+             @"middle_image" : @"image2",
+             @"large_image" : @"image1",
+             };
+}
+
 - (NSString *)created_at
 {
     // 日期格式化类
@@ -92,6 +135,18 @@
             _cellHeight += contentH + CHGCommonMargin;
         }
         
+        
+        NSDictionary *cmt = self.top_cmt.firstObject;
+        if (cmt) {
+            NSString *username = cmt[@"user"][@"username"];
+            NSString *content = cmt[@"content"];
+            NSString *cmtText = [NSString stringWithFormat:@"%@ : %@", username, content];
+            
+            CGFloat cmtTextH = [cmtText boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
+            
+            _cellHeight += CHGTopicTopCmtTopH + cmtTextH + CHGCommonMargin;
+        }
+        
         // 再加上底部高度
         _cellHeight += CHGTopicToolbarH + CHGCommonMargin;
             
@@ -102,29 +157,3 @@
 
 @end
 
-/*
- // NSString -> NSDate
- NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
- // 设置日期格式（解析字符串中的日期元素）
- fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
- 
- // 生成2个NSDate对象，用来比较时间差值
- NSDate *createdAtDate = [fmt dateFromString:topic.created_at]; // 发帖时间
- NSDate *nowDate = [NSDate date]; // 手机当前时间
- 
- // 获得createdAtDate和nowDate之间相差的秒数
- NSTimeInterval interval = [nowDate timeIntervalSinceDate:createdAtDate];
- */
-
-/**
- 服务器返回的日期
- 1> 时间字符串：2015-09-13 18:13:03
- NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
- fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
- NSDate *date = [fmt dateFromString:时间字符串];
- 
- 2> 时间戳：5646456456546
- NSDate *date = [NSDate dateWithTimeIntervalSince1970:时间戳/1000.0];
- */
-
-// 时间戳：从1970-1-1 00:00:00开始到现在为止走过的毫秒数

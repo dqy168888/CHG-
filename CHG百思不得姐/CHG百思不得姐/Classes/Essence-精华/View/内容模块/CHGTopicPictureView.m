@@ -55,7 +55,7 @@
 {
      _topic = topic;
     CHGWeakSelf;
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.image1] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) { // 下载时
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) { // 下载时
         // 每下载一点图片数据，就会调用一次这个block
         self.labeledCircularProgress.hidden = NO;
         // 下载进度

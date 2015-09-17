@@ -91,8 +91,11 @@ static NSString * const CHGTopicCellID = @"Topic";
     // 发送请求
     CHGWeakSelf;
     [self.manager GET:CHGRequestURL parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        CHGWriteToPlist(responseObject, @"topcmt");
         // 字典数组 -> 模型数组
         weakSelf.topics = [CHGTopic objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
         
         // 存储maxtime
         weakSelf.maxtime = responseObject[@"info"][@"maxtime"];

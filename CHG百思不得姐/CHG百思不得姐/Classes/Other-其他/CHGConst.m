@@ -29,3 +29,7 @@ CGFloat const CHGTopicTextY = 55;
 
 /** 帖子-底部工具条的高度 */
 CGFloat const CHGTopicToolbarH = 35;
+
+/** 帖子-最热评论-顶部的高度 */
+CGFloat const CHGTopicTopCmtTopH = 20;
+
