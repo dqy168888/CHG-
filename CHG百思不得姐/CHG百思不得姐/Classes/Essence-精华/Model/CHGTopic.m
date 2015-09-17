@@ -34,7 +34,6 @@
 // 时间戳：从1970-1-1 00:00:00开始到现在为止走过的毫秒数
 
 
-#import "CHGTopic.h"
 /*
  一、今年
  1.今天
@@ -56,6 +55,11 @@
  二、非今年
  * 2014-08-07 18:06:56
  */
+
+#import "CHGTopic.h"
+#import "CHGUser.h"
+#import "CHGComment.h"
+
 @implementation CHGTopic
 
 #pragma mark - mjextension
@@ -71,6 +75,14 @@
              @"large_image" : @"image1",
              };
 }
+
++ (NSDictionary *)objectClassInArray
+{
+    // 数组名 : 模型名
+    return @{@"top_cmt" : [CHGComment class]};
+    //    return @{@"top_cmt" : @"CHGComment"};
+}
+
 
 - (NSString *)created_at
 {
@@ -136,10 +148,10 @@
         }
         
         
-        NSDictionary *cmt = self.top_cmt.firstObject;
+        CHGComment *cmt = self.top_cmt.firstObject;
         if (cmt) {
-            NSString *username = cmt[@"user"][@"username"];
-            NSString *content = cmt[@"content"];
+            NSString *username = cmt.user.username;
+            NSString *content = cmt.content;
             NSString *cmtText = [NSString stringWithFormat:@"%@ : %@", username, content];
             
             CGFloat cmtTextH = [cmtText boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;

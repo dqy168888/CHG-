@@ -11,7 +11,8 @@
 #import "CHGTopicPictureView.h"
 #import "CHGTopicVideoView.h"
 #import "CHGTopicVoiceView.h"
-
+#import "CHGComment.h"
+#import "CHGUser.h"
 
 @interface CHGTopicCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -118,10 +119,10 @@
         self.voiceView.hidden = YES;
     }
     
-    NSDictionary *cmt = topic.top_cmt.firstObject;
+    CHGComment *cmt = topic.top_cmt.firstObject;
     if (cmt) {
-        NSString *username = cmt[@"user"][@"username"];
-        NSString *content = cmt[@"content"];
+        NSString *username = cmt.user.username;
+        NSString *content = cmt.content;
         self.hotView.hidden = NO;
         self.contentLabel.text = [NSString stringWithFormat:@"%@ : %@",username,content];
     }else

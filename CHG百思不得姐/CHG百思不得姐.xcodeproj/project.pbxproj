@@ -80,6 +80,8 @@
 		FAF3F0481BA1178B008B46EC /* CHGPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F0471BA1178B008B46EC /* CHGPostWordViewController.m */; };
 		FAF3F04E1BA11CB7008B46EC /* CHGPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F04D1BA11CB7008B46EC /* CHGPlaceholderTextView.m */; };
 		FAF3F0511BA15BFD008B46EC /* CHGPlaceholderTextView2.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F0501BA15BFD008B46EC /* CHGPlaceholderTextView2.m */; };
+		FAFFB94F1BAB1F9500569EB1 /* CHGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFFB94E1BAB1F9500569EB1 /* CHGUser.m */; };
+		FAFFB9521BAB1FBE00569EB1 /* CHGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFFB9511BAB1FBE00569EB1 /* CHGComment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,6 +230,10 @@
 		FAF3F04D1BA11CB7008B46EC /* CHGPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPlaceholderTextView.m; sourceTree = "<group>"; };
 		FAF3F04F1BA15BFD008B46EC /* CHGPlaceholderTextView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGPlaceholderTextView2.h; sourceTree = "<group>"; };
 		FAF3F0501BA15BFD008B46EC /* CHGPlaceholderTextView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGPlaceholderTextView2.m; sourceTree = "<group>"; };
+		FAFFB94D1BAB1F9500569EB1 /* CHGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGUser.h; sourceTree = "<group>"; };
+		FAFFB94E1BAB1F9500569EB1 /* CHGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGUser.m; sourceTree = "<group>"; };
+		FAFFB9501BAB1FBE00569EB1 /* CHGComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGComment.h; sourceTree = "<group>"; };
+		FAFFB9511BAB1FBE00569EB1 /* CHGComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGComment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +355,10 @@
 				FA9994111B9C4EE900CF4E83 /* CHGTag.m */,
 				FAF1BD571BA6ECBB0071C8B8 /* CHGTopic.h */,
 				FAF1BD581BA6ECBC0071C8B8 /* CHGTopic.m */,
+				FAFFB94D1BAB1F9500569EB1 /* CHGUser.h */,
+				FAFFB94E1BAB1F9500569EB1 /* CHGUser.m */,
+				FAFFB9501BAB1FBE00569EB1 /* CHGComment.h */,
+				FAFFB9511BAB1FBE00569EB1 /* CHGComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -855,6 +865,7 @@
 				FA99941D1B9C623C00CF4E83 /* UIImage+CHGExtension.m in Sources */,
 				FA03E90D1B9DA66B0027D475 /* CHGMeCell.m in Sources */,
 				FAF2F60B1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.m in Sources */,
+				FAFFB94F1BAB1F9500569EB1 /* CHGUser.m in Sources */,
 				FA6A0FAB1BA5E046003F2E48 /* CHGWordViewController.m in Sources */,
 				FAA42F3E1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m in Sources */,
 				FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */,
@@ -871,6 +882,7 @@
 				FAF1BD591BA6ECBC0071C8B8 /* CHGTopic.m in Sources */,
 				FA8237F51B95EC3600A4E7C8 /* main.m in Sources */,
 				FA8237F91B95EC3600A4E7C8 /* UIView+CHGExtension.m in Sources */,
+				FAFFB9521BAB1FBE00569EB1 /* CHGComment.m in Sources */,
 				FA9994121B9C4EE900CF4E83 /* CHGTag.m in Sources */,
 				FA1B7F8B1B9DCFED004FD879 /* NSString+CHGExtension.m in Sources */,
 				FA4531031BAAE5FE002990D7 /* CHGTagViewCell.m in Sources */,
