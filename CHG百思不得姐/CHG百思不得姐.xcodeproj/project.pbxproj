@@ -82,6 +82,7 @@
 		FAF3F0511BA15BFD008B46EC /* CHGPlaceholderTextView2.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF3F0501BA15BFD008B46EC /* CHGPlaceholderTextView2.m */; };
 		FAFFB94F1BAB1F9500569EB1 /* CHGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFFB94E1BAB1F9500569EB1 /* CHGUser.m */; };
 		FAFFB9521BAB1FBE00569EB1 /* CHGComment.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFFB9511BAB1FBE00569EB1 /* CHGComment.m */; };
+		FAFFB9551BAB24F800569EB1 /* CHGExtensionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFFB9541BAB24F800569EB1 /* CHGExtensionConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +235,8 @@
 		FAFFB94E1BAB1F9500569EB1 /* CHGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGUser.m; sourceTree = "<group>"; };
 		FAFFB9501BAB1FBE00569EB1 /* CHGComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGComment.h; sourceTree = "<group>"; };
 		FAFFB9511BAB1FBE00569EB1 /* CHGComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGComment.m; sourceTree = "<group>"; };
+		FAFFB9531BAB24F800569EB1 /* CHGExtensionConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGExtensionConfig.h; sourceTree = "<group>"; };
+		FAFFB9541BAB24F800569EB1 /* CHGExtensionConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGExtensionConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,6 +521,8 @@
 				FA8237E31B95EC3600A4E7C8 /* Controller */,
 				FA8237E61B95EC3600A4E7C8 /* Model */,
 				FA8237E71B95EC3600A4E7C8 /* View */,
+				FAFFB9531BAB24F800569EB1 /* CHGExtensionConfig.h */,
+				FAFFB9541BAB24F800569EB1 /* CHGExtensionConfig.m */,
 			);
 			path = "Other-其他";
 			sourceTree = "<group>";
@@ -868,6 +873,7 @@
 				FAFFB94F1BAB1F9500569EB1 /* CHGUser.m in Sources */,
 				FA6A0FAB1BA5E046003F2E48 /* CHGWordViewController.m in Sources */,
 				FAA42F3E1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m in Sources */,
+				FAFFB9551BAB24F800569EB1 /* CHGExtensionConfig.m in Sources */,
 				FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */,
 				FADF576B1BA7CDC400395122 /* CHGChiBaoZiFooter.m in Sources */,
 				FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */,

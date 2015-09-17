@@ -119,10 +119,9 @@
         self.voiceView.hidden = YES;
     }
     
-    CHGComment *cmt = topic.top_cmt.firstObject;
-    if (cmt) {
-        NSString *username = cmt.user.username;
-        NSString *content = cmt.content;
+    if (topic.topComment) {
+        NSString *username = topic.topComment.user.username;
+        NSString *content = topic.topComment.content;
         self.hotView.hidden = NO;
         self.contentLabel.text = [NSString stringWithFormat:@"%@ : %@",username,content];
     }else

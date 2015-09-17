@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class CHGComment;
 typedef enum {
     /** 图片 */
     CHGTopicTypePicture = 10,
@@ -71,7 +71,7 @@ typedef enum {
 @property (nonatomic, assign) NSInteger playcount;
 
 /** 最热评论 */
-@property (nonatomic, strong) NSArray *top_cmt;
+@property (nonatomic, strong) CHGComment *topComment;
 
 /***** 额外增加的属性 ******/
 /** cell的高度 */

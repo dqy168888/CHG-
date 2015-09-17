@@ -66,22 +66,23 @@
 /**
  * 属性名-字典key的映射（key-mapping）
  */
-+ (NSDictionary *)replacedKeyFromPropertyName
-{
-    return @{
-             @"ID" : @"id",
-             @"small_image" : @"image0",
-             @"middle_image" : @"image2",
-             @"large_image" : @"image1",
-             };
-}
-
-+ (NSDictionary *)objectClassInArray
-{
-    // 数组名 : 模型名
-    return @{@"top_cmt" : [CHGComment class]};
-    //    return @{@"top_cmt" : @"CHGComment"};
-}
+//+ (NSDictionary *)replacedKeyFromPropertyName
+//{
+//    return @{
+//             @"ID" : @"id",
+//             @"small_image" : @"image0",
+//             @"middle_image" : @"image2",
+//             @"large_image" : @"image1",
+//             @"topComment" : @"top_cmt[0]"
+//             };
+//}
+//
+//+ (NSDictionary *)objectClassInArray
+//{
+//    // 数组名 : 模型名
+//    return @{@"user" : [CHGUser class]};
+//    //    return @{@"top_cmt" : @"CHGComment"};
+//}
 
 
 - (NSString *)created_at
@@ -148,10 +149,9 @@
         }
         
         
-        CHGComment *cmt = self.top_cmt.firstObject;
-        if (cmt) {
-            NSString *username = cmt.user.username;
-            NSString *content = cmt.content;
+        if (self.topComment) {
+            NSString *username = self.topComment.user.username;
+            NSString *content = self.topComment.content;
             NSString *cmtText = [NSString stringWithFormat:@"%@ : %@", username, content];
             
             CGFloat cmtTextH = [cmtText boundingRectWithSize:CGSizeMake(textW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
