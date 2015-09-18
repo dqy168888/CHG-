@@ -57,6 +57,12 @@
 		FA9994201B9C662A00CF4E83 /* UIImageView+CHGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA99941F1B9C662A00CF4E83 /* UIImageView+CHGExtension.m */; };
 		FA9A97361B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9A97341B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m */; };
 		FA9A97371B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9A97351B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib */; };
+		FA9B78D21BAB9B34003AABC1 /* CHGCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9B78D01BAB9B34003AABC1 /* CHGCommentViewController.m */; };
+		FA9B78D31BAB9B34003AABC1 /* CHGCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9B78D11BAB9B34003AABC1 /* CHGCommentViewController.xib */; };
+		FA9B78D71BABA9A4003AABC1 /* CHGCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9B78D51BABA9A4003AABC1 /* CHGCommentCell.m */; };
+		FA9B78D81BABA9A4003AABC1 /* CHGCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9B78D61BABA9A4003AABC1 /* CHGCommentCell.xib */; };
+		FA9B78E11BABAAC2003AABC1 /* CHGCommentViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9B78DF1BABAAC2003AABC1 /* CHGCommentViewController2.m */; };
+		FA9B78E21BABAAC2003AABC1 /* CHGCommentViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9B78E01BABAAC2003AABC1 /* CHGCommentViewController2.xib */; };
 		FAA274621B9C8BB00086B332 /* CHGConst.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA274611B9C8BB00086B332 /* CHGConst.m */; };
 		FAA42F3A1B9BBF67006145C6 /* CHGRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA42F391B9BBF67006145C6 /* CHGRecommendCategory.m */; };
 		FAA42F3E1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA42F3C1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m */; };
@@ -187,6 +193,15 @@
 		FA9A97331B96A45E00EF0EB6 /* CHGLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGLoginRegisterViewController.h; sourceTree = "<group>"; };
 		FA9A97341B96A45E00EF0EB6 /* CHGLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGLoginRegisterViewController.m; sourceTree = "<group>"; };
 		FA9A97351B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		FA9B78CF1BAB9B34003AABC1 /* CHGCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGCommentViewController.h; sourceTree = "<group>"; };
+		FA9B78D01BAB9B34003AABC1 /* CHGCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGCommentViewController.m; sourceTree = "<group>"; };
+		FA9B78D11BAB9B34003AABC1 /* CHGCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGCommentViewController.xib; sourceTree = "<group>"; };
+		FA9B78D41BABA9A3003AABC1 /* CHGCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGCommentCell.h; sourceTree = "<group>"; };
+		FA9B78D51BABA9A4003AABC1 /* CHGCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGCommentCell.m; sourceTree = "<group>"; };
+		FA9B78D61BABA9A4003AABC1 /* CHGCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGCommentCell.xib; sourceTree = "<group>"; };
+		FA9B78DE1BABAAC2003AABC1 /* CHGCommentViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGCommentViewController2.h; sourceTree = "<group>"; };
+		FA9B78DF1BABAAC2003AABC1 /* CHGCommentViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGCommentViewController2.m; sourceTree = "<group>"; };
+		FA9B78E01BABAAC2003AABC1 /* CHGCommentViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGCommentViewController2.xib; sourceTree = "<group>"; };
 		FAA274601B9C8BB00086B332 /* CHGConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGConst.h; sourceTree = "<group>"; };
 		FAA274611B9C8BB00086B332 /* CHGConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGConst.m; sourceTree = "<group>"; };
 		FAA42F381B9BBF67006145C6 /* CHGRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGRecommendCategory.h; sourceTree = "<group>"; };
@@ -284,6 +299,9 @@
 				FA4530F61BAAE5FE002990D7 /* CHGTopicCell.h */,
 				FA4530F71BAAE5FE002990D7 /* CHGTopicCell.m */,
 				FA4530F81BAAE5FE002990D7 /* CHGTopicCell.xib */,
+				FA9B78D41BABA9A3003AABC1 /* CHGCommentCell.h */,
+				FA9B78D51BABA9A4003AABC1 /* CHGCommentCell.m */,
+				FA9B78D61BABA9A4003AABC1 /* CHGCommentCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -347,6 +365,12 @@
 				FAF2F6081BA9B6DF0068C276 /* CHGSeeBigPictureViewController.h */,
 				FAF2F6091BA9B6DF0068C276 /* CHGSeeBigPictureViewController.m */,
 				FAF2F60A1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.xib */,
+				FA9B78CF1BAB9B34003AABC1 /* CHGCommentViewController.h */,
+				FA9B78D01BAB9B34003AABC1 /* CHGCommentViewController.m */,
+				FA9B78D11BAB9B34003AABC1 /* CHGCommentViewController.xib */,
+				FA9B78DE1BABAAC2003AABC1 /* CHGCommentViewController2.h */,
+				FA9B78DF1BABAAC2003AABC1 /* CHGCommentViewController2.m */,
+				FA9B78E01BABAAC2003AABC1 /* CHGCommentViewController2.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -775,7 +799,10 @@
 				FA45310A1BAAE5FE002990D7 /* CHGTopicVideoView.xib in Resources */,
 				FA45310C1BAAE5FE002990D7 /* CHGTopicVoiceView.xib in Resources */,
 				FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */,
+				FA9B78E21BABAAC2003AABC1 /* CHGCommentViewController2.xib in Resources */,
+				FA9B78D31BAB9B34003AABC1 /* CHGCommentViewController.xib in Resources */,
 				FAF2F60C1BA9B6DF0068C276 /* CHGSeeBigPictureViewController.xib in Resources */,
+				FA9B78D81BABA9A4003AABC1 /* CHGCommentCell.xib in Resources */,
 				FACD16E31B95678B00339438 /* Images.xcassets in Resources */,
 				FA4531041BAAE5FE002990D7 /* CHGTagViewCell.xib in Resources */,
 				FA9A97371B96A45E00EF0EB6 /* CHGLoginRegisterViewController.xib in Resources */,
@@ -847,6 +874,7 @@
 				FA03E9101B9DA6840027D475 /* CHGSquare.m in Sources */,
 				FA6A0FA51BA5E023003F2E48 /* CHGVoiceViewController.m in Sources */,
 				FA8237F61B95EC3600A4E7C8 /* CHGTabBarController.m in Sources */,
+				FA9B78D71BABA9A4003AABC1 /* CHGCommentCell.m in Sources */,
 				FA8237F41B95EC3600A4E7C8 /* AppDelegate.m in Sources */,
 				FACD16DB1B95678B00339438 /* CHG_____.xcdatamodeld in Sources */,
 				FA575B961B99528800B5652F /* CHGLoginRegisterTextField.m in Sources */,
@@ -876,6 +904,7 @@
 				FAFFB9551BAB24F800569EB1 /* CHGExtensionConfig.m in Sources */,
 				FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */,
 				FADF576B1BA7CDC400395122 /* CHGChiBaoZiFooter.m in Sources */,
+				FA9B78E11BABAAC2003AABC1 /* CHGCommentViewController2.m in Sources */,
 				FA8237EE1B95EC3600A4E7C8 /* CHGEssenceViewController.m in Sources */,
 				FA6A0FA21BA5E011003F2E48 /* CHGVideoViewController.m in Sources */,
 				FAA274621B9C8BB00086B332 /* CHGConst.m in Sources */,
@@ -889,6 +918,7 @@
 				FA8237F51B95EC3600A4E7C8 /* main.m in Sources */,
 				FA8237F91B95EC3600A4E7C8 /* UIView+CHGExtension.m in Sources */,
 				FAFFB9521BAB1FBE00569EB1 /* CHGComment.m in Sources */,
+				FA9B78D21BAB9B34003AABC1 /* CHGCommentViewController.m in Sources */,
 				FA9994121B9C4EE900CF4E83 /* CHGTag.m in Sources */,
 				FA1B7F8B1B9DCFED004FD879 /* NSString+CHGExtension.m in Sources */,
 				FA4531031BAAE5FE002990D7 /* CHGTagViewCell.m in Sources */,

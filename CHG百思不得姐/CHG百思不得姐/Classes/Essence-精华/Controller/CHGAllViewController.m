@@ -14,6 +14,8 @@
 #import <MJExtension.h>
 #import "CHGChiBaoZiFooter.h"
 #import "CHGChiBaoZiHeader.h"
+#import "CHGCommentViewController.h"
+#import "CHGCommentViewController2.h"
 /*
  1.要想让一个scrollView的内容能够穿透整个屏幕
  1> 让scrollView的frame占据整个屏幕
@@ -168,5 +170,17 @@ static NSString * const CHGTopicCellID = @"Topic";
 
     return topic.cellHeight;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CHGCommentViewController *commentVC = [[CHGCommentViewController alloc] init];
+    commentVC.topic = self.topics[indexPath.row];
+    [self.navigationController pushViewController:commentVC animated:YES];
+    
+//    CHGCommentViewController2 *commentVC2 = [[CHGCommentViewController2 alloc] init];
+//    commentVC2.topic = self.topics[indexPath.row];
+//    [self.navigationController pushViewController:commentVC2 animated:YES];
+}
+
 
 @end
