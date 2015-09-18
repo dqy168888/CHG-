@@ -22,6 +22,7 @@
 		FA45310A1BAAE5FE002990D7 /* CHGTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4530FF1BAAE5FE002990D7 /* CHGTopicVideoView.xib */; };
 		FA45310B1BAAE5FE002990D7 /* CHGTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4531011BAAE5FE002990D7 /* CHGTopicVoiceView.m */; };
 		FA45310C1BAAE5FE002990D7 /* CHGTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4531021BAAE5FE002990D7 /* CHGTopicVoiceView.xib */; };
+		FA54F2711BABE80900DD2EC5 /* CHGCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA54F2701BABE80900DD2EC5 /* CHGCommentHeaderView.m */; };
 		FA575B961B99528800B5652F /* CHGLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */; };
 		FA5B04791B98AD9800FE4D92 /* CHGQuickLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5B04781B98AD9800FE4D92 /* CHGQuickLoginButton.m */; };
 		FA6A0F9C1BA5D0B8003F2E48 /* CHGTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6A0F9B1BA5D0B8003F2E48 /* CHGTitleButton.m */; };
@@ -128,6 +129,8 @@
 		FA4531001BAAE5FE002990D7 /* CHGTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGTopicVoiceView.h; sourceTree = "<group>"; };
 		FA4531011BAAE5FE002990D7 /* CHGTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGTopicVoiceView.m; sourceTree = "<group>"; };
 		FA4531021BAAE5FE002990D7 /* CHGTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGTopicVoiceView.xib; sourceTree = "<group>"; };
+		FA54F26F1BABE80900DD2EC5 /* CHGCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGCommentHeaderView.h; sourceTree = "<group>"; };
+		FA54F2701BABE80900DD2EC5 /* CHGCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGCommentHeaderView.m; sourceTree = "<group>"; };
 		FA575B941B99528800B5652F /* CHGLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGLoginRegisterTextField.h; sourceTree = "<group>"; };
 		FA575B951B99528800B5652F /* CHGLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGLoginRegisterTextField.m; sourceTree = "<group>"; };
 		FA5B04771B98AD9800FE4D92 /* CHGQuickLoginButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGQuickLoginButton.h; sourceTree = "<group>"; };
@@ -318,6 +321,8 @@
 				FA4531001BAAE5FE002990D7 /* CHGTopicVoiceView.h */,
 				FA4531011BAAE5FE002990D7 /* CHGTopicVoiceView.m */,
 				FA4531021BAAE5FE002990D7 /* CHGTopicVoiceView.xib */,
+				FA54F26F1BABE80900DD2EC5 /* CHGCommentHeaderView.h */,
+				FA54F2701BABE80900DD2EC5 /* CHGCommentHeaderView.m */,
 			);
 			path = "内容模块";
 			sourceTree = "<group>";
@@ -918,6 +923,7 @@
 				FA8237F51B95EC3600A4E7C8 /* main.m in Sources */,
 				FA8237F91B95EC3600A4E7C8 /* UIView+CHGExtension.m in Sources */,
 				FAFFB9521BAB1FBE00569EB1 /* CHGComment.m in Sources */,
+				FA54F2711BABE80900DD2EC5 /* CHGCommentHeaderView.m in Sources */,
 				FA9B78D21BAB9B34003AABC1 /* CHGCommentViewController.m in Sources */,
 				FA9994121B9C4EE900CF4E83 /* CHGTag.m in Sources */,
 				FA1B7F8B1B9DCFED004FD879 /* NSString+CHGExtension.m in Sources */,

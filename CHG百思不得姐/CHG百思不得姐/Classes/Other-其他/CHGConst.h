@@ -31,3 +31,9 @@ UIKIT_EXTERN CGFloat const CHGTopicToolbarH;
 
 /** 帖子-最热评论-顶部的高度 */
 UIKIT_EXTERN CGFloat const CHGTopicTopCmtTopH;
+
+/** 性别-男 */
+UIKIT_EXTERN NSString * const CHGUserSexMale;
+
+/** 性别-女 */
+UIKIT_EXTERN NSString * const CHGUserSexFemale;

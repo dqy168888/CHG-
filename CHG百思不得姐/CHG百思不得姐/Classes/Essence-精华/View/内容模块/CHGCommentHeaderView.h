@@ -1,5 +1,5 @@
 //
-//  CHGCommentCell.h
+//  CHGCommentHeaderView.h
 //  CHG百思不得姐
 //
 //  Created by chenhongen on 15/9/18.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CHGComment.h"
-@interface CHGCommentCell : UITableViewCell
-@property (nonatomic, strong) CHGComment *comment;
+
+@interface CHGCommentHeaderView : UITableViewHeaderFooterView
+/** 文字属性 */
+@property (nonatomic, copy) NSString *text;
 @end

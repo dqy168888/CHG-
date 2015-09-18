@@ -33,3 +33,8 @@ CGFloat const CHGTopicToolbarH = 35;
 /** 帖子-最热评论-顶部的高度 */
 CGFloat const CHGTopicTopCmtTopH = 20;
 
+/** 性别-男 */
+NSString * const CHGUserSexMale = @"m";
+
+/** 性别-女 */
+NSString * const CHGUserSexFemale = @"f";

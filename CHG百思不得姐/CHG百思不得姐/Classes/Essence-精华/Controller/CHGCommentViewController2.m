@@ -10,35 +10,74 @@
 #import "CHGTopic.h"
 #import "CHGTopicCell.h"
 #import "CHGCommentCell.h"
+#import "CHGChiBaoZiFooter.h"
+#import "CHGChiBaoZiHeader.h"
+#import <AFNetworking.h>
+#import <MJExtension.h>
+#import "CHGCommentHeaderView.h"
 
 @interface CHGCommentViewController2 ()<UITableViewDelegate, UITableViewDataSource>
+/** 请求管理者 */
+@property (nonatomic, weak) AFHTTPSessionManager *manager;
+
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpace;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+/** 暂时存储：最热评论 */
+@property (nonatomic, strong) CHGComment *topComment;
+
+/** 最热评论 */
+@property (nonatomic, strong) NSArray *hotComments;
+/** 最新评论（所有的评论数据） */
+@property (nonatomic, strong) NSMutableArray *latestComments;
 
 @end
 
 @implementation CHGCommentViewController2
 
+#pragma mark - 懒加载
+- (AFHTTPSessionManager *)manager
+{
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
+
+#pragma mark - 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupNav];
     
     [self setupTable];
+    
+    [self setupRefresh];
 }
 
 - (void)setupTable
 {
+    self.tableView.backgroundColor = CHGGlobalBg;
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CHGCommentCell class]) bundle:nil] forCellReuseIdentifier:@"Comment"];
+    
+    self.tableView.estimatedRowHeight = 100;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    // 对传过来的数据进行处理
+    if (self.topic.topComment) {
+        // 把最热评论存起来
+        self.topComment = self.topic.topComment;
+        // 清空最热评论模块  （因为这里不需要显示）
+        self.topic.cellHeight = 0;
+        self.topic.topComment = nil;
+    }
     
     CHGTopicCell *cell = [CHGTopicCell viewFromXib];
     cell.topic = self.topic;
     cell.frame = CGRectMake(0, 0, CHGScreenW, self.topic.cellHeight);
     
     UIView *header = [[UIView alloc] init];
-    header.backgroundColor = [UIColor redColor];
-    header.height = cell.height + CHGCommonMargin * 2;
+    header.height = cell.height + CHGCommonMargin ;
     [header addSubview:cell];
     
     self.tableView.tableHeaderView = header;
@@ -46,7 +85,6 @@
 
 - (void)setupNav
 {
-    
     self.title = @"评论";
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"comment_nav_item_share_icon" highImage:@"comment_nav_item_share_icon_click" target:nil action:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
@@ -55,7 +93,66 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    // 恢复帖子的最热评论数据
+    if (self.topComment) {
+        self.topic.topComment = self.topComment;
+        self.topic.cellHeight = 0;
+    }
 }
+
+
+- (void)setupRefresh
+{
+    self.tableView.header = [CHGChiBaoZiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopics)];
+    
+    [self.tableView.header beginRefreshing];
+    
+    self.tableView.footer = [CHGChiBaoZiFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
+}
+
+#pragma mark - 加载评论数据
+- (void)loadNewTopics
+{
+    // 取消之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    // 请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"dataList";
+    params[@"c"] = @"comment";
+    params[@"data_id"] = self.topic.ID;
+    params[@"hot"] = @1;
+    
+    // 发送请求
+    CHGWeakSelf;
+    [self.manager GET:CHGRequestURL parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        CHGWriteToPlist(responseObject, @"comment");
+        
+        // 字典数组 -> 模型数组
+        weakSelf.hotComments = [CHGComment objectArrayWithKeyValuesArray:responseObject[@"hot"]];
+        weakSelf.latestComments = [CHGComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        
+        // 刷新表格
+        [weakSelf.tableView reloadData];
+        
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(100 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 结束刷新
+        [weakSelf.tableView.header endRefreshing];
+//        });
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        // 结束刷新
+        [weakSelf.tableView.header endRefreshing];
+    }];
+}
+
+- (void)loadMoreTopics
+{
+    
+}
+
+
 
 #pragma mark - 监听
 - (void)keyboardWillChangeFrame:(NSNotification *)note
@@ -72,18 +169,34 @@
 #pragma mark <UITableViewDataSource>
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    if (self.hotComments.count) return 2;
+    if (self.latestComments.count) return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (section == 0) return 10;
-    return 20;
+    if (section == 0 && self.hotComments.count){
+    
+        return self.hotComments.count;
+    }
+    return self.latestComments.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     CHGCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Comment"];
+    
+    // 获得对应的评论数据
+    NSArray *comments = self.latestComments;
+    if (indexPath.section == 0 && self.hotComments.count){
+        comments = self.hotComments;
+    }
+    
+    // 传递模型给cell
+    cell.comment = comments[indexPath.row];
+    
     return cell;
 }
 
@@ -93,9 +206,23 @@
     [self.view endEditing:YES];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    if (section == 0) return @"最热评论";
+//    return @"最新评论";
+//}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    if (section == 0) return @"333最热评论";
-    return @"最新评论";
+    CHGCommentHeaderView *header = [[CHGCommentHeaderView alloc] initWithReuseIdentifier:@"header"];
+    
+    if (section == 0 && self.hotComments.count ) {
+        header.text = @"最热评论";
+    } else
+    {
+        header.text = @"最新评论";
+    }
+    
+    return header;
 }
 @end
