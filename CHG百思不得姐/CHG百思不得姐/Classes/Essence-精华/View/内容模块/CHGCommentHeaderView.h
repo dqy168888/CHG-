@@ -11,4 +11,5 @@
 @interface CHGCommentHeaderView : UITableViewHeaderFooterView
 /** 文字属性 */
 @property (nonatomic, copy) NSString *text;
+
 @end

@@ -31,6 +31,8 @@
 /** 最新评论（所有的评论数据） */
 @property (nonatomic, strong) NSMutableArray *latestComments;
 
+@property (nonatomic, assign) NSInteger page;
+
 @end
 
 @implementation CHGCommentViewController2
@@ -53,11 +55,17 @@
     [self setupTable];
     
     [self setupRefresh];
+    
+    
 }
 
 - (void)setupTable
 {
     self.tableView.backgroundColor = CHGGlobalBg;
+    
+    // 去掉分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([CHGCommentCell class]) bundle:nil] forCellReuseIdentifier:@"Comment"];
     
     self.tableView.estimatedRowHeight = 100;
@@ -133,6 +141,9 @@
         weakSelf.hotComments = [CHGComment objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         weakSelf.latestComments = [CHGComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
         
+        // 页码
+        self.page = 1;
+        
         // 刷新表格
         [weakSelf.tableView reloadData];
         
@@ -149,7 +160,57 @@
 
 - (void)loadMoreTopics
 {
+    // 取消之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     
+    // 页码
+    NSInteger page = self.page + 1;
+    
+    // 请求参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"dataList";
+    params[@"c"] = @"comment";
+    params[@"data_id"] = self.topic.ID;
+    params[@"page"] = @(page);
+    
+    CHGComment *cmt = [self.latestComments lastObject];
+    params[@"lastcid"] = cmt.ID;
+    
+    // 发送请求
+    CHGWeakSelf;
+    [self.manager GET:CHGRequestURL parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        // 没有数据
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            self.tableView.footer.hidden = YES;
+            return;
+        }
+        
+        CHGWriteToPlist(responseObject, @"newComments");
+        
+        // 字典数组 -> 模型数组
+        NSArray *newComments = [CHGComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        
+        [self.latestComments addObjectsFromArray:newComments];
+        
+        // 页码
+        self.page = page;
+        
+        // 刷新表格
+        [weakSelf.tableView reloadData];
+        
+        // 控制footer的状态
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if (self.latestComments.count >= total) { // 全部加载完毕
+            self.tableView.footer.hidden = YES;
+        } else {
+            // 结束刷新状态
+            [self.tableView.footer endRefreshing];
+        }
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        // 结束刷新
+        [weakSelf.tableView.header endRefreshing];
+    }];
 }
 
 

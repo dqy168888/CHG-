@@ -38,4 +38,6 @@
     _text = [text copy];
     self.label.text = text;
 }
+
+
 @end

@@ -33,6 +33,11 @@
 {
     // 清空自动伸缩属性
     self.autoresizingMask = UIViewAutoresizingNone;
+    
+    UIImageView *bgView = [[UIImageView alloc] init];
+    bgView.image = [UIImage imageNamed:@"mainCellBackground"];
+    self.backgroundView = bgView;
+    
 }
 
 - (void)setComment:(CHGComment *)comment
