@@ -139,8 +139,14 @@
         weakSelf.latestComments = [CHGComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
         
         self.page = 1;
+        
         // 刷新表格
         [weakSelf.tableView reloadData];
+        
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            // 结束刷新
+//            [weakSelf.tableView.header endRefreshing];
+//        });
         
         // 结束刷新
         [weakSelf.tableView.header endRefreshing];
@@ -194,6 +200,7 @@
         // 控制footer的状态
         NSInteger total = [responseObject[@"total"] integerValue];
         if (self.latestComments.count >= total) { // 全部加载完毕
+//            [self.tableView.footer noticeNoMoreData];
             self.tableView.footer.hidden = YES;
         } else {
             // 结束刷新状态
@@ -294,5 +301,18 @@
 //    return header;
 //}
 
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+//{
+//    CHGCommentHeaderView *header = [[CHGCommentHeaderView alloc] initWithReuseIdentifier:@"header"];
+//    if (section == 0) {
+//        
+//    }else if (section == 1 && self.hotComments.count ) {
+//        header.text = @"最热评论";
+//    } else if (section == 2 )
+//    {
+//        header.text = @"最新评论";
+//    }
+//    return header;
+//}
 
 @end

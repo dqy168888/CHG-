@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 @class CHGComment;
 typedef enum {
+    /** 全部 */
+    CHGTopicTypeAll = 1,
+    
     /** 图片 */
     CHGTopicTypePicture = 10,
     

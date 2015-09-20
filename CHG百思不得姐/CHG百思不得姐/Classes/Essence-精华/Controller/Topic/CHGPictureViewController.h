@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 陈弘根. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CHGBasicTopicViewController.h"
 
-@interface CHGPictureViewController : UITableViewController
+@interface CHGPictureViewController : CHGBasicTopicViewController
 
 @end

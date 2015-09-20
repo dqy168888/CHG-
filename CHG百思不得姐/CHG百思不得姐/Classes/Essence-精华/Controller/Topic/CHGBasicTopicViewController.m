@@ -1,12 +1,12 @@
 //
-//  CHGAllViewController.m
+//  CHGBasicTopicViewController.m
 //  CHG百思不得姐
 //
-//  Created by chenhongen on 15/9/14.
+//  Created by chenhongen on 15/9/20.
 //  Copyright (c) 2015年 陈弘根. All rights reserved.
 //
 
-#import "CHGAllViewController.h"
+#import "CHGBasicTopicViewController.h"
 #import "CHGTopic.h"
 #import "CHGTopicCell.h"
 #import <AFNetworking.h>
@@ -23,7 +23,7 @@
  2.要想让用户能看清楚所有的内容，不被导航栏和tabbar挡住
  1> 设置scrollView的contentInset属性
  */
-@interface CHGAllViewController ()<UITableViewDelegate>
+@interface CHGBasicTopicViewController ()<UITableViewDelegate>
 /** 请求管理者 */
 @property (nonatomic, weak) AFHTTPSessionManager *manager;
 /** 所有的帖子数据 */
@@ -32,7 +32,9 @@
 @property (nonatomic, copy) NSString *maxtime;
 @end
 
-@implementation CHGAllViewController
+@implementation CHGBasicTopicViewController
+
+- (CHGTopicType)type { return 0; }
 
 static NSString * const CHGTopicCellID = @"Topic";
 #pragma mark - 懒加载
@@ -49,7 +51,7 @@ static NSString * const CHGTopicCellID = @"Topic";
     [super viewDidLoad];
     
     [self setupTab];
-   
+    
     [self setupRefresh];
 }
 
@@ -88,7 +90,7 @@ static NSString * const CHGTopicCellID = @"Topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @1;//@"1";
+    params[@"type"] = @(self.type);
     
     // 发送请求
     CHGWeakSelf;
@@ -122,7 +124,7 @@ static NSString * const CHGTopicCellID = @"Topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = @1;//@"1";
+    params[@"type"] = @(self.type);//@"1";
     params[@"maxtime"] = self.maxtime;
     
     // 发送请求
@@ -144,7 +146,7 @@ static NSString * const CHGTopicCellID = @"Topic";
         // 结束刷新
         [weakSelf.tableView.footer endRefreshing];
     }];
-
+    
 }
 
 
@@ -167,7 +169,7 @@ static NSString * const CHGTopicCellID = @"Topic";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CHGTopic *topic = self.topics[indexPath.row];
-
+    
     return topic.cellHeight;
 }
 
@@ -177,9 +179,9 @@ static NSString * const CHGTopicCellID = @"Topic";
     commentVC.topic = self.topics[indexPath.row];
     [self.navigationController pushViewController:commentVC animated:YES];
     
-//    CHGCommentViewController2 *commentVC2 = [[CHGCommentViewController2 alloc] init];
-//    commentVC2.topic = self.topics[indexPath.row];
-//    [self.navigationController pushViewController:commentVC2 animated:YES];
+    //    CHGCommentViewController2 *commentVC2 = [[CHGCommentViewController2 alloc] init];
+    //    commentVC2.topic = self.topics[indexPath.row];
+    //    [self.navigationController pushViewController:commentVC2 animated:YES];
 }
 
 
