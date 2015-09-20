@@ -15,6 +15,7 @@
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import "CHGCommentHeaderView.h"
+#import "CHGUser.h"
 
 @interface CHGCommentViewController2 ()<UITableViewDelegate, UITableViewDataSource>
 /** 请求管理者 */
@@ -33,9 +34,13 @@
 
 @property (nonatomic, assign) NSInteger page;
 
+/** 写方法声明的目的是为了使用点语法提示 */
+- (CHGComment *)selectedComment;
+
 @end
 
 @implementation CHGCommentViewController2
+
 
 #pragma mark - 懒加载
 - (AFHTTPSessionManager *)manager
@@ -135,7 +140,7 @@
     CHGWeakSelf;
     [self.manager GET:CHGRequestURL parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         
-        CHGWriteToPlist(responseObject, @"comment");
+//        CHGWriteToPlist(responseObject, @"comment");
         
         // 字典数组 -> 模型数组
         weakSelf.hotComments = [CHGComment objectArrayWithKeyValuesArray:responseObject[@"hot"]];
@@ -185,7 +190,7 @@
             return;
         }
         
-        CHGWriteToPlist(responseObject, @"newComments");
+//        CHGWriteToPlist(responseObject, @"newComments");
         
         // 字典数组 -> 模型数组
         NSArray *newComments = [CHGComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
@@ -288,5 +293,73 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    
+    // 设置菜单内容
+    menu.menuItems = @[
+                       [[UIMenuItem alloc] initWithTitle:@"顶" action:@selector(ding:)],
+                       [[UIMenuItem alloc] initWithTitle:@"回复" action:@selector(reply:)],
+                       [[UIMenuItem alloc] initWithTitle:@"举报" action:@selector(warn:)],
+                       ];
+    
+    // 显示位置
+    CGRect rect = CGRectMake(0, cell.height * 0.5, cell.width, 1);
+    [menu setTargetRect:rect inView:cell];
+    // 显示出来
+    [menu setMenuVisible:YES animated:YES];
+}
 
+- (CHGComment *)selectedComment
+{
+    NSIndexPath *indexpath = self.tableView.indexPathForSelectedRow;
+    NSInteger row = indexpath.row;
+    
+    NSArray *comments = self.latestComments;
+    if (indexpath.section == 0 && self.hotComments.count) {
+        comments = self.hotComments;
+    }
+
+    return comments[row];
+}
+
+#pragma mark - UIMenuController处理
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    if (!self.isFirstResponder) { // 如果控制器不是第一响应者时（文本框弹出键盘时，文本框才是第一响应者）
+        if (action == @selector(ding:)
+            || action == @selector(reply:)
+            || action == @selector(warn:)) return NO;
+    }
+    return [super canPerformAction:action withSender:sender];
+}
+
+- (void)ding:(UIMenuController *)menu
+{
+    CHGLog(@"ding - %@ %@",
+           self.selectedComment.user.username,
+           self.selectedComment.content);
+}
+
+- (void)reply:(UIMenuController *)menu
+{
+    CHGLog(@"reply - %@ %@",
+           self.selectedComment.user.username,
+           self.selectedComment.content);
+}
+
+- (void)warn:(UIMenuController *)menu
+{
+    CHGLog(@"warn - %@ %@",
+           self.selectedComment.user.username,
+           self.selectedComment.content);
+}
 @end

@@ -96,7 +96,7 @@ static NSString * const CHGTopicCellID = @"Topic";
     CHGWeakSelf;
     [self.manager GET:CHGRequestURL parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         
-        CHGWriteToPlist(responseObject, @"topcmt");
+//        CHGWriteToPlist(responseObject, @"topcmt");
         // 字典数组 -> 模型数组
         weakSelf.topics = [CHGTopic objectArrayWithKeyValuesArray:responseObject[@"list"]];
         

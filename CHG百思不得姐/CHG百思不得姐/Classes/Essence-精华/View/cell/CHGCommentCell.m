@@ -52,7 +52,7 @@
     if ([comment.user.sex isEqualToString:CHGUserSexMale]) {
         self.sexView.image = [UIImage imageNamed:@"Profile_manIcon"];
     } else {
-        self.sexView.image = [UIImage imageNamed:@"Profile_woamanIcon"];
+        self.sexView.image = [UIImage imageNamed:@"Profile_womanIcon"];
     }
     
     if (comment.voiceuri.length) {

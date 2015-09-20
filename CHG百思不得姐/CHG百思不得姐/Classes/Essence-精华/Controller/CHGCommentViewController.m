@@ -184,7 +184,7 @@
             return;
         }
         
-        CHGWriteToPlist(responseObject, @"newComments");
+//        CHGWriteToPlist(responseObject, @"newComments");
         
         // 字典数组 -> 模型数组
         NSArray *newComments = [CHGComment objectArrayWithKeyValuesArray:responseObject[@"data"]];
