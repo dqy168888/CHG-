@@ -12,6 +12,7 @@
 
 #import "CHGUser.h"
 #import "CHGComment.h"
+#import "CHGRecommendCategory.h"
 
 @implementation CHGExtensionConfig
 + (void)load
@@ -27,9 +28,11 @@
     }];
     
     [CHGTopic setupObjectClassInArray:^NSDictionary *{
-        // 数组名 : 模型名
         return @{@"user" : [CHGUser class]};
-        //    return @{@"top_cmt" : @"CHGComment"};
+    }];
+    
+    [CHGRecommendCategory setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{ @"ID" : @"id", };
     }];
 
 }

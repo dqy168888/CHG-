@@ -65,6 +65,8 @@
 		FA9CEA7A1BAE5048005BDAC4 /* CHGVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9CEA741BAE5048005BDAC4 /* CHGVoiceViewController.m */; };
 		FA9CEA7B1BAE5048005BDAC4 /* CHGWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9CEA761BAE5048005BDAC4 /* CHGWordViewController.m */; };
 		FA9CEA811BAE5177005BDAC4 /* CHGBasicTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9CEA801BAE5177005BDAC4 /* CHGBasicTopicViewController.m */; };
+		FA9CEA851BAED332005BDAC4 /* CHGUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9CEA831BAED332005BDAC4 /* CHGUserCell.m */; };
+		FA9CEA861BAED332005BDAC4 /* CHGUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9CEA841BAED332005BDAC4 /* CHGUserCell.xib */; };
 		FAA274621B9C8BB00086B332 /* CHGConst.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA274611B9C8BB00086B332 /* CHGConst.m */; };
 		FAA42F3A1B9BBF67006145C6 /* CHGRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA42F391B9BBF67006145C6 /* CHGRecommendCategory.m */; };
 		FAA42F3E1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA42F3C1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m */; };
@@ -208,6 +210,9 @@
 		FA9CEA761BAE5048005BDAC4 /* CHGWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGWordViewController.m; sourceTree = "<group>"; };
 		FA9CEA7F1BAE5177005BDAC4 /* CHGBasicTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGBasicTopicViewController.h; sourceTree = "<group>"; };
 		FA9CEA801BAE5177005BDAC4 /* CHGBasicTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGBasicTopicViewController.m; sourceTree = "<group>"; };
+		FA9CEA821BAED332005BDAC4 /* CHGUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGUserCell.h; sourceTree = "<group>"; };
+		FA9CEA831BAED332005BDAC4 /* CHGUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGUserCell.m; sourceTree = "<group>"; };
+		FA9CEA841BAED332005BDAC4 /* CHGUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CHGUserCell.xib; sourceTree = "<group>"; };
 		FAA274601B9C8BB00086B332 /* CHGConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGConst.h; sourceTree = "<group>"; };
 		FAA274611B9C8BB00086B332 /* CHGConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGConst.m; sourceTree = "<group>"; };
 		FAA42F381B9BBF67006145C6 /* CHGRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGRecommendCategory.h; sourceTree = "<group>"; };
@@ -394,7 +399,6 @@
 			children = (
 				FA4530F21BAAE5FE002990D7 /* cell */,
 				FA4530F91BAAE5FE002990D7 /* 内容模块 */,
-				FADF57661BA7CDC400395122 /* 刷新控件 */,
 				FA6A0F9A1BA5D0B8003F2E48 /* CHGTitleButton.h */,
 				FA6A0F9B1BA5D0B8003F2E48 /* CHGTitleButton.m */,
 			);
@@ -446,6 +450,9 @@
 				FAA42F3B1B9BBFBD006145C6 /* CHGRecommendCategoryCell.h */,
 				FAA42F3C1B9BBFBD006145C6 /* CHGRecommendCategoryCell.m */,
 				FAA42F3D1B9BBFBD006145C6 /* CHGRecommendCategoryCell.xib */,
+				FA9CEA821BAED332005BDAC4 /* CHGUserCell.h */,
+				FA9CEA831BAED332005BDAC4 /* CHGUserCell.m */,
+				FA9CEA841BAED332005BDAC4 /* CHGUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -540,6 +547,7 @@
 				FA8237E21B95EC3600A4E7C8 /* PrefixHeader.pch */,
 				FAA274601B9C8BB00086B332 /* CHGConst.h */,
 				FAA274611B9C8BB00086B332 /* CHGConst.m */,
+				FADF57661BA7CDC400395122 /* 刷新控件 */,
 				FA8237DE1B95EC3600A4E7C8 /* Category-分类 */,
 				FA8237E31B95EC3600A4E7C8 /* Controller */,
 				FA8237E61B95EC3600A4E7C8 /* Model */,
@@ -602,6 +610,8 @@
 		FA9CEA6C1BAE5048005BDAC4 /* Topic */ = {
 			isa = PBXGroup;
 			children = (
+				FA9CEA7F1BAE5177005BDAC4 /* CHGBasicTopicViewController.h */,
+				FA9CEA801BAE5177005BDAC4 /* CHGBasicTopicViewController.m */,
 				FA9CEA6D1BAE5048005BDAC4 /* CHGAllViewController.h */,
 				FA9CEA6E1BAE5048005BDAC4 /* CHGAllViewController.m */,
 				FA9CEA6F1BAE5048005BDAC4 /* CHGPictureViewController.h */,
@@ -612,8 +622,6 @@
 				FA9CEA741BAE5048005BDAC4 /* CHGVoiceViewController.m */,
 				FA9CEA751BAE5048005BDAC4 /* CHGWordViewController.h */,
 				FA9CEA761BAE5048005BDAC4 /* CHGWordViewController.m */,
-				FA9CEA7F1BAE5177005BDAC4 /* CHGBasicTopicViewController.h */,
-				FA9CEA801BAE5177005BDAC4 /* CHGBasicTopicViewController.m */,
 			);
 			path = Topic;
 			sourceTree = "<group>";
@@ -725,7 +733,8 @@
 				FADF57691BA7CDC400395122 /* CHGChiBaoZiHeader.h */,
 				FADF576A1BA7CDC400395122 /* CHGChiBaoZiHeader.m */,
 			);
-			path = "刷新控件";
+			name = "刷新控件";
+			path = "../Essence-精华/View/刷新控件";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -816,6 +825,7 @@
 				FA4531061BAAE5FE002990D7 /* CHGTopicCell.xib in Resources */,
 				FA45310A1BAAE5FE002990D7 /* CHGTopicVideoView.xib in Resources */,
 				FA45310C1BAAE5FE002990D7 /* CHGTopicVoiceView.xib in Resources */,
+				FA9CEA861BAED332005BDAC4 /* CHGUserCell.xib in Resources */,
 				FA8238081B95F9AE00A4E7C8 /* CHGRecommendController.xib in Resources */,
 				FA9B78E21BABAAC2003AABC1 /* CHGCommentViewController2.xib in Resources */,
 				FA9B78D31BAB9B34003AABC1 /* CHGCommentViewController.xib in Resources */,
@@ -939,6 +949,7 @@
 				FA9CEA791BAE5048005BDAC4 /* CHGVideoViewController.m in Sources */,
 				FA54F2711BABE80900DD2EC5 /* CHGCommentHeaderView.m in Sources */,
 				FA9B78D21BAB9B34003AABC1 /* CHGCommentViewController.m in Sources */,
+				FA9CEA851BAED332005BDAC4 /* CHGUserCell.m in Sources */,
 				FA9994121B9C4EE900CF4E83 /* CHGTag.m in Sources */,
 				FA1B7F8B1B9DCFED004FD879 /* NSString+CHGExtension.m in Sources */,
 				FA4531031BAAE5FE002990D7 /* CHGTagViewCell.m in Sources */,

@@ -7,17 +7,36 @@
 //
 
 #import "CHGRecommendCategoryCell.h"
+#import "CHGRecommendCategory.h"
+
+@interface CHGRecommendCategoryCell ()
+
+@property (weak, nonatomic) IBOutlet UIView *SelectedIndicator;
+
+@end
 
 @implementation CHGRecommendCategoryCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    
+    // 清除文字背景颜色
+    self.textLabel.backgroundColor = [UIColor clearColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    
+    self.textLabel.textColor = selected ?[UIColor redColor] : [UIColor grayColor];
+    self.SelectedIndicator.hidden = !selected;
+    
 }
 
+- (void)setCategory:(CHGRecommendCategory *)category{
+    
+    _category = category;
+    
+    // 设置文字
+    self.textLabel.text = category.name;
+    
+}
 @end

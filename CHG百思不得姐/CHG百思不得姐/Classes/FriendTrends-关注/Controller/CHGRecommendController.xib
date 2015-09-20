@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CHGRecommendController">
             <connections>
                 <outlet property="CategoryTableView" destination="6Y9-ET-sPr" id="85q-iv-Tby"/>
+                <outlet property="UserTableView" destination="CDU-D3-QXk" id="rWr-rr-LZz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,16 +18,38 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6Y9-ET-sPr" userLabel="左侧">
                     <rect key="frame" x="0.0" y="0.0" width="70" height="667"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="P04-cR-oAo"/>
                     </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Nyp-3o-ITF"/>
+                        <outlet property="delegate" destination="-1" id="VpW-Ua-BbE"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CDU-D3-QXk" userLabel="左侧">
+                    <rect key="frame" x="70" y="0.0" width="305" height="667"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="U8m-Le-xbE"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="U8m-Le-xbE"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ZhH-Ix-HHm"/>
+                        <outlet property="delegate" destination="-1" id="S5k-S5-HHU"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="6Y9-ET-sPr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0v0-Qv-rFA"/>
                 <constraint firstItem="6Y9-ET-sPr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7mp-mW-4aW"/>
+                <constraint firstAttribute="bottom" secondItem="CDU-D3-QXk" secondAttribute="bottom" id="XT5-UG-wFq"/>
+                <constraint firstItem="CDU-D3-QXk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fCR-gV-gJx"/>
+                <constraint firstAttribute="trailing" secondItem="CDU-D3-QXk" secondAttribute="trailing" id="krm-xF-GO2"/>
+                <constraint firstItem="CDU-D3-QXk" firstAttribute="leading" secondItem="6Y9-ET-sPr" secondAttribute="trailing" id="ks2-QX-kcI"/>
                 <constraint firstAttribute="bottom" secondItem="6Y9-ET-sPr" secondAttribute="bottom" id="qW4-BC-zOa"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

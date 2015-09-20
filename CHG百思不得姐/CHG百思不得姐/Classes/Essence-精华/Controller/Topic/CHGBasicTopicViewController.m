@@ -175,13 +175,13 @@ static NSString * const CHGTopicCellID = @"Topic";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CHGCommentViewController *commentVC = [[CHGCommentViewController alloc] init];
-    commentVC.topic = self.topics[indexPath.row];
-    [self.navigationController pushViewController:commentVC animated:YES];
+//    CHGCommentViewController *commentVC = [[CHGCommentViewController alloc] init];
+//    commentVC.topic = self.topics[indexPath.row];
+//    [self.navigationController pushViewController:commentVC animated:YES];
     
-    //    CHGCommentViewController2 *commentVC2 = [[CHGCommentViewController2 alloc] init];
-    //    commentVC2.topic = self.topics[indexPath.row];
-    //    [self.navigationController pushViewController:commentVC2 animated:YES];
+        CHGCommentViewController2 *commentVC2 = [[CHGCommentViewController2 alloc] init];
+        commentVC2.topic = self.topics[indexPath.row];
+        [self.navigationController pushViewController:commentVC2 animated:YES];
 }
 
 

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CHGRecommendCategory;
 @interface CHGRecommendCategoryCell : UITableViewCell
-
+@property (nonatomic, weak) CHGRecommendCategory *category;
 @end
