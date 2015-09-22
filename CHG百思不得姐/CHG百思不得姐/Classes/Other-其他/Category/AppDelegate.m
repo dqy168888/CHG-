@@ -10,10 +10,57 @@
 #import "CHGTabBarController.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) UIWindow *topWindow;
 @end
 
 @implementation AppDelegate
+
+- (UIWindow *)topWindow{
+    
+    if (_topWindow == nil) {
+        _topWindow = [[UIWindow alloc] init];
+        _topWindow.windowLevel = UIWindowLevelAlert;
+        _topWindow.frame = CGRectMake(0, 0, CHGScreenW, 20);
+        _topWindow.backgroundColor = [UIColor clearColor];
+        // 这句很重要，默认是隐藏的，要想显示必须手动设置为NO
+        _topWindow.hidden = NO;
+        [_topWindow addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(topWindowClick)]];
+    }
+    return _topWindow;
+}
+
+- (void)topWindowClick
+{
+    NSArray *windows = [UIApplication sharedApplication].windows;
+    for (UIWindow *window in windows) {
+        [self searchSubviews:window];
+    }
+}
+
+/**
+ * 搜索superview内部的所有子控件
+ */
+- (void)searchSubviews:(UIView *)superview
+{
+    for (UIScrollView *scrollView in superview.subviews) {
+        [self searchSubviews:scrollView];
+        
+        // 判断是否为 scrollView
+        if (![scrollView isKindOfClass:[UIScrollView class]]) continue;
+        
+        // 判断scrollView是否在窗口上 （是否相交）
+        // 计算出scrollView在window坐标系上的矩形框
+        CGRect scrollViewRect = [scrollView convertRect:scrollView.bounds toView:scrollView.window];
+        CGRect windowRect = scrollView.window.bounds;
+        // 判断scrollView的边框是否和window的边框交叉
+        if (!CGRectIntersectsRect(scrollViewRect, windowRect)) continue;
+        
+        // 能来到这里说明scrollView在窗口上,修改偏移量，滚到最顶部
+        CGPoint offset = scrollView.contentOffset;
+        offset.y =  - scrollView.contentInset.top;
+        [scrollView setContentOffset:offset animated:YES];
+    }
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -45,8 +92,10 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
+// 程序激活的时候调用topWindow
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    [self topWindow];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

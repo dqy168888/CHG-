@@ -38,11 +38,26 @@
     
 }
 
-
-- (UIStatusBarStyle)preferredStatusBarStyle
+// 即将显示前 改变状态栏样式
+- (void)viewDidAppear:(BOOL)animated
 {
-    return UIStatusBarStyleLightContent;
+    [super viewDidAppear:animated];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+}
+
+
+
+//- (UIStatusBarStyle)preferredStatusBarStyle
+//{
+//    return UIStatusBarStyleLightContent;
+//}
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
