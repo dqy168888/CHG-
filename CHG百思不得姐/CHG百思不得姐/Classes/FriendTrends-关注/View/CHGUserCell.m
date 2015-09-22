@@ -7,17 +7,34 @@
 //
 
 #import "CHGUserCell.h"
+#import "CHGFollowUser.h"
+
+@interface CHGUserCell ()
+/** 头像 */
+@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
+/** 用户名 */
+@property (weak, nonatomic) IBOutlet UILabel *screenNameLabel;
+/** 粉丝数 */
+@property (weak, nonatomic) IBOutlet UILabel *fansCountLabel;
+
+@end
 
 @implementation CHGUserCell
 
-- (void)awakeFromNib {
-    // Initialization code
-}
+- (void)setUser:(CHGFollowUser *)user
+{
+    _user = user;
+    
+    [self.headerImageView setHeader:user.header];
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    self.screenNameLabel.text = user.screen_name;
+    
+    if (user.fans_count >= 10000) {
+        self.fansCountLabel.text = [NSString stringWithFormat:@"%.1f万人关注", user.fans_count / 10000.0];
+    } else {
+        self.fansCountLabel.text = [NSString stringWithFormat:@"%zd人关注", user.fans_count];
+    }
+    
 }
 
 @end

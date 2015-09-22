@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CHGFollowUser;
 @interface CHGUserCell : UITableViewCell
-
+@property (nonatomic, strong) CHGFollowUser *user;
 @end
