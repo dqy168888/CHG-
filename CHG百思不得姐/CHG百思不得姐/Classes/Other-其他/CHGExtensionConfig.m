@@ -26,9 +26,9 @@
                  @"topComment" : @"top_cmt[0]"
                  };
     }];
-    
-    [CHGTopic setupObjectClassInArray:^NSDictionary *{
-        return @{@"user" : [CHGUser class]};
+
+    [CHGComment setupReplacedKeyFromPropertyName:^NSDictionary *{
+        return @{@"ID" : @"id"};
     }];
     
     [CHGRecommendCategory setupReplacedKeyFromPropertyName:^NSDictionary *{

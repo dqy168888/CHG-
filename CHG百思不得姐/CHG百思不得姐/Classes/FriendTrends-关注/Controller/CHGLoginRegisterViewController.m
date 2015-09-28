@@ -4,7 +4,7 @@
 //
 //  Created by chenhongen on 15/9/2.
 //  Copyright (c) 2015年 陈弘根. All rights reserved.
-//
+//  注册登录
 
 #import "CHGLoginRegisterViewController.h"
 

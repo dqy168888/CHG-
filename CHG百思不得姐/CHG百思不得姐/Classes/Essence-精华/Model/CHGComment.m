@@ -9,8 +9,8 @@
 #import "CHGComment.h"
 
 @implementation CHGComment
-+ (NSDictionary *)replacedKeyFromPropertyName
-{
-    return @{@"ID" : @"id"};
-}
+//+ (NSDictionary *)replacedKeyFromPropertyName
+//{
+//    return @{@"ID" : @"id"};
+//}
 @end

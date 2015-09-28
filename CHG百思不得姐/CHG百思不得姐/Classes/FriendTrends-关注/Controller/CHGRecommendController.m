@@ -4,7 +4,7 @@
 //
 //  Created by chenhongen on 15/9/1.
 //  Copyright (c) 2015年 陈弘根. All rights reserved.
-//
+//  推荐关注
 
 #import "CHGRecommendController.h"
 #import <AFNetworking.h>

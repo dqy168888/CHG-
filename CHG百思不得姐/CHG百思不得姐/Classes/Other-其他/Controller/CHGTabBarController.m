@@ -64,7 +64,7 @@
     [self setValue:[[CHGTabBar alloc] init] forKeyPath:@"tabBar"];
 }
 
-
+// 设置tabbar文字属性
 - (void)setupAttribute
 {
     NSMutableDictionary *normalAttr = [NSMutableDictionary dictionary];

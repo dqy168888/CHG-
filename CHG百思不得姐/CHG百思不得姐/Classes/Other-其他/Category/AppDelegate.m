@@ -18,6 +18,7 @@
 - (UIWindow *)topWindow{
     
     if (_topWindow == nil) {
+        
         _topWindow = [[UIWindow alloc] init];
         _topWindow.windowLevel = UIWindowLevelAlert;
         _topWindow.frame = CGRectMake(0, 0, CHGScreenW, 20);
@@ -59,6 +60,7 @@
         CGPoint offset = scrollView.contentOffset;
         offset.y =  - scrollView.contentInset.top;
         [scrollView setContentOffset:offset animated:YES];
+        
     }
 }
 
@@ -94,7 +96,6 @@
 
 // 程序激活的时候调用topWindow
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    
     [self topWindow];
 }
 
